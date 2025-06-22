@@ -33,7 +33,7 @@ certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos --email 
 
 # Switch to production Nginx config with SSL
 echo "⚙️  Switching to production Nginx configuration..."
-ln -sf /etc/nginx/sites-available/$DOMAIN /etc/nginx/sites-enabled/
+ln -sf /etc/nginx/sites-available/$DOMAIN /etc/nginx/sites-enabled/$DOMAIN
 rm -f /etc/nginx/sites-enabled/${DOMAIN}-temp
 
 # Test and reload Nginx

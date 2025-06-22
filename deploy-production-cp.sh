@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Production deployment script for extantra.net
+# Alternative deployment script using cp instead of rsync
 # Run this script as root on your Ubuntu/Debian server
 
 set -e
 
-echo "🚀 Starting production deployment for extantra.net..."
+echo "🚀 Starting production deployment for extantra.net (using cp)..."
 
 # Variables
 DOMAIN="extantra.net"
@@ -22,31 +22,50 @@ fi
 echo "📦 Updating system packages..."
 apt update && apt upgrade -y
 
-# Install required packages
-echo "🔧 Installing Nginx, Certbot, and rsync..."
-apt install -y nginx certbot python3-certbot-nginx ufw rsync
+# Install required packages (without rsync)
+echo "🔧 Installing Nginx and Certbot..."
+apt install -y nginx certbot python3-certbot-nginx ufw
 
 # Create site directory
 echo "📁 Setting up site directory..."
 mkdir -p $SITE_DIR
 chown -R www-data:www-data $SITE_DIR
 
-# Copy site files (excluding unwanted files)
+# Copy site files using cp (excluding unwanted files)
 echo "📋 Copying site files..."
-rsync -av --exclude='.git' \
-          --exclude='*.py' \
-          --exclude='*.pyc' \
-          --exclude='__pycache__' \
-          --exclude='.DS_Store' \
-          --exclude='README.md' \
-          --exclude='BATCH_PROCESSING_GUIDE.md' \
-          --exclude='batch_*' \
-          --exclude='demo_*' \
-          --exclude='simple_*' \
-          --exclude='generate_*' \
-          --exclude='deploy-*' \
-          --exclude='nginx-*' \
-          $CURRENT_DIR/ $SITE_DIR/
+find $CURRENT_DIR -maxdepth 1 -type f \( \
+    -name "*.html" -o \
+    -name "*.css" -o \
+    -name "*.js" -o \
+    -name "*.json" -o \
+    -name "*.txt" -o \
+    -name "*.md" \
+    \) ! -name "README.md" ! -name "BATCH_PROCESSING_GUIDE.md" ! -name "DEPLOYMENT.md" \
+    -exec cp {} $SITE_DIR/ \;
+
+# Copy directories (media folders)
+for dir in images audio drawings photos videos 3d models; do
+    if [ -d "$CURRENT_DIR/$dir" ]; then
+        echo "📁 Copying $dir directory..."
+        cp -r "$CURRENT_DIR/$dir" "$SITE_DIR/"
+    fi
+done
+
+# Remove any accidentally copied unwanted files
+echo "🧹 Cleaning up unwanted files..."
+find $SITE_DIR -name "*.py" -delete 2>/dev/null || true
+find $SITE_DIR -name "*.pyc" -delete 2>/dev/null || true
+find $SITE_DIR -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+find $SITE_DIR -name ".DS_Store" -delete 2>/dev/null || true
+find $SITE_DIR -name "batch_*" -delete 2>/dev/null || true
+find $SITE_DIR -name "demo_*" -delete 2>/dev/null || true
+find $SITE_DIR -name "simple_*" -delete 2>/dev/null || true
+find $SITE_DIR -name "generate_*" -delete 2>/dev/null || true
+find $SITE_DIR -name "deploy-*" -delete 2>/dev/null || true
+find $SITE_DIR -name "nginx-*" -delete 2>/dev/null || true
+find $SITE_DIR -name "setup-*" -delete 2>/dev/null || true
+find $SITE_DIR -name "update-*" -delete 2>/dev/null || true
+rm -f $SITE_DIR/README.md $SITE_DIR/BATCH_PROCESSING_GUIDE.md $SITE_DIR/DEPLOYMENT.md 2>/dev/null || true
 
 # Set proper permissions
 chown -R www-data:www-data $SITE_DIR
@@ -106,3 +125,7 @@ echo "📍 Please point your domain $DOMAIN to this server's IP address now."
 echo ""
 echo "Once your domain is pointing here, run the SSL setup:"
 echo "sudo bash setup-ssl.sh"
+
+echo ""
+echo "📋 Files copied to $SITE_DIR:"
+ls -la $SITE_DIR

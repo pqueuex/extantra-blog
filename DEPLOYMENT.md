@@ -8,6 +8,7 @@ Your site is ready for production deployment with HTTPS, security headers, and o
 - Ubuntu/Debian server with root access
 - Domain name (extantra.net) ready to point to your server
 - Server with public IP address
+- **Note**: This setup is designed to coexist with other sites (like store.extantra.net) on the same server
 
 ### Step 1: Initial Server Setup
 
@@ -127,6 +128,31 @@ sudo systemctl restart nginx
 /etc/nginx/sites-available/     # Nginx config
 /etc/letsencrypt/               # SSL certificates
 ```
+
+## 🏢 Multi-Site Considerations
+
+Since you have `store.extantra.net` running on the same server:
+
+### Site Isolation
+- Each subdomain has its own Nginx configuration file
+- SSL certificates are managed separately per domain
+- Site files are stored in separate directories:
+  - Main site: `/var/www/extantra.net/`
+  - Store: `/var/www/store.extantra.net/` (existing)
+
+### Shared Resources
+- **Nginx**: Shared web server handling all subdomains
+- **Certbot**: Manages SSL certificates for all domains
+- **Firewall**: UFW rules apply to all sites
+
+### DNS Configuration
+Make sure your DNS has both:
+- A record: `extantra.net` → `your.server.ip.address`
+- A record: `store.extantra.net` → `your.server.ip.address` (existing)
+- A record: `www.extantra.net` → `your.server.ip.address`
+
+### SSL Certificate Management
+The setup script will obtain certificates for `extantra.net` and `www.extantra.net` without affecting your existing `store.extantra.net` certificates.
 
 ## 🎉 Post-Deployment
 
