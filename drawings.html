@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Drawings - EXTANTRA | Digital Art & Illustrations</title>
+    <meta name="description" content="Drawings and digital illustrations by EXTANTRA. Explore digital art, sketches, concept art, and illustrative works.">
+    <meta name="keywords" content="drawings, digital art, illustrations, sketches, concept art, digital drawings, EXTANTRA art">
+    <meta name="author" content="EXTANTRA">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Drawings - EXTANTRA">
+    <meta property="og:description" content="Drawings and digital illustrations by EXTANTRA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://extantra.net/drawings.html">
+    <meta property="og:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    <meta property="og:site_name" content="EXTANTRA Blog">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Drawings - EXTANTRA">
+    <meta name="twitter:description" content="Drawings and digital illustrations by EXTANTRA.">
+    <meta name="twitter:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://extantra.net/drawings.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="images/extantralogo-inverted.webp" alt="EXTANTRA Logo" class="logo-image">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('index.html')">Home</div>
+                    <div class="category" onclick="goToPage('photos.html')">Photos</div>
+                    <div class="category" onclick="goToPage('3d-models.html')">3D Models</div>
+                    <div class="category" onclick="goToPage('video.html')">Video</div>
+                    <div class="category active" onclick="goToPage('drawings.html')">Drawings</div>
+                    <div class="category" onclick="goToPage('music.html')">Music</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>Drawings</h1>
+                    <p class="tagline">Digital Art & Illustrations</p>
+                </div>
+
+                <!-- Drawings Gallery -->
+                <div class="gallery-section">
+                    <div class="section-header">
+                        <h2>Drawings Gallery</h2>
+                    </div>
+                    <div class="image-gallery" id="drawingsGallery">
+                        <!-- Images will be loaded here dynamically -->
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 EXTANTRA. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:contact@extantra.net">Contact</a>
+                    <a href="https://store.extantra.net">Store</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+
+        // Drawings Gallery Manager
+        class DrawingsGallery {
+            constructor() {
+                this.drawings = [];
+                this.init();
+            }
+            
+            async init() {
+                console.log('Initializing Drawings Gallery...');
+                await this.loadDrawings();
+                this.renderGallery();
+            }
+            
+            async loadDrawings() {
+                try {
+                    console.log('Loading drawings database...');
+                    
+                    if (window.location.protocol.startsWith('http')) {
+                        const response = await fetch('drawings-database.json');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        const data = await response.json();
+                        this.drawings = data.drawings;
+                    } else {
+                        console.log('Running on file:// protocol. Using embedded data.');
+                        throw new Error('Using embedded data due to file:// protocol.');
+                    }
+                } catch (error) {
+                    console.warn('Could not load from JSON, using embedded data:', error.message);
+                    // Fallback with sample data
+                    this.drawings = [
+                        {
+                            id: 1,
+                            filename: "20210922_001.webp",
+                            title: "Drawing 2021-09-22 #001",
+                            date: "2021-09-22",
+                            year: "2021",
+                            category: "Archive",
+                            description: "Digital artwork from 2021-09-22",
+                            medium: "Digital",
+                            format: "WebP"
+                        },
+                        {
+                            id: 98,
+                            filename: "20250621_020.webp",
+                            title: "Drawing 2025-06-21 #020",
+                            date: "2025-06-21",
+                            year: "2025",
+                            category: "Latest",
+                            description: "Digital artwork from 2025-06-21",
+                            medium: "Digital",
+                            format: "WebP"
+                        }
+                        // Additional drawings would be loaded from the full database
+                    ];
+                }
+                
+                // Sort by date (newest first for display)
+                this.drawings.sort((a, b) => new Date(b.date) - new Date(a.date));
+                console.log('Drawings loaded:', this.drawings.length);
+            }
+            
+            renderGallery() {
+                const gallery = document.getElementById('drawingsGallery');
+                if (!gallery) return;
+                
+                gallery.innerHTML = '';
+                
+                this.drawings.forEach(drawing => {
+                    const drawingCard = this.createDrawingCard(drawing);
+                    gallery.appendChild(drawingCard);
+                });
+            }
+            
+            createDrawingCard(drawing) {
+                const card = document.createElement('div');
+                card.className = 'gallery-item';
+                card.style.cursor = 'pointer';
+                
+                card.innerHTML = `
+                    <div class="gallery-image-container">
+                        <img src="drawings/${drawing.filename}" alt="${drawing.title}" class="gallery-image" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">${drawing.title}</h3>
+                            <p class="gallery-meta">${drawing.date} • ${drawing.medium}</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Make entire card clickable
+                card.addEventListener('click', () => {
+                    openImageModal(`drawings/${drawing.filename}`, drawing.title, drawing);
+                });
+                
+                return card;
+            }
+        }
+        
+        // Enhanced Image Modal Functions for Drawings
+        function openImageModal(imagePath, title, drawing = null) {
+            const modal = document.createElement('div');
+            modal.className = 'image-modal';
+            
+            const metaInfo = drawing ? `
+                <div class="modal-meta">
+                    <p>${drawing.description}</p>
+                    <p><strong>Date:</strong> ${drawing.date} | <strong>Medium:</strong> ${drawing.medium} | <strong>Format:</strong> ${drawing.format}</p>
+                </div>
+            ` : '';
+            
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeImageModal()">&times;</span>
+                    <img src="${imagePath}" alt="${title}" class="modal-image">
+                    <h3 class="modal-title">${title}</h3>
+                    ${metaInfo}
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+            
+            // Close on background click
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeImageModal();
+            });
+            
+            // Close on Escape key
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                    document.removeEventListener('keydown', handleEscape);
+                }
+            };
+            document.addEventListener('keydown', handleEscape);
+        }
+        
+        function closeImageModal() {
+            const modal = document.querySelector('.image-modal');
+            if (modal) {
+                document.body.style.overflow = '';
+                modal.remove();
+            }
+        }
+
+        // Initialize gallery when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const drawingsGallery = new DrawingsGallery();
+            window.drawingsGallery = drawingsGallery;
+        });
+    </script>
+</body>
+</html>

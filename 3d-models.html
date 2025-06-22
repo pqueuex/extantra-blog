@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>3D Models - EXTANTRA | 3D Art & Digital Modeling</title>
+    <meta name="description" content="3D models and digital art creations by EXTANTRA. Explore 3D modeling, digital sculptures, and three-dimensional artistic works.">
+    <meta name="keywords" content="3D models, 3D art, digital modeling, 3D design, digital sculptures, EXTANTRA 3D">
+    <meta name="author" content="EXTANTRA">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="3D Models - EXTANTRA">
+    <meta property="og:description" content="3D models and digital art creations by EXTANTRA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://extantra.net/3d-models.html">
+    <meta property="og:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    <meta property="og:site_name" content="EXTANTRA Blog">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="3D Models - EXTANTRA">
+    <meta name="twitter:description" content="3D models and digital art creations by EXTANTRA.">
+    <meta name="twitter:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://extantra.net/3d-models.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="images/extantralogo-inverted.webp" alt="EXTANTRA Logo" class="logo-image">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('index.html')">Home</div>
+                    <div class="category" onclick="goToPage('photos.html')">Photos</div>
+                    <div class="category active" onclick="goToPage('3d-models.html')">3D Models</div>
+                    <div class="category" onclick="goToPage('video.html')">Video</div>
+                    <div class="category" onclick="goToPage('drawings.html')">Drawings</div>
+                    <div class="category" onclick="goToPage('music.html')">Music</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>3D Models</h1>
+                    <p class="tagline">3D Art & Digital Modeling</p>
+                </div>
+
+                <!-- 3D Model Viewer -->
+                <div class="model-viewer-section">
+                    <div class="viewer-header">
+                        <h2>Interactive 3D Viewer</h2>
+                        <div class="viewer-controls-top">
+                            <div class="model-selector">
+                                <select id="modelSelect">
+                                    <option value="">Select a model to load</option>
+                                </select>
+                                <button id="loadModelBtn">Load Model</button>
+                            </div>
+                            <div class="material-controls">
+                                <button class="view-btn active" data-view="material">Material</button>
+                                <button class="view-btn" data-view="wireframe">Wireframe</button>
+                                <button class="view-btn" data-view="no-material">No Material</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-viewer" id="modelViewer">
+                        <canvas id="threejsCanvas"></canvas>
+                        <div class="viewer-controls">
+                            <div class="control-info">
+                                <span>🖱️ Drag to rotate</span>
+                                <span>🔍 Scroll to zoom</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3D Models Collection -->
+                <div class="models-section">
+                    <div class="section-header">
+                        <h2>3D Models Collection</h2>
+                        <div class="category-filter">
+                            <button class="filter-btn active" data-category="all">All</button>
+                            <button class="filter-btn" data-category="Character">Character</button>
+                            <button class="filter-btn" data-category="Abstract">Abstract</button>
+                            <button class="filter-btn" data-category="Architectural">Architectural</button>
+                            <button class="filter-btn" data-category="Vehicle">Vehicle</button>
+                        </div>
+                    </div>
+                    <div class="models-grid" id="modelsGrid">
+                        <!-- Models will be loaded here dynamically -->
+                    </div>
+                </div>
+
+                <!-- 3D Renders Gallery -->
+                <div class="gallery-section">
+                    <div class="section-header">
+                        <h2>3D Renders Gallery</h2>
+                        <p class="section-description">Rendered images and screenshots from 3D modeling work</p>
+                    </div>
+                    <div class="image-gallery" id="threeDGallery">
+                        <!-- Images will be loaded here dynamically -->
+                    </div>
+                </div>
+
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 EXTANTRA. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:contact@extantra.net">Contact</a>
+                    <a href="https://store.extantra.net">Store</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+
+        // 3D Model Viewer
+        class ModelViewer {
+            constructor() {
+                this.scene = null;
+                this.camera = null;
+                this.renderer = null;
+                this.controls = null;
+                this.currentModel = null;
+                this.animationId = null;
+                this.loader = null;
+                this.currentMaterials = [];
+                this.currentView = 'material';
+                
+                this.init();
+            }
+            
+            init() {
+                const canvas = document.getElementById('threejsCanvas');
+                const container = document.getElementById('modelViewer');
+                
+                // Scene setup
+                this.scene = new THREE.Scene();
+                this.scene.background = new THREE.Color(0x000000);
+                
+                // Camera setup
+                this.camera = new THREE.PerspectiveCamera(
+                    75, 
+                    container.clientWidth / container.clientHeight, 
+                    0.1, 
+                    1000
+                );
+                this.camera.position.set(5, 5, 5);
+                
+                // Renderer setup
+                this.renderer = new THREE.WebGLRenderer({ 
+                    canvas: canvas,
+                    antialias: true,
+                    alpha: true
+                });
+                this.renderer.setSize(container.clientWidth, container.clientHeight);
+                this.renderer.setPixelRatio(window.devicePixelRatio);
+                this.renderer.shadowMap.enabled = true;
+                this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+                
+                // Controls setup
+                this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+                this.controls.enableDamping = true;
+                this.controls.dampingFactor = 0.05;
+                this.controls.screenSpacePanning = false;
+                this.controls.minDistance = 2;
+                this.controls.maxDistance = 20;
+                
+                // GLB/GLTF Loader setup
+                this.loader = new THREE.GLTFLoader();
+                
+                // Lighting setup
+                this.setupLighting();
+                
+                // Load default model
+                this.loadModel('cube');
+                
+                // Event listeners
+                window.addEventListener('resize', () => this.onWindowResize());
+                document.getElementById('loadModelBtn').addEventListener('click', () => {
+                    const modelType = document.getElementById('modelSelect').value;
+                    this.loadModel(modelType);
+                });
+                
+                // Material view controls
+                this.setupMaterialControls();
+                
+                // Start animation loop
+                this.animate();
+            }
+            
+            setupLighting() {
+                // Ambient light
+                const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+                this.scene.add(ambientLight);
+                
+                // Directional light
+                const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+                directionalLight.position.set(10, 10, 5);
+                directionalLight.castShadow = true;
+                directionalLight.shadow.mapSize.width = 2048;
+                directionalLight.shadow.mapSize.height = 2048;
+                this.scene.add(directionalLight);
+                
+                // Red accent light (matching site theme)
+                const redLight = new THREE.PointLight(0xcc0000, 0.5, 50);
+                redLight.position.set(-5, 5, 5);
+                this.scene.add(redLight);
+            }
+            
+            loadModel(modelType) {
+                // Remove existing model
+                if (this.currentModel) {
+                    this.scene.remove(this.currentModel);
+                }
+                
+                let geometry, material;
+                
+                switch(modelType) {
+                    case 'cube':
+                        geometry = new THREE.BoxGeometry(2, 2, 2);
+                        break;
+                    case 'sphere':
+                        geometry = new THREE.SphereGeometry(1.5, 32, 32);
+                        break;
+                    case 'torus':
+                        geometry = new THREE.TorusGeometry(1.2, 0.4, 16, 100);
+                        break;
+                    default:
+                        geometry = new THREE.BoxGeometry(2, 2, 2);
+                }
+                
+                // Material with site theme colors
+                material = new THREE.MeshPhongMaterial({
+                    color: 0x666666,
+                    shininess: 100,
+                    specular: 0xcc0000
+                });
+                
+                this.currentModel = new THREE.Mesh(geometry, material);
+                this.currentModel.castShadow = true;
+                this.currentModel.receiveShadow = true;
+                this.scene.add(this.currentModel);
+                
+                // Store materials and apply current view
+                this.storeMaterials();
+                this.setMaterialView(this.currentView);
+                
+                // Reset camera position
+                this.controls.reset();
+            }
+            
+            loadExternalModel(filePath, modelName = 'Model') {
+                console.log('Loading external model:', filePath);
+                
+                // Remove existing model
+                if (this.currentModel) {
+                    this.scene.remove(this.currentModel);
+                }
+                
+                // Show loading indicator (you could add a loading spinner here)
+                console.log('Loading model...');
+                
+                this.loader.load(
+                    filePath,
+                    (gltf) => {
+                        console.log('Model loaded successfully:', modelName);
+                        
+                        this.currentModel = gltf.scene;
+                        this.currentModel.castShadow = true;
+                        this.currentModel.receiveShadow = true;
+                        
+                        // Center and scale the model
+                        const box = new THREE.Box3().setFromObject(this.currentModel);
+                        const center = box.getCenter(new THREE.Vector3());
+                        const size = box.getSize(new THREE.Vector3());
+                        
+                        // Center the model
+                        this.currentModel.position.sub(center);
+                        
+                        // Scale to fit in view
+                        const maxDim = Math.max(size.x, size.y, size.z);
+                        const scale = 3 / maxDim;
+                        this.currentModel.scale.setScalar(scale);
+                        
+                        this.scene.add(this.currentModel);
+                        this.controls.reset();
+                        
+                        // Store materials and apply current view
+                        this.storeMaterials();
+                        this.setMaterialView(this.currentView);
+                        
+                        console.log('Model added to scene');
+                    },
+                    (progress) => {
+                        console.log('Loading progress:', (progress.loaded / progress.total * 100) + '%');
+                    },
+                    (error) => {
+                        console.error('Error loading model:', error);
+                        // Fallback to a simple cube
+                        this.loadModel('cube');
+                    }
+                );
+            }
+            
+            animate() {
+                this.animationId = requestAnimationFrame(() => this.animate());
+                
+                // Rotate model slowly
+                if (this.currentModel) {
+                    this.currentModel.rotation.y += 0.005;
+                }
+                
+                this.controls.update();
+                this.renderer.render(this.scene, this.camera);
+            }
+            
+            storeMaterials() {
+                this.currentMaterials = [];
+                if (this.currentModel) {
+                    this.currentModel.traverse((child) => {
+                        if (child.material) {
+                            this.currentMaterials.push({
+                                object: child,
+                                original: child.material.clone()
+                            });
+                        }
+                    });
+                }
+            }
+            
+            setupMaterialControls() {
+                const viewButtons = document.querySelectorAll('.view-btn');
+                viewButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        viewButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        const view = button.dataset.view;
+                        this.currentView = view;
+                        this.setMaterialView(view);
+                    });
+                });
+            }
+            
+            setMaterialView(view) {
+                if (!this.currentModel) return;
+                
+                this.currentModel.traverse((child) => {
+                    if (child.material) {
+                        switch(view) {
+                            case 'wireframe':
+                                child.material.wireframe = true;
+                                child.material.transparent = false;
+                                child.material.opacity = 1;
+                                break;
+                            case 'no-material':
+                                child.material = new THREE.MeshBasicMaterial({
+                                    color: 0x666666,
+                                    wireframe: false,
+                                    transparent: true,
+                                    opacity: 0.3
+                                });
+                                break;
+                            case 'material':
+                            default:
+                                // Find original material for this object
+                                const originalMat = this.currentMaterials.find(mat => mat.object === child);
+                                if (originalMat) {
+                                    child.material = originalMat.original.clone();
+                                } else {
+                                    child.material.wireframe = false;
+                                    child.material.transparent = false;
+                                    child.material.opacity = 1;
+                                }
+                                break;
+                        }
+                    }
+                });
+            }
+            
+            onWindowResize() {
+                const container = document.getElementById('modelViewer');
+                this.camera.aspect = container.clientWidth / container.clientHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(container.clientWidth, container.clientHeight);
+            }
+            
+            dispose() {
+                if (this.animationId) {
+                    cancelAnimationFrame(this.animationId);
+                }
+                this.renderer.dispose();
+            }
+        }
+        
+        // 3D Models Collection Manager
+        class ModelsLibrary {
+            constructor(viewer) {
+                this.models = [];
+                this.viewer = viewer;
+                this.init();
+            }
+            
+            async init() {
+                console.log('Initializing 3D Models Library...');
+                await this.loadModelsDatabase();
+                this.renderModels();
+                this.setupCategoryFilter();
+                this.populateModelSelector();
+            }
+            
+            async loadModelsDatabase() {
+                try {
+                    console.log('Loading models database...');
+                    
+                    if (window.location.protocol.startsWith('http')) {
+                        const response = await fetch('models-database.json');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        const data = await response.json();
+                        this.models = data.models;
+                    } else {
+                        console.log('Running on file:// protocol. Using embedded data.');
+                        throw new Error('Using embedded data due to file:// protocol.');
+                    }
+                } catch (error) {
+                    console.warn('Could not load from JSON, using embedded data:', error.message);
+                    this.models = [
+                        {
+                            id: 1,
+                            title: "Abstract Cube Study",
+                            filename: "abstract_cube.glb",
+                            artist: "EXTANTRA",
+                            category: "Abstract",
+                            created: "2024",
+                            description: "Geometric exploration of form and space",
+                            fileSize: "2.1 MB",
+                            polyCount: "1,240"
+                        },
+                        {
+                            id: 2,
+                            title: "Organic Flow",
+                            filename: "organic_flow.glb",
+                            artist: "EXTANTRA",
+                            category: "Organic",
+                            created: "2024",
+                            description: "Fluid organic shapes inspired by nature",
+                            fileSize: "3.8 MB",
+                            polyCount: "2,850"
+                        },
+                        {
+                            id: 3,
+                            title: "Minimal Sculpture",
+                            filename: "minimal_sculpture.glb",
+                            artist: "EXTANTRA",
+                            category: "Sculpture",
+                            created: "2024",
+                            description: "Minimalist sculptural form study",
+                            fileSize: "1.9 MB",
+                            polyCount: "986"
+                        },
+                        {
+                            id: 4,
+                            title: "Urban Structure",
+                            filename: "urban_structure.glb",
+                            artist: "EXTANTRA",
+                            category: "Architectural",
+                            created: "2024",
+                            description: "Architectural concept model",
+                            fileSize: "4.2 MB",
+                            polyCount: "3,120"
+                        }
+                    ];
+                }
+                console.log('Models loaded:', this.models.length);
+            }
+            
+            renderModels() {
+                const modelsGrid = document.getElementById('modelsGrid');
+                if (!modelsGrid) return;
+                
+                modelsGrid.innerHTML = '';
+                
+                this.models.forEach(model => {
+                    const modelCard = this.createModelCard(model);
+                    modelsGrid.appendChild(modelCard);
+                });
+            }
+            
+            createModelCard(model) {
+                const card = document.createElement('div');
+                card.className = 'model-card';
+                card.dataset.category = model.category;
+                
+                card.innerHTML = `
+                    <div class="model-line">
+                        <div class="model-info">
+                            <span class="model-title">${model.title}</span>
+                            <span class="model-meta">
+                                <span class="model-category">${model.category}</span>
+                                <span class="model-stats">${model.polyCount} polygons • ${model.fileSize}</span>
+                            </span>
+                        </div>
+                        <button class="load-to-viewer-btn" data-model-id="${model.id}">
+                            Load
+                        </button>
+                    </div>
+                `;
+                
+                this.setupModelCardEvents(card, model);
+                return card;
+            }
+            
+            setupModelCardEvents(card, model) {
+                const loadBtn = card.querySelector('.load-to-viewer-btn');
+                loadBtn.addEventListener('click', () => this.loadToViewer(model));
+            }
+            
+            loadToViewer(model) {
+                console.log('Loading model to viewer:', model.title);
+                this.viewer.loadExternalModel(`models/${model.filename}`, model.title);
+            }
+            
+            populateModelSelector() {
+                const select = document.getElementById('modelSelect');
+                select.innerHTML = '<option value="">Select a model to load</option>';
+                
+                this.models.forEach(model => {
+                    const option = document.createElement('option');
+                    option.value = model.filename;
+                    option.textContent = model.title;
+                    option.dataset.modelId = model.id;
+                    select.appendChild(option);
+                });
+            }
+            
+            setupCategoryFilter() {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        const category = button.dataset.category;
+                        this.filterModelsByCategory(category);
+                    });
+                });
+            }
+            
+            filterModelsByCategory(category) {
+                const modelCards = document.querySelectorAll('.model-card');
+                modelCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        }
+        
+        // 3D Gallery Manager
+        class ThreeDGallery {
+            constructor() {
+                this.images = [];
+                this.init();
+            }
+            
+            async init() {
+                console.log('Initializing 3D Gallery...');
+                await this.loadImages();
+                this.renderGallery();
+            }
+            
+            async loadImages() {
+                // List of 3D render images
+                const imageFiles = [
+                    'MC1.png',
+                    'Screenshot_2025-04-15_at_10.32.38_AM.png',
+                    'dogz.png',
+                    'gooicide1.png',
+                    'hobo1.png',
+                    'hobo2.png',
+                    'hobo3.png',
+                    'hoon.png',
+                    'pocpizza.png',
+                    'skinnerrender1.png'
+                ];
+                
+                this.images = imageFiles.map((filename, index) => ({
+                    id: index + 1,
+                    filename: filename,
+                    title: this.generateTitle(filename),
+                    path: `3d/${filename}`
+                }));
+                
+                console.log('3D Gallery images loaded:', this.images.length);
+            }
+            
+            generateTitle(filename) {
+                // Convert filename to readable title
+                return filename
+                    .replace(/\.(png|jpg|jpeg)$/i, '')
+                    .replace(/Screenshot_\d{4}-\d{2}-\d{2}_at_\d{1,2}\.\d{2}\.\d{2}_[AP]M/i, 'Screenshot')
+                    .replace(/_/g, ' ')
+                    .replace(/\b\w/g, l => l.toUpperCase());
+            }
+            
+            renderGallery() {
+                const gallery = document.getElementById('threeDGallery');
+                if (!gallery) return;
+                
+                gallery.innerHTML = '';
+                
+                this.images.forEach(image => {
+                    const imageCard = this.createImageCard(image);
+                    gallery.appendChild(imageCard);
+                });
+            }
+            
+            createImageCard(image) {
+                const card = document.createElement('div');
+                card.className = 'gallery-item';
+                card.style.cursor = 'pointer';
+                
+                card.innerHTML = `
+                    <div class="gallery-image-container">
+                        <img src="${image.path}" alt="${image.title}" class="gallery-image" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">${image.title}</h3>
+                        </div>
+                    </div>
+                `;
+                
+                // Make entire card clickable
+                card.addEventListener('click', () => {
+                    openImageModal(image.path, image.title);
+                });
+                
+                return card;
+            }
+        }
+        
+        // Image Modal Functions
+        function openImageModal(imagePath, title) {
+            const modal = document.createElement('div');
+            modal.className = 'image-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeImageModal()">&times;</span>
+                    <img src="${imagePath}" alt="${title}" class="modal-image">
+                    <h3 class="modal-title">${title}</h3>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+            
+            // Close on background click
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeImageModal();
+            });
+            
+            // Close on Escape key
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                    document.removeEventListener('keydown', handleEscape);
+                }
+            };
+            document.addEventListener('keydown', handleEscape);
+        }
+        
+        function closeImageModal() {
+            const modal = document.querySelector('.image-modal');
+            if (modal) {
+                document.body.style.overflow = '';
+                modal.remove();
+            }
+        }
+        
+        // Initialize viewer when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const viewer = new ModelViewer();
+            const modelsLibrary = new ModelsLibrary(viewer);
+            const gallery = new ThreeDGallery();
+            
+            // Update load button to handle both sample and external models
+            document.getElementById('loadModelBtn').addEventListener('click', () => {
+                const select = document.getElementById('modelSelect');
+                const selectedValue = select.value;
+                
+                if (!selectedValue) return;
+                
+                // Check if it's a sample model or external model
+                if (['cube', 'sphere', 'torus'].includes(selectedValue)) {
+                    viewer.loadModel(selectedValue);
+                } else {
+                    viewer.loadExternalModel(`models/${selectedValue}`, select.options[select.selectedIndex].text);
+                }
+            });
+            
+            // Make globally accessible
+            window.modelViewer = viewer;
+            window.modelsLibrary = modelsLibrary;
+            window.threeDGallery = gallery;
+        });
+    </script>
+</body>
+</html>

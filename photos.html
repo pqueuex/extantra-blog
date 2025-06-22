@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Photos - EXTANTRA | Photography & Visual Arts</title>
+    <meta name="description" content="Photography and visual arts collection by EXTANTRA. Explore digital photography, artistic captures, and visual storytelling.">
+    <meta name="keywords" content="photography, photos, visual arts, digital photography, artistic photography, EXTANTRA photos">
+    <meta name="author" content="EXTANTRA">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Photos - EXTANTRA">
+    <meta property="og:description" content="Photography and visual arts collection by EXTANTRA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://extantra.net/photos.html">
+    <meta property="og:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    <meta property="og:site_name" content="EXTANTRA Blog">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photos - EXTANTRA">
+    <meta name="twitter:description" content="Photography and visual arts collection by EXTANTRA.">
+    <meta name="twitter:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://extantra.net/photos.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="images/extantralogo-inverted.webp" alt="EXTANTRA Logo" class="logo-image">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('index.html')">Home</div>
+                    <div class="category active" onclick="goToPage('photos.html')">Photos</div>
+                    <div class="category" onclick="goToPage('3d-models.html')">3D Models</div>
+                    <div class="category" onclick="goToPage('video.html')">Video</div>
+                    <div class="category" onclick="goToPage('drawings.html')">Drawings</div>
+                    <div class="category" onclick="goToPage('music.html')">Music</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>Photos</h1>
+                </div>
+
+                <!-- Photos Gallery -->
+                <div class="gallery-section">
+                    <div class="section-header">
+                        <h2>The Photo Dump</h2>
+                    </div>
+                    <div class="image-gallery" id="photosGallery">
+                        <!-- Photos will be loaded here dynamically -->
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 EXTANTRA. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:contact@extantra.net">Contact</a>
+                    <a href="https://store.extantra.net">Store</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+
+        // Photos Gallery Manager
+        class PhotosGallery {
+            constructor() {
+                this.photos = [];
+                this.init();
+            }
+            
+            async init() {
+                console.log('Initializing Photos Gallery...');
+                await this.loadPhotos();
+                this.renderGallery();
+            }
+            
+            async loadPhotos() {
+                try {
+                    console.log('Loading photos database...');
+                    
+                    if (window.location.protocol.startsWith('http')) {
+                        const response = await fetch('photos-database.json');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        const data = await response.json();
+                        this.photos = data.photos;
+                    } else {
+                        console.log('Running on file:// protocol. Using embedded data.');
+                        throw new Error('Using embedded data due to file:// protocol.');
+                    }
+                } catch (error) {
+                    console.warn('Could not load from JSON, using embedded data:', error.message);
+                    // Fallback with sample data
+                    this.photos = [
+                        {
+                            id: 1,
+                            filename: "20090108_001.jpg",
+                            title: "Vintage 2009 #001",
+                            date: "2009-01-08",
+                            year: "2009",
+                            category: "Archive",
+                            description: "Photography from January 2009",
+                            camera: "Sony DSC",
+                            location: "Unknown"
+                        },
+                        {
+                            id: 36,
+                            filename: "20250112_001.jpg",
+                            title: "Latest 2025 #001",
+                            date: "2025-01-12",
+                            year: "2025",
+                            category: "Latest",
+                            description: "Photography from January 2025",
+                            camera: "Digital Camera",
+                            location: "Unknown"
+                        }
+                        // Additional photos would be loaded from the full database
+                    ];
+                }
+                
+                // Sort by date (newest first for display)
+                this.photos.sort((a, b) => new Date(b.date) - new Date(a.date));
+                console.log('Photos loaded:', this.photos.length);
+            }
+            
+            renderGallery() {
+                const gallery = document.getElementById('photosGallery');
+                if (!gallery) return;
+                
+                gallery.innerHTML = '';
+                
+                this.photos.forEach(photo => {
+                    const photoCard = this.createPhotoCard(photo);
+                    gallery.appendChild(photoCard);
+                });
+            }
+            
+            createPhotoCard(photo) {
+                const card = document.createElement('div');
+                card.className = 'gallery-item';
+                card.style.cursor = 'pointer';
+                
+                card.innerHTML = `
+                    <div class="gallery-image-container">
+                        <img src="photos/${photo.filename}" alt="${photo.title}" class="gallery-image" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">${photo.title}</h3>
+                            <p class="gallery-meta">${photo.date} • ${photo.camera}</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Make entire card clickable
+                card.addEventListener('click', () => {
+                    openImageModal(`photos/${photo.filename}`, photo.title, photo);
+                });
+                
+                return card;
+            }
+        }
+        
+        // Enhanced Image Modal Functions for Photos
+        function openImageModal(imagePath, title, photo = null) {
+            const modal = document.createElement('div');
+            modal.className = 'image-modal';
+            
+            const metaInfo = photo ? `
+                <div class="modal-meta">
+                    <p>${photo.description}</p>
+                    <p><strong>Date:</strong> ${photo.date} | <strong>Camera:</strong> ${photo.camera}</p>
+                </div>
+            ` : '';
+            
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeImageModal()">&times;</span>
+                    <img src="${imagePath}" alt="${title}" class="modal-image">
+                    <h3 class="modal-title">${title}</h3>
+                    ${metaInfo}
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+            
+            // Close on background click
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeImageModal();
+            });
+            
+            // Close on Escape key
+            const handleEscape = (e) => {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                    document.removeEventListener('keydown', handleEscape);
+                }
+            };
+            document.addEventListener('keydown', handleEscape);
+        }
+        
+        function closeImageModal() {
+            const modal = document.querySelector('.image-modal');
+            if (modal) {
+                document.body.style.overflow = '';
+                modal.remove();
+            }
+        }
+
+        // Initialize gallery when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const photosGallery = new PhotosGallery();
+            window.photosGallery = photosGallery;
+        });
+    </script>
+</body>
+</html>

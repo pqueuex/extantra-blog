@@ -1,0 +1,8 @@
+# Requirements for enhanced batch converter
+Pillow>=9.0.0      # For image processing and EXIF data
+mutagen>=1.45.0    # For audio metadata extraction
+ffmpeg-python>=0.2.0  # For audio/video conversion (optional)
+
+# Basic version works with standard library only
+# Enhanced features require these packages:
+# pip install Pillow mutagen ffmpeg-python

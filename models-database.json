@@ -1,0 +1,103 @@
+{
+  "models": [
+    {
+      "id": 1,
+      "title": "Spikevirus",
+      "filename": "Spikevirus.glb",
+      "artist": "EXTANTRA",
+      "category": "Abstract",
+      "created": "2024",
+      "description": "Viral-inspired spiky geometric form",
+      "fileSize": "Unknown",
+      "polyCount": "Unknown"
+    },
+    {
+      "id": 2,
+      "title": "Anime Girl - Blonde",
+      "filename": "anime_girl_blonde.glb",
+      "artist": "EXTANTRA",
+      "category": "Character",
+      "created": "2024",
+      "description": "Blonde anime character model",
+      "fileSize": "Unknown",
+      "polyCount": "Unknown"
+    },
+    {
+      "id": 3,
+      "title": "Anime Girl - Gray",
+      "filename": "anime_girl_gray.glb",
+      "artist": "EXTANTRA",
+      "category": "Character",
+      "created": "2024",
+      "description": "Gray anime character model",
+      "fileSize": "Unknown",
+      "polyCount": "Unknown"
+    },
+    {
+      "id": 4,
+      "title": "Anime Girl - Green",
+      "filename": "anime_girl_green.glb",
+      "artist": "EXTANTRA",
+      "category": "Character",
+      "created": "2024",
+      "description": "Green anime character model",
+      "fileSize": "Unknown",
+      "polyCount": "Unknown"
+    },
+    {
+      "id": 5,
+      "title": "Castle Entrance",
+      "filename": "castle_entrance.glb",
+      "artist": "EXTANTRA",
+      "category": "Architectural",
+      "created": "2024",
+      "description": "Medieval castle entrance structure",
+      "fileSize": "Unknown",
+      "polyCount": "Unknown"
+    },
+    {
+      "id": 6,
+      "title": "Gruel Guy",
+      "filename": "gruel_guy.glb",
+      "artist": "EXTANTRA",
+      "category": "Character",
+      "created": "2024",
+      "description": "Quirky character model",
+      "fileSize": "Unknown",
+      "polyCount": "Unknown"
+    },
+    {
+      "id": 7,
+      "title": "Jet",
+      "filename": "jet.glb",
+      "artist": "EXTANTRA",
+      "category": "Vehicle",
+      "created": "2024",
+      "description": "Military jet aircraft model",
+      "fileSize": "Unknown",
+      "polyCount": "Unknown"
+    },
+    {
+      "id": 8,
+      "title": "PQ Avi",
+      "filename": "pq_avi.glb",
+      "artist": "EXTANTRA",
+      "category": "Character",
+      "created": "2024",
+      "description": "Avatar character model",
+      "fileSize": "Unknown",
+      "polyCount": "Unknown"
+    },
+    {
+      "id": 9,
+      "title": "Stan",
+      "filename": "stan.glb",
+      "artist": "EXTANTRA",
+      "category": "Character",
+      "created": "2024",
+      "description": "Character model named Stan",
+      "fileSize": "Unknown",
+      "polyCount": "Unknown"
+    }
+  ]
+}

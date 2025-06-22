@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Video - EXTANTRA | Video Production & Digital Media</title>
+    <meta name="description" content="Video productions and digital media content by EXTANTRA. Explore video art, digital storytelling, and multimedia projects.">
+    <meta name="keywords" content="video production, digital media, video art, multimedia, digital storytelling, EXTANTRA videos">
+    <meta name="author" content="EXTANTRA">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Video - EXTANTRA">
+    <meta property="og:description" content="Video productions and digital media content by EXTANTRA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://extantra.net/video.html">
+    <meta property="og:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    <meta property="og:site_name" content="EXTANTRA Blog">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Video - EXTANTRA">
+    <meta name="twitter:description" content="Video productions and digital media content by EXTANTRA.">
+    <meta name="twitter:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://extantra.net/video.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="images/extantralogo-inverted.webp" alt="EXTANTRA Logo" class="logo-image">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('index.html')">Home</div>
+                    <div class="category" onclick="goToPage('photos.html')">Photos</div>
+                    <div class="category" onclick="goToPage('3d-models.html')">3D Models</div>
+                    <div class="category active" onclick="goToPage('video.html')">Video</div>
+                    <div class="category" onclick="goToPage('drawings.html')">Drawings</div>
+                    <div class="category" onclick="goToPage('music.html')">Music</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>Video</h1>
+                </div>
+
+                <!-- Video Player -->
+                <div class="video-section">
+                    <video id="mainVideo" class="main-video" controls preload="metadata">
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <div class="video-controls">
+                        <div class="video-title" id="currentVideoTitle">Select a video</div>
+                        <div class="video-buttons">
+                            <button id="autoplayBtn" class="video-btn active">Auto</button>
+                            <button id="shuffleBtn" class="video-btn">Shuffle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video List -->
+                <div class="video-list" id="videoList">
+                    <!-- Videos will be loaded here -->
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 EXTANTRA. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:contact@extantra.net">Contact</a>
+                    <a href="https://store.extantra.net">Store</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Video player state
+        let videoDatabase = [];
+        let currentVideoIndex = 0;
+        let isAutoplay = true;
+        let isShuffled = false;
+        let shuffledIndices = [];
+        
+        // Initialize video player
+        async function initializeVideoPlayer() {
+            try {
+                // Load video database
+                const response = await fetch('./videos-database.json');
+                const database = await response.json();
+                videoDatabase = database.videos;
+                
+                // Populate video list
+                populateVideoList();
+                
+                // Load first video
+                if (videoDatabase.length > 0) {
+                    loadVideo(0);
+                }
+                
+                // Setup event listeners
+                setupEventListeners();
+                
+            } catch (error) {
+                console.error('Error loading video database:', error);
+                handleFallback();
+            }
+        }
+        
+        function populateVideoList() {
+            const videoList = document.getElementById('videoList');
+            videoList.innerHTML = '';
+            
+            videoDatabase.forEach((video, index) => {
+                const videoItem = document.createElement('div');
+                videoItem.className = 'video-item';
+                videoItem.onclick = () => loadVideo(index);
+                
+                videoItem.innerHTML = `
+                    <div class="video-item-title">${video.title}</div>
+                    <div class="video-item-meta">${video.date} • ${video.duration_formatted}</div>
+                `;
+                
+                videoList.appendChild(videoItem);
+            });
+        }
+        
+        function loadVideo(index) {
+            if (index < 0 || index >= videoDatabase.length) return;
+            
+            currentVideoIndex = index;
+            const video = videoDatabase[index];
+            const mainVideo = document.getElementById('mainVideo');
+            
+            // Update video source
+            const videoPath = `./videos/${video.filename}`;
+            mainVideo.src = videoPath;
+            
+            // Update title
+            document.getElementById('currentVideoTitle').textContent = video.title;
+            
+            // Update active state
+            updateVideoListActiveState(index);
+            
+            // Load video
+            mainVideo.load();
+            if (isAutoplay && index > 0) {
+                mainVideo.play().catch(e => console.log('Autoplay prevented:', e));
+            }
+        }
+        
+        function updateVideoListActiveState(activeIndex) {
+            const videoItems = document.querySelectorAll('.video-item');
+            videoItems.forEach((item, index) => {
+                item.classList.toggle('active', index === activeIndex);
+            });
+        }
+        
+        function playNext() {
+            let nextIndex;
+            
+            if (isShuffled) {
+                const currentShuffleIndex = shuffledIndices.indexOf(currentVideoIndex);
+                nextIndex = shuffledIndices[(currentShuffleIndex + 1) % shuffledIndices.length];
+            } else {
+                nextIndex = (currentVideoIndex + 1) % videoDatabase.length;
+            }
+            
+            loadVideo(nextIndex);
+        }
+        
+        function toggleShuffle() {
+            isShuffled = !isShuffled;
+            const shuffleBtn = document.getElementById('shuffleBtn');
+            shuffleBtn.classList.toggle('active', isShuffled);
+            
+            if (isShuffled) {
+                // Create shuffled indices
+                shuffledIndices = [...Array(videoDatabase.length).keys()];
+                for (let i = shuffledIndices.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffledIndices[i], shuffledIndices[j]] = [shuffledIndices[j], shuffledIndices[i]];
+                }
+            }
+        }
+        
+        function toggleAutoplay() {
+            isAutoplay = !isAutoplay;
+            const autoplayBtn = document.getElementById('autoplayBtn');
+            autoplayBtn.classList.toggle('active', isAutoplay);
+        }
+        
+        function setupEventListeners() {
+            const mainVideo = document.getElementById('mainVideo');
+            const shuffleBtn = document.getElementById('shuffleBtn');
+            const autoplayBtn = document.getElementById('autoplayBtn');
+            
+            // Video ended event
+            mainVideo.addEventListener('ended', () => {
+                if (isAutoplay) {
+                    playNext();
+                }
+            });
+            
+            // Video error handling
+            mainVideo.addEventListener('error', (e) => {
+                console.error('Video error:', e);
+                if (isAutoplay) {
+                    setTimeout(() => playNext(), 1000); // Try next video after 1 second
+                }
+            });
+            
+            // Video loaded event
+            mainVideo.addEventListener('loadedmetadata', () => {
+                console.log('Video loaded successfully');
+            });
+            
+            // Control buttons
+            shuffleBtn.addEventListener('click', toggleShuffle);
+            autoplayBtn.addEventListener('click', toggleAutoplay);
+            
+            // Keyboard controls
+            document.addEventListener('keydown', (e) => {
+                switch(e.key) {
+                    case ' ':
+                        e.preventDefault();
+                        if (mainVideo.paused) {
+                            mainVideo.play();
+                        } else {
+                            mainVideo.pause();
+                        }
+                        break;
+                    case 'ArrowRight':
+                        if (e.ctrlKey || e.metaKey) {
+                            e.preventDefault();
+                            playNext();
+                        }
+                        break;
+                    case 'ArrowLeft':
+                        if (e.ctrlKey || e.metaKey) {
+                            e.preventDefault();
+                            const prevIndex = isShuffled 
+                                ? shuffledIndices[(shuffledIndices.indexOf(currentVideoIndex) - 1 + shuffledIndices.length) % shuffledIndices.length]
+                                : (currentVideoIndex - 1 + videoDatabase.length) % videoDatabase.length;
+                            loadVideo(prevIndex);
+                        }
+                        break;
+                }
+            });
+        }
+        
+        function handleFallback() {
+            // Fallback to manual video loading if database fails
+            const videoList = document.getElementById('videoList');
+            videoList.innerHTML = '<div class="error-message">Unable to load video database.</div>';
+        }
+        
+        function goToPage(page) {
+            window.location.href = page;
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initializeVideoPlayer);
+    </script>
+</body>
+</html>

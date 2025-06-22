@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>EXTANTRA</title>
+    <meta name="description" content="Personal blog of EXTANTRA featuring technology insights, gaming thoughts, creative projects, and digital experiences. Exploring the intersection of technology and creativity.">
+    <meta name="keywords" content="personal blog, technology blog, gaming blog, creative projects, digital art, programming, web development, indie games">
+    <meta name="author" content="EXTANTRA">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="EXTANTRA - Personal Blog">
+    <meta property="og:description" content="Personal blog featuring technology insights, gaming thoughts, and creative projects. Exploring digital creativity and innovation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://extantra.net">
+    <meta property="og:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    <meta property="og:site_name" content="EXTANTRA Blog">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EXTANTRA - Personal Blog">
+    <meta name="twitter:description" content="Personal blog featuring technology, gaming, and creative projects.">
+    <meta name="twitter:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://extantra.net">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "EXTANTRA Blog",
+      "url": "https://extantra.net",
+      "description": "Personal blog featuring creative projects",
+      "author": {
+        "@type": "Person",
+        "name": "EXTANTRA"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "EXTANTRA"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="images/extantralogo-inverted.webp" alt="Extantra" class="logo-image" id="logoImage">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('index.html')">Home</div>
+                    <div class="category" onclick="goToPage('photos.html')">Photos</div>
+                    <div class="category" onclick="goToPage('3d-models.html')">3D Models</div>
+                    <div class="category" onclick="goToPage('video.html')">Video</div>
+                    <div class="category" onclick="goToPage('drawings.html')">Drawings</div>
+                    <div class="category" onclick="goToPage('music.html')">Music</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>EXTANTRA</h1>
+                    <p class="tagline">Framing disconnection, whatever</p>
+                </div>
+
+                <div class="blog-grid">
+                    <!-- Blog posts will be loaded dynamically -->
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 EXTANTRA. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:contact@extantra.net">Contact</a>
+                    <a href="https://store.extantra.net">Store</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Hidden Admin Interface -->
+    <div id="adminModal" class="admin-modal hidden">
+        <div class="admin-modal-content">
+            <div class="admin-header">
+                <h2>Create New Blog Post</h2>
+                <button class="admin-close" onclick="closeAdmin()">&times;</button>
+            </div>
+            
+            <form id="blogPostForm" class="blog-form">
+                <div class="form-group">
+                    <label for="postTitle">Title</label>
+                    <input type="text" id="postTitle" name="title" required placeholder="Enter post title...">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="postDate">Date</label>
+                        <input type="date" id="postDate" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postStatus">Status</label>
+                        <select id="postStatus" name="status">
+                            <option value="draft">Draft</option>
+                            <option value="published">Published</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="postTags">Tags</label>
+                    <input type="text" id="postTags" name="tags" placeholder="Enter tags separated by commas...">
+                    <small>Separate tags with commas (e.g., web development, javascript, tutorial)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="postExcerpt">Excerpt</label>
+                    <textarea id="postExcerpt" name="excerpt" rows="3" placeholder="Brief description of the post..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="postContent">Content</label>
+                    <textarea id="postContent" name="content" rows="12" required placeholder="Write your blog post content here...&#10;&#10;You can use basic HTML tags like:&#10;&lt;p&gt;Paragraph&lt;/p&gt;&#10;&lt;strong&gt;Bold text&lt;/strong&gt;&#10;&lt;em&gt;Italic text&lt;/em&gt;&#10;&lt;code&gt;Inline code&lt;/code&gt;&#10;&lt;pre&gt;Code blocks&lt;/pre&gt;&#10;&lt;a href='url'&gt;Links&lt;/a&gt;"></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="saveDraft()">Save as Draft</button>
+                    <button type="button" class="btn btn-primary" onclick="publishPost()">Publish Post</button>
+                    <button type="button" class="btn btn-danger" onclick="clearForm()">Clear</button>
+                </div>
+            </form>
+            
+            <div id="adminMessage" class="admin-message hidden"></div>
+        </div>
+    </div>
+
+    <script>
+        // Admin interface variables
+        let logoClickCount = 0;
+        let logoClickTimer = null;
+        let blogDatabase = null;
+        
+        function goToPage(page) {
+            window.location.href = page;
+        }
+        
+        // Logo click handler for admin access
+        function handleLogoClick() {
+            logoClickCount++;
+            
+            if (logoClickCount === 1) {
+                logoClickTimer = setTimeout(() => {
+                    logoClickCount = 0;
+                }, 2000); // Reset after 2 seconds
+            }
+            
+            if (logoClickCount === 3) {
+                clearTimeout(logoClickTimer);
+                logoClickCount = 0;
+                openAdmin();
+            }
+        }
+        
+        // Admin interface functions
+        function openAdmin() {
+            const modal = document.getElementById('adminModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Set today's date as default
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('postDate').value = today;
+            
+            loadBlogDatabase();
+        }
+        
+        function closeAdmin() {
+            const modal = document.getElementById('adminModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        
+        async function loadBlogDatabase() {
+            try {
+                const response = await fetch('./blog-database.json');
+                if (response.ok) {
+                    blogDatabase = await response.json();
+                } else {
+                    // Initialize empty database if file doesn't exist
+                    blogDatabase = {
+                        generated: new Date().toISOString(),
+                        total_posts: 0,
+                        posts: []
+                    };
+                }
+            } catch (error) {
+                console.error('Error loading blog database:', error);
+                blogDatabase = {
+                    generated: new Date().toISOString(),
+                    total_posts: 0,
+                    posts: []
+                };
+            }
+        }
+        
+        function generateSlug(title) {
+            return title
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+        
+        function createBlogPost(formData, status = 'draft') {
+            const now = new Date().toISOString();
+            const title = formData.get('title');
+            const tags = formData.get('tags') ? formData.get('tags').split(',').map(tag => tag.trim()) : [];
+            
+            const post = {
+                id: (blogDatabase.posts.length > 0 ? Math.max(...blogDatabase.posts.map(p => p.id)) + 1 : 1),
+                title: title,
+                slug: generateSlug(title),
+                date: formData.get('date'),
+                created: now,
+                modified: now,
+                status: status,
+                tags: tags,
+                excerpt: formData.get('excerpt') || '',
+                content: formData.get('content'),
+                author: 'EXTANTRA',
+                featured: false
+            };
+            
+            return post;
+        }
+        
+        function saveDraft() {
+            const form = document.getElementById('blogPostForm');
+            const formData = new FormData(form);
+            
+            if (!formData.get('title') || !formData.get('content')) {
+                showAdminMessage('Please fill in at least the title and content.', 'error');
+                return;
+            }
+            
+            const post = createBlogPost(formData, 'draft');
+            
+            // Add to database
+            blogDatabase.posts.unshift(post); // Add to beginning
+            blogDatabase.total_posts = blogDatabase.posts.length;
+            blogDatabase.generated = new Date().toISOString();
+            
+            // Save to local storage for persistence
+            localStorage.setItem('blogDatabase', JSON.stringify(blogDatabase));
+            
+            showAdminMessage(`Draft "${post.title}" saved successfully!`, 'success');
+            
+            // Clear form
+            setTimeout(() => {
+                clearForm();
+            }, 2000);
+        }
+        
+        function publishPost() {
+            const form = document.getElementById('blogPostForm');
+            const formData = new FormData(form);
+            
+            if (!formData.get('title') || !formData.get('content')) {
+                showAdminMessage('Please fill in at least the title and content.', 'error');
+                return;
+            }
+            
+            const post = createBlogPost(formData, 'published');
+            
+            // Add to database
+            blogDatabase.posts.unshift(post); // Add to beginning
+            blogDatabase.total_posts = blogDatabase.posts.length;
+            blogDatabase.generated = new Date().toISOString();
+            
+            // Save to local storage for persistence
+            localStorage.setItem('blogDatabase', JSON.stringify(blogDatabase));
+            
+            showAdminMessage(`Post "${post.title}" published successfully!`, 'success');
+            
+            // Clear form and refresh page to show new post
+            setTimeout(() => {
+                clearForm();
+                closeAdmin();
+                location.reload();
+            }, 2000);
+        }
+        
+        function clearForm() {
+            document.getElementById('blogPostForm').reset();
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('postDate').value = today;
+            hideAdminMessage();
+        }
+        
+        function showAdminMessage(message, type = 'info') {
+            const messageDiv = document.getElementById('adminMessage');
+            messageDiv.textContent = message;
+            messageDiv.className = `admin-message ${type}`;
+            messageDiv.classList.remove('hidden');
+            
+            setTimeout(() => {
+                hideAdminMessage();
+            }, 5000);
+        }
+        
+        function hideAdminMessage() {
+            const messageDiv = document.getElementById('adminMessage');
+            messageDiv.classList.add('hidden');
+        }
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('EXTANTRA Blog loaded');
+            
+            // Add logo click handler
+            const logoImage = document.getElementById('logoImage');
+            logoImage.addEventListener('click', handleLogoClick);
+            
+            // Load any saved blog posts from localStorage
+            const savedDatabase = localStorage.getItem('blogDatabase');
+            if (savedDatabase) {
+                try {
+                    const parsedDatabase = JSON.parse(savedDatabase);
+                    // Update the page with new posts if any
+                    updateBlogGrid(parsedDatabase.posts);
+                } catch (error) {
+                    console.error('Error parsing saved blog database:', error);
+                }
+            }
+            
+            // Close admin modal on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeAdmin();
+                }
+            });
+        });
+        
+        function updateBlogGrid(posts) {
+            const blogGrid = document.querySelector('.blog-grid');
+            if (!blogGrid || !posts.length) return;
+            
+            // Clear existing posts
+            blogGrid.innerHTML = '';
+            
+            // Add published posts
+            const publishedPosts = posts.filter(post => post.status === 'published');
+            publishedPosts.forEach(post => {
+                const article = document.createElement('article');
+                article.className = 'blog-post-card';
+                
+                const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                article.innerHTML = `
+                    <div class="post-date">${formattedDate}</div>
+                    <h2 class="post-title">${post.title}</h2>
+                    <div class="post-excerpt">${post.excerpt}</div>
+                    <div class="post-tags">
+                        ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                `;
+                
+                blogGrid.appendChild(article);
+            });
+        }
+    </script>
+</body>
+</html>
