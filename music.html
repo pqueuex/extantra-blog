@@ -13,42 +13,8 @@
     <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
     <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
     
-    <!-- Open Graph Meta Tags for Social Media             loadSong(song) {
-                console.log('Loading song into featured player:', song.title, 'File:', song.filename);
-                this.currentSong = song;
-                
-                // Clear any existing event listeners
-                const oldAudio = this.audio.cloneNode();
-                this.audio.parentNode.replaceChild(oldAudio, this.audio);
-                this.audio = oldAudio;
-                
-                // Set up event listeners
-                this.audio.addEventListener('loadedmetadata', () => {
-                    console.log('✓ Featured player metadata loaded');
-                    this.updateDuration();
-                });
-                
-                this.audio.addEventListener('canplay', () => {
-                    console.log('✓ Featured player can play');
-                });
-                
-                this.audio.addEventListener('error', (e) => {
-                    console.error('✗ Featured player audio error:', e);
-                    console.error('Failed to load:', this.audio.src);
-                });
-                
-                this.audio.addEventListener('timeupdate', () => this.updateProgress());
-                this.audio.addEventListener('ended', () => this.handleEnded());
-                
-                // Set the source and load
-                this.audio.src = `audio/${song.filename}`;
-                this.trackTitleEl.textContent = song.title;
-                
-                // Load the audio
-                this.audio.load();
-                
-                console.log('Song loaded and ready to play');
-            } property="og:title" content="Music - EXTANTRA">
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Music - EXTANTRA">
     <meta property="og:description" content="Music productions and audio art by EXTANTRA.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://extantra.net/music.html">
