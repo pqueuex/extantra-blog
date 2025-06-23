@@ -33,7 +33,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.2">
 </head>
 <body>
     <div class="container">
@@ -846,15 +846,35 @@
                 this.audio.volume = this.volume;
                 this.updateVolumeDisplay();
                 
-                // Explicitly load the audio and auto-play when ready
+                // Explicitly load the audio
                 this.audio.load();
                 
-                // Auto-play when the audio can play
+                // Auto-play when the audio can play - with better error handling
                 const autoPlayHandler = () => {
+                    console.log('🎵 Audio ready, attempting autoplay...');
                     this.audio.removeEventListener('canplaythrough', autoPlayHandler);
-                    this.play();
+                    this.audio.removeEventListener('loadeddata', autoPlayHandler);
+                    
+                    // Try to play immediately
+                    this.play().catch(error => {
+                        console.warn('Auto-play failed (user interaction required):', error);
+                        // Don't show error to user, just log it
+                    });
                 };
+                
+                // Listen for multiple events to ensure autoplay works
                 this.audio.addEventListener('canplaythrough', autoPlayHandler);
+                this.audio.addEventListener('loadeddata', autoPlayHandler);
+                
+                // Fallback timeout
+                setTimeout(() => {
+                    if (this.audio.readyState >= 2 && !this.isPlaying) {
+                        console.log('🎵 Fallback autoplay attempt...');
+                        this.play().catch(error => {
+                            console.warn('Fallback auto-play failed:', error);
+                        });
+                    }
+                }, 1000);
             }
             
             setupAudioContext() {
@@ -1382,7 +1402,7 @@
             const epSong = {
                 id: `ep-${filename}`, // Unique ID for EP tracks
                 filename: filename, // Just the filename
-                title: filename,
+                title: filename.replace(/^\d+\s+/, '').replace('.mp3', ''), // Clean title
                 artist: "EXTANTRA",
                 duration_formatted: "0:00",
                 isEPTrack: true // Flag to indicate this is an EP track
@@ -1410,8 +1430,12 @@
             }
             
             // Load the song into the featured player
-            window.featuredPlayer.loadSong(epSong);
-            console.log('🎵 EP song loaded into featured player');
+            try {
+                window.featuredPlayer.loadSong(epSong);
+                console.log('🎵 EP song loaded into featured player');
+            } catch (error) {
+                console.error('❌ Error loading EP song:', error);
+            }
         }
 
         function downloadEP() {
@@ -1423,6 +1447,38 @@
             link.click();
             document.body.removeChild(link);
         }
+    </script>
+
+    <script>
+        // Debug script to check CSS loading and deployment issues
+        window.addEventListener('load', () => {
+            console.log('🔍 Debug: Page loaded, checking CSS...');
+            
+            // Check if CSS is loaded by testing a known style
+            const testEl = document.createElement('div');
+            testEl.className = 'ep-section';
+            testEl.style.visibility = 'hidden';
+            testEl.style.position = 'absolute';
+            document.body.appendChild(testEl);
+            
+            const computedStyle = window.getComputedStyle(testEl);
+            const cssLoaded = computedStyle.backgroundColor === 'rgb(10, 10, 10)'; // #0a0a0a
+            
+            console.log('🔍 CSS loaded:', cssLoaded);
+            console.log('🔍 EP section background:', computedStyle.backgroundColor);
+            console.log('🔍 Current protocol:', window.location.protocol);
+            console.log('🔍 Current host:', window.location.host);
+            
+            document.body.removeChild(testEl);
+            
+            if (!cssLoaded) {
+                console.error('❌ CSS not loaded properly on production!');
+                console.log('🔍 Link tags:', Array.from(document.querySelectorAll('link[rel="stylesheet"]')).map(link => ({
+                    href: link.href,
+                    loaded: link.sheet !== null
+                })));
+            }
+        });
     </script>
 </body>
 </html>
