@@ -360,6 +360,187 @@ body {
     border-radius: 0;
 }
 
+/* Preferably Silent Goblin EP Styles */
+.ep-section {
+    margin: 0 8px 20px 8px;
+    border: 1px solid #333;
+    background-color: #0a0a0a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ep-section:hover {
+    border-color: #cc0000;
+}
+
+.ep-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.ep-content-wrapper {
+    padding: 12px;
+    transition: all 0.4s ease;
+}
+
+.ep-main-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.ep-expand-arrow {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #cc0000;
+    transition: transform 0.3s ease;
+}
+
+.ep-container.expanded .ep-expand-arrow {
+    transform: rotate(180deg);
+}
+
+.ep-cover-container {
+    flex-shrink: 0;
+}
+
+.ep-cover-image {
+    width: 48px;
+    height: 48px;
+    image-rendering: pixelated;
+    transition: all 0.3s ease;
+}
+
+.ep-container.expanded .ep-cover-image {
+    width: 53px;
+    height: 53px;
+}
+
+.ep-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ep-info h3 {
+    font-size: 12px;
+    color: #cc0000;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ep-description {
+    font-size: 10px;
+    color: #ccc;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.download-btn {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    font-size: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: flex-start;
+}
+
+.download-btn:hover {
+    background-color: #aa0000;
+}
+
+.ep-tracklist {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding-top 0.4s ease, margin-top 0.4s ease;
+}
+
+.ep-container.expanded .ep-tracklist {
+    max-height: 200px;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #333;
+}
+
+.ep-tracklist h4 {
+    font-size: 10px;
+    color: #cc0000;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ep-tracks {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ep-track {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 4px;
+    font-size: 10px;
+    color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.ep-track:hover {
+    background-color: #333;
+}
+
+.ep-track.loaded {
+    background-color: #333;
+    border-left: 2px solid #cc0000;
+    padding-left: 2px;
+}
+
+.ep-track-number {
+    color: #666;
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.ep-track-title {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.ep-track-title.scrolling {
+    animation: scroll-ep-text 8s linear infinite;
+}
+
+@keyframes scroll-ep-text {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }
+    75% { transform: translateX(calc(-100% + 200px)); }
+    100% { transform: translateX(calc(-100% + 200px)); }
+}
+
+.ep-track-duration {
+    color: #666;
+    font-size: 9px;
+}
+
 /* Music Player Styles - Minimal & Clean */
 .player-header {
     display: flex;
@@ -381,6 +562,21 @@ body {
     font-size: 10px;
     color: #fff;
     font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 350px;
+    position: relative;
+}
+
+.track-title.scrolling {
+    animation: scroll-featured-text 8s linear infinite;
+}
+
+@keyframes scroll-featured-text {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }
+    75% { transform: translateX(calc(-100% + 350px)); }
+    100% { transform: translateX(calc(-100% + 350px)); }
 }
 
 .player-controls {
@@ -535,6 +731,11 @@ body {
 }
 
 /* Songs Section - Minimal Grid */
+.library-container {
+    margin: 0 8px;
+    overflow: hidden;
+}
+
 .songs-section {
     margin-top: 32px;
 }
@@ -589,12 +790,16 @@ body {
     display: grid;
     gap: 1px;
     margin-top: 20px;
+    overflow: hidden; /* Prevent horizontal overflow */
 }
 
 .song-card {
     background-color: black;
     border: 1px solid #333;
     transition: border-color 0.15s ease;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .song-card:hover {
@@ -605,7 +810,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 16px;
+    padding: 6px 8px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .song-info {
@@ -613,50 +820,93 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 6px;
+    min-width: 0; /* Allow text to shrink */
+    max-width: calc(100% - 38px); /* Reserve space for LOAD button */
 }
 
 .song-title {
-    font-size: 11px;
+    font-size: 9px;
     color: white;
     font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 0; /* Allow shrinking */
+    max-width: 300px; /* Prevent taking too much space */
 }
 
 .song-meta {
     display: flex;
-    gap: 16px;
+    align-items: center;
     font-size: 9px;
     color: #666;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.song-genre {
-    color: #cc0000;
 }
 
 .song-duration {
     font-family: monospace;
+    font-size: 8px;
+    color: #666;
+    flex-shrink: 0;
+    width: 35px;
+    text-align: right;
 }
 
-.load-to-featured-btn {
+.load-btn {
     background-color: transparent;
     border: 1px solid #333;
     color: #666;
-    padding: 4px 12px;
+    padding: 3px 6px;
     font-size: 8px;
     cursor: pointer;
     transition: all 0.15s ease;
+    margin-left: 4px;
+    flex-shrink: 0;
+    width: 32px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-left: 16px;
-    flex-shrink: 0;
 }
 
-.load-to-featured-btn:hover {
+.load-btn:hover {
     border-color: #cc0000;
     color: #cc0000;
+}
+
+.song-card.loaded {
+    border-color: #cc0000;
+}
+
+.song-card.loaded .load-btn {
+    border-color: #cc0000;
+    color: #cc0000;
+}
+
+.song-title {
+    font-size: 9px;
+    color: white;
+    font-weight: normal;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 0; /* Allow shrinking */
+    max-width: 300px; /* Prevent taking too much space */
+    position: relative;
+}
+
+.song-title.scrolling {
+    animation: scroll-text 8s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }
+    75% { transform: translateX(calc(-100% + 300px)); }
+    100% { transform: translateX(calc(-100% + 300px)); }
 }
 
 /* 3D Model Viewer Styles */

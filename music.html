@@ -135,20 +135,52 @@
                     </div>
                 </div>
 
-                <!-- Songs List -->
-                <div class="songs-section">
-                    <div class="section-header">
-                        <h2>Music Collection</h2>
-                        <div class="genre-filter">
-                            <button class="filter-btn active" data-genre="all">All</button>
-                            <button class="filter-btn" data-genre="Electronic">Electronic</button>
-                            <button class="filter-btn" data-genre="Ambient">Ambient</button>
-                            <button class="filter-btn" data-genre="Emo">Emo</button>
-                            <button class="filter-btn" data-genre="Experimental">Experimental</button>
+                <!-- Preferably Silent Goblin EP Section -->
+                <div class="ep-section">
+                    <div class="ep-container" id="epContainer">
+                        <div class="ep-content-wrapper" id="epContent">
+                            <div class="ep-main-content">
+                                <div class="ep-cover-container" id="epCover">
+                                    <img src="site-elements/psgdisc.gif" alt="Preferably Silent Goblin EP" class="ep-cover-image">
+                                </div>
+                                <div class="ep-info">
+                                    <h3>Preferably Silent Goblin EP</h3>
+                                    <p class="ep-description">A collection of dark electronic compositions, explores ambient, rap, keller synth, experimental sounds. Download or listen here on extantra.net</p>
+                                    <button class="download-btn" onclick="downloadEP()">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                                        </svg>
+                                        Download EP
+                                    </button>
+                                </div>
+                                <div class="ep-expand-arrow"></div>
+                            </div>
+                            <div class="ep-tracklist" id="epTracklist">
+                                <h4>Tracklist:</h4>
+                                <div class="ep-tracks" id="epTracks">
+                                    <!-- Tracks will be loaded here -->
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="songs-grid" id="songsGrid">
-                        <!-- Songs will be loaded here dynamically -->
+                </div>
+
+                <!-- Songs List -->
+                <div class="library-container">
+                    <div class="songs-section">
+                        <div class="section-header">
+                            <h2>Music Collection</h2>
+                            <div class="genre-filter" style="display: none;">
+                                <button class="filter-btn active" data-genre="all">All</button>
+                                <button class="filter-btn" data-genre="Electronic">Electronic</button>
+                                <button class="filter-btn" data-genre="Ambient">Ambient</button>
+                                <button class="filter-btn" data-genre="Emo">Emo</button>
+                                <button class="filter-btn" data-genre="Experimental">Experimental</button>
+                            </div>
+                        </div>
+                        <div class="songs-grid" id="songsGrid">
+                            <!-- Songs will be loaded here dynamically -->
+                        </div>
                     </div>
                 </div>
             </main>
@@ -284,15 +316,6 @@
                         },
                         {
                             id: 4,
-                            title: "Beggo",
-                            filename: "beggo.mp3",
-                            artist: "EXTANTRA",
-                            genre: "Experimental",
-                            duration: "0:00",
-                            description: "Experimental composition"
-                        },
-                        {
-                            id: 5,
                             title: "Britmix",
                             filename: "britmix.mp3",
                             artist: "EXTANTRA",
@@ -301,7 +324,7 @@
                             description: "British-inspired electronic mix"
                         },
                         {
-                            id: 6,
+                            id: 5,
                             title: "Emo1",
                             filename: "emo1.mp3",
                             artist: "EXTANTRA",
@@ -310,7 +333,7 @@
                             description: "Emotional electronic piece"
                         },
                         {
-                            id: 7,
+                            id: 6,
                             title: "Emosong1",
                             filename: "emosong1.mp3",
                             artist: "EXTANTRA",
@@ -319,7 +342,7 @@
                             description: "Emotional composition"
                         },
                         {
-                            id: 8,
+                            id: 7,
                             title: "Endleton",
                             filename: "endleton.mp3",
                             artist: "EXTANTRA",
@@ -328,7 +351,7 @@
                             description: "Atmospheric soundscape"
                         },
                         {
-                            id: 9,
+                            id: 8,
                             title: "Gmode",
                             filename: "gmode.mp3",
                             artist: "EXTANTRA",
@@ -337,7 +360,7 @@
                             description: "Gaming-inspired electronic track"
                         },
                         {
-                            id: 10,
+                            id: 9,
                             title: "Gog1",
                             filename: "gog1.mp3",
                             artist: "EXTANTRA",
@@ -346,7 +369,7 @@
                             description: "Electronic composition"
                         },
                         {
-                            id: 11,
+                            id: 10,
                             title: "Gooup1",
                             filename: "gooup1.mp3",
                             artist: "EXTANTRA",
@@ -355,7 +378,7 @@
                             description: "Uplifting electronic track"
                         },
                         {
-                            id: 12,
+                            id: 11,
                             title: "Grilla",
                             filename: "grilla.mp3",
                             artist: "EXTANTRA",
@@ -364,7 +387,7 @@
                             description: "Intense electronic composition"
                         },
                         {
-                            id: 13,
+                            id: 12,
                             title: "Grisp",
                             filename: "grisp.mp3",
                             artist: "EXTANTRA",
@@ -373,7 +396,7 @@
                             description: "Crisp electronic sounds"
                         },
                         {
-                            id: 14,
+                            id: 13,
                             title: "Hungg",
                             filename: "hungg.mp3",
                             artist: "EXTANTRA",
@@ -382,7 +405,7 @@
                             description: "Heavy electronic piece"
                         },
                         {
-                            id: 15,
+                            id: 14,
                             title: "If You Don't (Mix)",
                             filename: "ifyoudonMIXt.mp3",
                             artist: "EXTANTRA",
@@ -391,7 +414,7 @@
                             description: "Mixed electronic composition"
                         },
                         {
-                            id: 16,
+                            id: 15,
                             title: "Iron Sight",
                             filename: "ironsight.mp3",
                             artist: "EXTANTRA",
@@ -400,7 +423,7 @@
                             description: "Gaming-inspired electronic track"
                         },
                         {
-                            id: 17,
+                            id: 16,
                             title: "Maby",
                             filename: "maby.mp3",
                             artist: "EXTANTRA",
@@ -409,7 +432,7 @@
                             description: "Contemplative electronic piece"
                         },
                         {
-                            id: 18,
+                            id: 17,
                             title: "Olive Tree",
                             filename: "olivetree.mp3",
                             artist: "EXTANTRA",
@@ -418,7 +441,7 @@
                             description: "Nature-inspired ambient composition"
                         },
                         {
-                            id: 19,
+                            id: 18,
                             title: "Organ Pie",
                             filename: "organpie.mp3",
                             artist: "EXTANTRA",
@@ -427,7 +450,7 @@
                             description: "Organ-based electronic track"
                         },
                         {
-                            id: 20,
+                            id: 19,
                             title: "P1",
                             filename: "p1.mp3",
                             artist: "EXTANTRA",
@@ -436,7 +459,7 @@
                             description: "Electronic composition part 1"
                         },
                         {
-                            id: 21,
+                            id: 20,
                             title: "Pall",
                             filename: "pall.mp3",
                             artist: "EXTANTRA",
@@ -445,7 +468,7 @@
                             description: "Dark electronic piece"
                         },
                         {
-                            id: 22,
+                            id: 21,
                             title: "Partin",
                             filename: "partin.mp3",
                             artist: "EXTANTRA",
@@ -454,7 +477,7 @@
                             description: "Departure-themed composition"
                         },
                         {
-                            id: 23,
+                            id: 22,
                             title: "Punkt",
                             filename: "punkt.mp3",
                             artist: "EXTANTRA",
@@ -463,7 +486,7 @@
                             description: "Pointillistic electronic composition"
                         },
                         {
-                            id: 24,
+                            id: 23,
                             title: "RP",
                             filename: "rp.mp3",
                             artist: "EXTANTRA",
@@ -472,7 +495,7 @@
                             description: "Electronic track"
                         },
                         {
-                            id: 25,
+                            id: 24,
                             title: "Rusicri",
                             filename: "rusicri.mp3",
                             artist: "EXTANTRA",
@@ -481,7 +504,7 @@
                             description: "Crisp electronic composition"
                         },
                         {
-                            id: 26,
+                            id: 25,
                             title: "Skid",
                             filename: "skid.mp3",
                             artist: "EXTANTRA",
@@ -490,7 +513,7 @@
                             description: "Fast-paced electronic track"
                         },
                         {
-                            id: 27,
+                            id: 26,
                             title: "Solid",
                             filename: "solid.mp3",
                             artist: "EXTANTRA",
@@ -499,7 +522,7 @@
                             description: "Solid electronic composition"
                         },
                         {
-                            id: 28,
+                            id: 27,
                             title: "Te",
                             filename: "te.mp3",
                             artist: "EXTANTRA",
@@ -508,7 +531,7 @@
                             description: "Minimal electronic piece"
                         },
                         {
-                            id: 29,
+                            id: 28,
                             title: "Uneven (Mix)",
                             filename: "unevenMIX.mp3",
                             artist: "EXTANTRA",
@@ -517,7 +540,7 @@
                             description: "Asymmetrical electronic mix"
                         },
                         {
-                            id: 30,
+                            id: 29,
                             title: "Viol",
                             filename: "viol.mp3",
                             artist: "EXTANTRA",
@@ -635,7 +658,7 @@
             createFallbackSongs() {
                 // Create fallback songs from your audio files
                 const audioFiles = [
-                    '5796709888.mp3', 'a white dress.mp3', 'bad.mp3', 'beggo.mp3', 'britmix.mp3',
+                    '5796709888.mp3', 'a white dress.mp3', 'bad.mp3', 'britmix.mp3',
                     'emo1.mp3', 'emosong1.mp3', 'endleton.mp3', 'gmode.mp3', 'gog1.mp3',
                     'gooup1.mp3', 'grilla.mp3', 'grisp.mp3', 'hungg.mp3', 'ifyoudonMIXt.mp3',
                     'ironsight.mp3', 'maby.mp3', 'olivetree.mp3', 'organpie.mp3', 'p1.mp3',
@@ -689,13 +712,10 @@
                         <div class="song-info">
                             <span class="song-title">${song.title}</span>
                             <span class="song-meta">
-                                <span class="song-genre">${song.genre}</span>
-                                <span class="song-duration" data-song-id="${song.id}">${song.duration}</span>
+                                <span class="song-duration" data-song-id="${song.id}">${song.duration_formatted || '0:00'}</span>
                             </span>
                         </div>
-                        <button class="load-to-featured-btn" data-song-id="${song.id}">
-                            Load
-                        </button>
+                        <button class="load-btn" data-song-id="${song.id}">LOAD</button>
                     </div>
                 `;
                 
@@ -706,7 +726,7 @@
             }
             
             setupSongCardEvents(card, song) {
-                const loadBtn = card.querySelector('.load-to-featured-btn');
+                const loadBtn = card.querySelector('.load-btn');
                 loadBtn.addEventListener('click', () => this.loadToFeaturedPlayer(song));
             }
             
@@ -716,6 +736,23 @@
                 console.log('Featured player loadSong method exists:', !!this.featuredPlayer?.loadSong);
                 
                 if (this.featuredPlayer && this.featuredPlayer.loadSong) {
+                    // Update visual state - remove loaded class from all cards and EP tracks
+                    document.querySelectorAll('.song-card, .ep-track').forEach(element => {
+                        element.classList.remove('loaded');
+                        const title = element.querySelector('.song-title, .ep-track-title');
+                        if (title) title.classList.remove('scrolling');
+                    });
+                    
+                    // Add loaded class to current card
+                    const currentCard = document.querySelector(`[data-song-id="${song.id}"]`).closest('.song-card');
+                    if (currentCard) {
+                        currentCard.classList.add('loaded');
+                        const title = currentCard.querySelector('.song-title');
+                        if (title && title.scrollWidth > title.clientWidth) {
+                            title.classList.add('scrolling');
+                        }
+                    }
+                    
                     this.featuredPlayer.loadSong(song);
                 } else {
                     console.error('❌ Featured player or loadSong method not available');
@@ -815,8 +852,25 @@
             loadSong(song) {
                 console.log('🎵 Loading song:', song.title);
                 this.currentSong = song;
-                this.audio.src = `audio/${song.filename}`;
+                
+                // Handle EP tracks vs regular tracks
+                if (song.isEPTrack) {
+                    this.audio.src = `audio/preferablysilentgoblin/${song.filename}`;
+                    console.log('🎵 Loading EP track from:', this.audio.src);
+                } else {
+                    this.audio.src = `audio/${song.filename}`;
+                    console.log('🎵 Loading regular track from:', this.audio.src);
+                }
+                
                 this.trackTitleEl.textContent = song.title;
+                
+                // Handle scrolling for long titles
+                this.trackTitleEl.classList.remove('scrolling');
+                setTimeout(() => {
+                    if (this.trackTitleEl.scrollWidth > this.trackTitleEl.clientWidth) {
+                        this.trackTitleEl.classList.add('scrolling');
+                    }
+                }, 100);
                 
                 this.isPlaying = false;
                 this.playIcon.style.display = 'block';
@@ -826,8 +880,15 @@
                 this.audio.volume = this.volume;
                 this.updateVolumeDisplay();
                 
-                // Explicitly load the audio. The existing audio graph will pick it up.
+                // Explicitly load the audio and auto-play when ready
                 this.audio.load();
+                
+                // Auto-play when the audio can play
+                const autoPlayHandler = () => {
+                    this.audio.removeEventListener('canplaythrough', autoPlayHandler);
+                    this.play();
+                };
+                this.audio.addEventListener('canplaythrough', autoPlayHandler);
             }
             
             setupAudioContext() {
@@ -925,6 +986,9 @@
                 this.isPlaying = false;
                 this.playIcon.style.display = 'block';
                 this.pauseIcon.style.display = 'none';
+                
+                // Automatically play the next song
+                this.playNextSong();
             }
             
             updateDuration() {
@@ -1115,16 +1179,284 @@
                     this.fakeVisualizerData[i] = Math.max(0, Math.min(255, this.fakeVisualizerData[i]));
                 }
             }
+            
+            playNextSong() {
+                console.log('🎵 Playing next song...');
+                
+                // Get current song info
+                const currentSong = this.currentSong;
+                console.log('🎵 Current song:', currentSong);
+                
+                if (!currentSong) {
+                    console.log('🎵 No current song, cannot play next');
+                    return;
+                }
+                
+                // Check if current song is from EP
+                if (currentSong.isEPTrack) {
+                    this.playNextEPTrack(currentSong);
+                } else {
+                    this.playNextLibraryTrack(currentSong);
+                }
+            }
+            
+            playNextEPTrack(currentSong) {
+                console.log('🎵 Playing next EP track...');
+                
+                // EP tracks in order
+                const epTracks = [
+                    { number: '01', title: 'lich roll', duration: '3:24' },
+                    { number: '02', title: 'darknesss', duration: '2:18' },
+                    { number: '03', title: 'cut it all off', duration: '4:12' },
+                    { number: '04', title: 'lacker', duration: '3:45' },
+                    { number: '05', title: 'first day out', duration: '2:56' },
+                    { number: '06', title: 'new hearted', duration: '3:33' },
+                    { number: '07', title: 'dont go', duration: '4:01' }
+                ];
+                
+                // Find current track index
+                const currentFileName = currentSong.filename;
+                const currentIndex = epTracks.findIndex(track => 
+                    currentFileName.includes(track.title) || 
+                    currentFileName.includes(track.number)
+                );
+                
+                console.log('🎵 Current EP track index:', currentIndex, 'filename:', currentFileName);
+                
+                // Play next track if available
+                if (currentIndex >= 0 && currentIndex < epTracks.length - 1) {
+                    const nextTrack = epTracks[currentIndex + 1];
+                    const nextFileName = `${nextTrack.number} ${nextTrack.title}.mp3`;
+                    console.log('🎵 Next EP track:', nextFileName);
+                    
+                    // Create EP song object for next track
+                    const nextEPSong = {
+                        id: `ep-${nextFileName}`,
+                        filename: nextFileName,
+                        title: nextFileName,
+                        artist: "EXTANTRA",
+                        duration_formatted: nextTrack.duration,
+                        isEPTrack: true
+                    };
+                    
+                    // Update visual state
+                    this.updateEPTrackVisualState(nextTrack);
+                    
+                    // Load and play next track
+                    this.loadSong(nextEPSong);
+                } else {
+                    console.log('🎵 End of EP, no next track');
+                }
+            }
+            
+            playNextLibraryTrack(currentSong) {
+                console.log('🎵 Playing next library track...');
+                
+                // Get reference to music library
+                const musicLibrary = window.musicLibrary;
+                if (!musicLibrary || !musicLibrary.songs) {
+                    console.log('🎵 Music library not available');
+                    return;
+                }
+                
+                // Find current song index in library
+                const currentIndex = musicLibrary.songs.findIndex(song => 
+                    song.id === currentSong.id || 
+                    song.filename === currentSong.filename
+                );
+                
+                console.log('🎵 Current library track index:', currentIndex, 'total songs:', musicLibrary.songs.length);
+                
+                // Play next track if available
+                if (currentIndex >= 0 && currentIndex < musicLibrary.songs.length - 1) {
+                    const nextSong = musicLibrary.songs[currentIndex + 1];
+                    console.log('🎵 Next library track:', nextSong.title);
+                    
+                    // Update visual state for library
+                    this.updateLibraryTrackVisualState(nextSong);
+                    
+                    // Load and play next track
+                    this.loadSong(nextSong);
+                } else {
+                    console.log('🎵 End of library, no next track');
+                }
+            }
+            
+            updateEPTrackVisualState(nextTrack) {
+                // Remove loaded class from all cards and EP tracks
+                document.querySelectorAll('.song-card, .ep-track').forEach(element => {
+                    element.classList.remove('loaded');
+                    const title = element.querySelector('.song-title, .ep-track-title');
+                    if (title) title.classList.remove('scrolling');
+                });
+                
+                // Find and highlight the next EP track
+                const epTracks = document.querySelectorAll('.ep-track');
+                epTracks.forEach(trackEl => {
+                    const trackTitle = trackEl.querySelector('.ep-track-title');
+                    if (trackTitle && trackTitle.textContent.trim() === nextTrack.title.trim()) {
+                        trackEl.classList.add('loaded');
+                        if (trackTitle.scrollWidth > trackTitle.clientWidth) {
+                            trackTitle.classList.add('scrolling');
+                        }
+                    }
+                });
+            }
+            
+            updateLibraryTrackVisualState(nextSong) {
+                // Remove loaded class from all cards and EP tracks
+                document.querySelectorAll('.song-card, .ep-track').forEach(element => {
+                    element.classList.remove('loaded');
+                    const title = element.querySelector('.song-title, .ep-track-title');
+                    if (title) title.classList.remove('scrolling');
+                });
+                
+                // Find and highlight the next library track
+                const songCards = document.querySelectorAll('.song-card');
+                songCards.forEach(card => {
+                    const titleEl = card.querySelector('.song-title');
+                    if (titleEl && (
+                        titleEl.textContent.trim() === nextSong.title.trim() ||
+                        card.dataset.songId == nextSong.id
+                    )) {
+                        card.classList.add('loaded');
+                        if (titleEl.scrollWidth > titleEl.clientWidth) {
+                            titleEl.classList.add('scrolling');
+                        }
+                    }
+                });
+            }
+            
+            formatTime(seconds) {
+                if (isNaN(seconds) || !isFinite(seconds)) return '0:00';
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
         }
         
         // Initialize the music library when the page loads
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             console.log('DOM loaded, initializing music library...');
             
             const musicLibrary = new MusicLibrary();
-            // Make featured player globally accessible for debugging
+            
+            // Wait for the music library to fully initialize
+            await new Promise(resolve => {
+                const checkInit = () => {
+                    if (musicLibrary.featuredPlayer) {
+                        resolve();
+                    } else {
+                        setTimeout(checkInit, 50);
+                    }
+                };
+                checkInit();
+            });
+            
+            // Make featured player and music library globally accessible
             window.featuredPlayer = musicLibrary.featuredPlayer;
+            window.musicLibrary = musicLibrary;
+            
+            console.log('🎵 Music library initialized, featured player:', !!window.featuredPlayer);
+            
+            // Initialize EP section after music library is ready
+            initializeEPSection();
+            console.log('🎵 EP section initialized');
         });
+
+        // EP Section Functions
+        function initializeEPSection() {
+            console.log('🎵 Initializing EP section...');
+            console.log('🎵 Featured player available during EP init:', !!window.featuredPlayer);
+            
+            const epSection = document.querySelector('.ep-section');
+            const epContainer = document.getElementById('epContainer');
+            
+            epSection.addEventListener('click', toggleEPSection);
+            loadEPTracks();
+        }
+
+        function toggleEPSection() {
+            const epContainer = document.getElementById('epContainer');
+            epContainer.classList.toggle('expanded');
+        }
+
+        function loadEPTracks() {
+            const epTracks = [
+                { number: '01', title: 'lich roll', duration: '3:24' },
+                { number: '02', title: 'darknesss', duration: '2:18' },
+                { number: '03', title: 'cut it all off', duration: '4:12' },
+                { number: '04', title: 'lacker', duration: '3:45' },
+                { number: '05', title: 'first day out', duration: '2:56' },
+                { number: '06', title: 'new hearted', duration: '3:33' },
+                { number: '07', title: 'dont go', duration: '4:01' }
+            ];
+
+            const epTracksContainer = document.getElementById('epTracks');
+            epTracksContainer.innerHTML = epTracks.map(track => `
+                <div class="ep-track" onclick="event.stopPropagation(); playEPTrack('${track.number} ${track.title}.mp3'); console.log('EP track clicked:', '${track.number} ${track.title}.mp3');">
+                    <span class="ep-track-number">${track.number}</span>
+                    <span class="ep-track-title">${track.title}</span>
+                    <span class="ep-track-duration">${track.duration}</span>
+                </div>
+            `).join('');
+        }
+
+        function playEPTrack(filename) {
+            console.log('🎵 EP Track clicked:', filename);
+            
+            // Wait for featured player to be available
+            if (!window.featuredPlayer) {
+                console.log('⏳ Featured player not ready, waiting...');
+                setTimeout(() => playEPTrack(filename), 500);
+                return;
+            }
+            
+            // For EP tracks, we pass just the filename since we'll handle the path in loadSong
+            const epSong = {
+                id: `ep-${filename}`, // Unique ID for EP tracks
+                filename: filename, // Just the filename
+                title: filename,
+                artist: "EXTANTRA",
+                duration_formatted: "0:00",
+                isEPTrack: true // Flag to indicate this is an EP track
+            };
+            
+            console.log('🎵 EP Song object:', epSong);
+            console.log('🎵 Featured player available:', !!window.featuredPlayer);
+            
+            // Update visual state - remove loaded class from all cards and EP tracks
+            document.querySelectorAll('.song-card, .ep-track').forEach(element => {
+                element.classList.remove('loaded');
+                const title = element.querySelector('.song-title, .ep-track-title');
+                if (title) title.classList.remove('scrolling');
+            });
+            
+            // Add loaded class to current EP track
+            const currentTrack = event.target.closest('.ep-track');
+            console.log('🎵 Current track element:', currentTrack);
+            if (currentTrack) {
+                currentTrack.classList.add('loaded');
+                const title = currentTrack.querySelector('.ep-track-title');
+                if (title && title.scrollWidth > title.clientWidth) {
+                    title.classList.add('scrolling');
+                }
+            }
+            
+            // Load the song into the featured player
+            window.featuredPlayer.loadSong(epSong);
+            console.log('🎵 EP song loaded into featured player');
+        }
+
+        function downloadEP() {
+            event.stopPropagation(); // Prevent triggering the expand/collapse
+            const link = document.createElement('a');
+            link.href = 'preferably-silent-goblin-ep.zip';
+            link.download = 'preferably-silent-goblin-ep.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
     </script>
 </body>
 </html>

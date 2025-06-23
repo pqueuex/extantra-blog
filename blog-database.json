@@ -3,20 +3,6 @@
   "total_posts": 3,
   "posts": [
     {
-      "id": 1,
-      "title": "Welcome to the New Blog",
-      "slug": "welcome-to-the-new-blog",
-      "date": "2025-06-21",
-      "created": "2025-06-21T12:00:00.000Z",
-      "modified": "2025-06-21T12:00:00.000Z",
-      "status": "published",
-      "tags": ["announcement", "welcome"],
-      "excerpt": "Starting a new chapter with this personal blog. Exploring the intersection of technology, gaming, and creative projects. Join me on this digital journey.",
-      "content": "Starting a new chapter with this personal blog. Exploring the intersection of technology, gaming, and creative projects. Join me on this digital journey.\n\nThis marks the beginning of a new era where I'll be sharing thoughts, projects, and experiences in the digital realm.",
-      "author": "EXTANTRA",
-      "featured": false
-    },
-    {
       "id": 2,
       "title": "Building E-commerce with Node.js",
       "slug": "building-ecommerce-with-nodejs",
