@@ -235,7 +235,9 @@
                     
                     // Only fetch if using HTTP/HTTPS to avoid CORS errors on file://
                     if (window.location.protocol.startsWith('http')) {
-                        const response = await fetch('songs-database.json');
+                        // Add cache-busting parameter to ensure fresh data
+                        const timestamp = new Date().getTime();
+                        const response = await fetch(`songs-database.json?v=${timestamp}`);
                         console.log('Response status:', response.status);
                         
                         if (!response.ok) {

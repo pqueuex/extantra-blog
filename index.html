@@ -33,7 +33,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.2">
     
     <!-- Structured Data for Blog -->
     <script type="application/ld+json">
@@ -333,22 +333,31 @@
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             console.log('EXTANTRA Blog loaded');
+            console.log('🔍 Debug: Checking for cached data...');
+            
+            // Clear any cached blog data to ensure fresh start
+            const savedDatabase = localStorage.getItem('blogDatabase');
+            if (savedDatabase) {
+                console.log('🔍 Found cached blog data, checking if it should be cleared...');
+                try {
+                    const parsedDatabase = JSON.parse(savedDatabase);
+                    console.log('🔍 Cached posts count:', parsedDatabase.posts.length);
+                    
+                    // Clear localStorage to ensure fresh start
+                    localStorage.removeItem('blogDatabase');
+                    console.log('🔍 Cleared localStorage blog data for fresh start');
+                } catch (error) {
+                    console.error('Error parsing saved blog database:', error);
+                    localStorage.removeItem('blogDatabase');
+                }
+            }
+            
+            // Load fresh blog database from server
+            loadFreshBlogDatabase();
             
             // Add logo click handler
             const logoImage = document.getElementById('logoImage');
             logoImage.addEventListener('click', handleLogoClick);
-            
-            // Load any saved blog posts from localStorage
-            const savedDatabase = localStorage.getItem('blogDatabase');
-            if (savedDatabase) {
-                try {
-                    const parsedDatabase = JSON.parse(savedDatabase);
-                    // Update the page with new posts if any
-                    updateBlogGrid(parsedDatabase.posts);
-                } catch (error) {
-                    console.error('Error parsing saved blog database:', error);
-                }
-            }
             
             // Close admin modal on Escape key
             document.addEventListener('keydown', (e) => {
@@ -358,15 +367,47 @@
             });
         });
         
+        async function loadFreshBlogDatabase() {
+            console.log('🔍 Loading fresh blog database from server...');
+            try {
+                // Add cache-busting parameter to ensure fresh data
+                const timestamp = new Date().getTime();
+                const response = await fetch(`./blog-database.json?v=${timestamp}`);
+                if (response.ok) {
+                    const freshDatabase = await response.json();
+                    console.log('🔍 Fresh database loaded. Posts count:', freshDatabase.posts.length);
+                    updateBlogGrid(freshDatabase.posts);
+                } else {
+                    console.log('🔍 No blog database found on server, starting fresh');
+                    updateBlogGrid([]);
+                }
+            } catch (error) {
+                console.error('Error loading fresh blog database:', error);
+                updateBlogGrid([]);
+            }
+        }
+        
         function updateBlogGrid(posts) {
             const blogGrid = document.querySelector('.blog-grid');
-            if (!blogGrid || !posts.length) return;
+            if (!blogGrid) return;
             
             // Clear existing posts
             blogGrid.innerHTML = '';
             
-            // Add published posts
+            // Filter for published posts
             const publishedPosts = posts.filter(post => post.status === 'published');
+            
+            if (publishedPosts.length === 0) {
+                // Show empty state message
+                blogGrid.innerHTML = `
+                    <div style="text-align: center; padding: 40px 20px; color: #666;">
+                        <p>No blog posts yet. Check back soon!</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Add published posts
             publishedPosts.forEach(post => {
                 const article = document.createElement('article');
                 article.className = 'blog-post-card';
