@@ -80,6 +80,13 @@
                     <p class="tagline">Framing disconnection, whatever</p>
                 </div>
 
+                <!-- Debug button (remove this once working) -->
+                <div style="margin-bottom: 20px;">
+                    <button onclick="testBlogLoad()" style="background: #cc0000; color: white; border: none; padding: 5px 10px; font-size: 10px; cursor: pointer;">
+                        🔧 Test Blog Load
+                    </button>
+                </div>
+
                 <div class="blog-grid">
                     <!-- Blog posts will be loaded dynamically -->
                 </div>
@@ -160,6 +167,23 @@
         
         function goToPage(page) {
             window.location.href = page;
+        }
+        
+        // Test function to manually load blog posts
+        function testBlogLoad() {
+            console.log('🔧 Manual test blog load triggered');
+            const testPost = {
+                id: 1,
+                title: "Welcome to EXTANTRA",
+                slug: "welcome-to-extantra",
+                date: "2025-07-08",
+                status: "published",
+                tags: ["welcome", "introduction", "blog"],
+                excerpt: "Welcome to my personal blog where I share thoughts on technology, creativity, and digital experiences.",
+                author: "EXTANTRA"
+            };
+            console.log('🔧 Test post:', testPost);
+            updateBlogGrid([testPost]);
         }
         
         // Logo click handler for admin access
@@ -334,6 +358,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log('EXTANTRA Blog loaded');
             console.log('🔍 Debug: Checking for cached data...');
+            console.log('🔍 Current protocol:', window.location.protocol);
+            console.log('🔍 Current URL:', window.location.href);
             
             // Clear any cached blog data to ensure fresh start
             const savedDatabase = localStorage.getItem('blogDatabase');
@@ -365,6 +391,25 @@
                     closeAdmin();
                 }
             });
+            
+            // Fallback: if running on file:// protocol, load test post
+            if (window.location.protocol === 'file:') {
+                console.log('🔍 Running on file:// protocol, loading fallback post...');
+                setTimeout(() => {
+                    const testPost = {
+                        id: 1,
+                        title: "Welcome to EXTANTRA",
+                        slug: "welcome-to-extantra",
+                        date: "2025-07-08",
+                        status: "published",
+                        tags: ["welcome", "introduction", "blog"],
+                        excerpt: "Welcome to my personal blog where I share thoughts on technology, creativity, and digital experiences.",
+                        author: "EXTANTRA"
+                    };
+                    console.log('🔍 Loading fallback post:', testPost);
+                    updateBlogGrid([testPost]);
+                }, 1000);
+            }
         });
         
         async function loadFreshBlogDatabase() {
@@ -372,43 +417,61 @@
             try {
                 // Add cache-busting parameter to ensure fresh data
                 const timestamp = new Date().getTime();
-                const response = await fetch(`./blog-database.json?v=${timestamp}`);
+                const url = `./blog-database.json?v=${timestamp}`;
+                console.log('🔍 Fetching from URL:', url);
+                
+                const response = await fetch(url);
+                console.log('🔍 Response status:', response.status, response.statusText);
+                
                 if (response.ok) {
                     const freshDatabase = await response.json();
                     console.log('🔍 Fresh database loaded. Posts count:', freshDatabase.posts.length);
+                    console.log('🔍 Database content:', freshDatabase);
                     updateBlogGrid(freshDatabase.posts);
                 } else {
                     console.log('🔍 No blog database found on server, starting fresh');
                     updateBlogGrid([]);
                 }
             } catch (error) {
-                console.error('Error loading fresh blog database:', error);
+                console.error('🔍 Error loading fresh blog database:', error);
                 updateBlogGrid([]);
             }
         }
         
         function updateBlogGrid(posts) {
+            console.log('🔍 updateBlogGrid called with posts:', posts);
             const blogGrid = document.querySelector('.blog-grid');
-            if (!blogGrid) return;
+            if (!blogGrid) {
+                console.error('🔍 Blog grid element not found!');
+                return;
+            }
+            
+            console.log('🔍 Blog grid element found');
             
             // Clear existing posts
             blogGrid.innerHTML = '';
             
             // Filter for published posts
             const publishedPosts = posts.filter(post => post.status === 'published');
+            console.log('🔍 Published posts:', publishedPosts.length, publishedPosts);
             
             if (publishedPosts.length === 0) {
+                console.log('🔍 No published posts found, showing empty state');
                 // Show empty state message
                 blogGrid.innerHTML = `
                     <div style="text-align: center; padding: 40px 20px; color: #666;">
                         <p>No blog posts yet. Check back soon!</p>
+                        <p style="font-size: 10px; color: #999;">Debug: Found ${posts.length} total posts, ${publishedPosts.length} published</p>
                     </div>
                 `;
                 return;
             }
             
+            console.log('🔍 Rendering', publishedPosts.length, 'published posts');
+            
             // Add published posts
-            publishedPosts.forEach(post => {
+            publishedPosts.forEach((post, index) => {
+                console.log(`🔍 Rendering post ${index + 1}:`, post.title);
                 const article = document.createElement('article');
                 article.className = 'blog-post-card';
                 article.style.cursor = 'pointer';
@@ -430,11 +493,15 @@
                 
                 // Add click handler to navigate to individual post
                 article.addEventListener('click', () => {
+                    console.log('🔍 Clicked post:', post.title, 'slug:', post.slug);
                     window.location.href = `post.html?slug=${post.slug}`;
                 });
                 
                 blogGrid.appendChild(article);
+                console.log('🔍 Post added to grid:', post.title);
             });
+            
+            console.log('🔍 All posts rendered successfully');
         }
     </script>
 </body>
