@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tags -->
     <title>EXTANTRA</title>
-    <meta name="description" content="Personal blog of EXTANTRA featuring technology insights, gaming thoughts, creative projects, and digital experiences. Exploring the intersection of technology and creativity.">
+    <meta name="description" content="Personal blog of EXTANTRA featuring technology insights, gaming thoughts, and creative projects. Exploring the intersection of technology and creativity.">
     <meta name="keywords" content="personal blog, technology blog, gaming blog, creative projects, digital art, programming, web development, indie games">
     <meta name="author" content="EXTANTRA">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
@@ -80,13 +80,6 @@
                     <p class="tagline">Framing disconnection, whatever</p>
                 </div>
 
-                <!-- Debug button (remove this once working) -->
-                <div style="margin-bottom: 20px;">
-                    <button onclick="testBlogLoad()" style="background: #cc0000; color: white; border: none; padding: 5px 10px; font-size: 10px; cursor: pointer;">
-                        🔧 Test Blog Load
-                    </button>
-                </div>
-
                 <div class="blog-grid">
                     <!-- Blog posts will be loaded dynamically -->
                 </div>
@@ -145,7 +138,7 @@
                 
                 <div class="form-group">
                     <label for="postContent">Content</label>
-                    <textarea id="postContent" name="content" rows="12" required placeholder="Write your blog post content here...&#10;&#10;You can use basic HTML tags like:&#10;&lt;p&gt;Paragraph&lt;/p&gt;&#10;&lt;strong&gt;Bold text&lt;/strong&gt;&#10;&lt;em&gt;Italic text&lt;/em&gt;&#10;&lt;code&gt;Inline code&lt;/code&gt;&#10;&lt;pre&gt;Code blocks&lt;/pre&gt;&#10;&lt;a href='url'&gt;Links&lt;/a&gt;"></textarea>
+                    <textarea id="postContent" name="content" rows="12" required placeholder="Write your blog post content here...&#10;&#10;You can use basic HTML tags like:&#10;&lt;p&gt;Paragraph&lt;/p&gt;&#10;&lt;strong&gt;Bold text&lt;/strong&gt;&#10;&lt;em&gt;Italic text&lt;/em&gt;&#10;&lt;code&gt;Inline code&lt;/code&gt;&#10;&lt;pre&gt;Code blocks&lt;/pre&gt;&#10;&lt;a href='url'&gt;Links&lt;/a&gt;&#10;&lt;img src='path/to/image.jpg' alt='Description'&gt;"></textarea>
                 </div>
                 
                 <div class="form-actions">
@@ -155,7 +148,13 @@
                 </div>
             </form>
             
-            <div id="adminMessage" class="admin-message hidden"></div>
+            <!-- Post Management Section -->
+            <div class="post-management-section" style="margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
+                <h3>Manage Posts</h3>
+                <div class="post-list" id="postList">
+                    <!-- Posts will be loaded here -->
+                </div>
+            </div>
         </div>
     </div>
 
@@ -208,18 +207,37 @@
             const modal = document.getElementById('adminModal');
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+            isAdminMode = true;
             
             // Set today's date as default
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('postDate').value = today;
             
-            loadBlogDatabase();
+            // Load blog database and update display
+            loadBlogDatabase().then(() => {
+                // Update blog grid to show edit buttons
+                if (blogDatabase && blogDatabase.posts) {
+                    updateBlogGrid(blogDatabase.posts);
+                    populatePostList();
+                }
+            });
+            
+            // Reset form to new post mode
+            clearForm();
         }
         
         function closeAdmin() {
             const modal = document.getElementById('adminModal');
             modal.classList.add('hidden');
             document.body.style.overflow = '';
+            isAdminMode = false;
+            currentEditingPost = null;
+            
+            // Update blog grid to hide edit buttons
+            loadAndDisplayPosts();
+            
+            // Reset form
+            clearForm();
         }
         
         async function loadBlogDatabase() {
@@ -235,6 +253,7 @@
                         posts: []
                     };
                 }
+                return blogDatabase;
             } catch (error) {
                 console.error('Error loading blog database:', error);
                 blogDatabase = {
@@ -242,6 +261,7 @@
                     total_posts: 0,
                     posts: []
                 };
+                return blogDatabase;
             }
         }
         
@@ -336,6 +356,22 @@
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('postDate').value = today;
             hideAdminMessage();
+            
+            // Reset editing state
+            currentEditingPost = null;
+            
+            // Reset form header
+            const formHeader = document.querySelector('#adminModal h2');
+            formHeader.textContent = 'Create New Blog Post';
+            
+            // Reset buttons
+            updateFormButtons();
+            
+            // Clear image preview
+            const preview = document.getElementById('imagePreview');
+            if (preview) {
+                preview.innerHTML = '';
+            }
         }
         
         function showAdminMessage(message, type = 'info') {
@@ -353,6 +389,270 @@
             const messageDiv = document.getElementById('adminMessage');
             messageDiv.classList.add('hidden');
         }
+        
+        // Image handling functions
+        function handleImageUpload(event) {
+            const files = event.target.files;
+            const preview = document.getElementById('imagePreview');
+            const contentTextarea = document.getElementById('postContent');
+            
+            preview.innerHTML = '';
+            
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const imageUrl = e.target.result;
+                        const fileName = file.name;
+                        
+                        // Create preview
+                        const previewItem = document.createElement('div');
+                        previewItem.className = 'image-preview-item';
+                        previewItem.innerHTML = `
+                            <img src="${imageUrl}" alt="${fileName}" style="max-width: 150px; max-height: 150px; object-fit: cover;">
+                            <div class="image-actions">
+                                <span class="image-filename">${fileName}</span>
+                                <button type="button" onclick="insertImageTag('${fileName}')" class="btn btn-small">Insert</button>
+                                <button type="button" onclick="copyImageTag('${fileName}')" class="btn btn-small">Copy HTML</button>
+                            </div>
+                        `;
+                        preview.appendChild(previewItem);
+                        
+                        // Store the image data for later use
+                        previewItem.dataset.imageData = imageUrl;
+                        previewItem.dataset.fileName = fileName;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        }
+        
+        function insertImageTag(fileName) {
+            const contentTextarea = document.getElementById('postContent');
+            const imageTag = `<img src="images/${fileName}" alt="${fileName.replace(/\.[^/.]+$/, '')}" class="blog-image">`;
+            
+            // Insert at cursor position
+            const startPos = contentTextarea.selectionStart;
+            const endPos = contentTextarea.selectionEnd;
+            const textBefore = contentTextarea.value.substring(0, startPos);
+            const textAfter = contentTextarea.value.substring(endPos);
+            
+            contentTextarea.value = textBefore + imageTag + textAfter;
+            
+            // Position cursor after inserted tag
+            contentTextarea.selectionStart = contentTextarea.selectionEnd = startPos + imageTag.length;
+            contentTextarea.focus();
+            
+            showAdminMessage(`Image tag for "${fileName}" inserted into content!`, 'success');
+        }
+        
+        function copyImageTag(fileName) {
+            const imageTag = `<img src="images/${fileName}" alt="${fileName.replace(/\.[^/.]+$/, '')}" class="blog-image">`;
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(imageTag).then(() => {
+                showAdminMessage(`Image tag for "${fileName}" copied to clipboard!`, 'success');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = imageTag;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showAdminMessage(`Image tag for "${fileName}" copied to clipboard!`, 'success');
+            });
+        }
+        
+        function downloadImages() {
+            const previewItems = document.querySelectorAll('.image-preview-item');
+            const instructions = [];
+            
+            previewItems.forEach(item => {
+                const fileName = item.dataset.fileName;
+                const imageData = item.dataset.imageData;
+                
+                // Create download link
+                const link = document.createElement('a');
+                link.href = imageData;
+                link.download = fileName;
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                instructions.push(`• Save "${fileName}" to the images/ folder`);
+            });
+            
+            if (instructions.length > 0) {
+                const instructionText = `Images downloaded! Please:\n\n${instructions.join('\n')}\n\nThen your blog post images will display correctly.`;
+                showAdminMessage(instructionText, 'info');
+            }
+        }
+        
+        function populatePostList() {
+            const postList = document.getElementById('postList');
+            if (!postList || !blogDatabase || !blogDatabase.posts) {
+                return;
+            }
+            
+            if (blogDatabase.posts.length === 0) {
+                postList.innerHTML = '<p style="color: #666; font-style: italic;">No posts created yet.</p>';
+                return;
+            }
+            
+            const postsHtml = blogDatabase.posts.map(post => {
+                const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+                
+                const statusBadge = post.status === 'published' 
+                    ? '<span class="status-badge status-published">Published</span>'
+                    : '<span class="status-badge status-draft">Draft</span>';
+                
+                return `
+                    <div class="post-item">
+                        <div class="post-item-header">
+                            <h4>${post.title}</h4>
+                            ${statusBadge}
+                        </div>
+                        <div class="post-item-meta">
+                            <span>ID: ${post.id}</span>
+                            <span>Date: ${formattedDate}</span>
+                            <span>Modified: ${new Date(post.modified).toLocaleDateString()}</span>
+                        </div>
+                        <div class="post-item-actions">
+                            <button class="btn btn-small" onclick="editPost(${post.id})">Edit</button>
+                            <button class="btn btn-small" onclick="quickAddImage(${post.id})" title="Quick add images">📷 Add Images</button>
+                            <button class="btn btn-small btn-danger" onclick="deletePost(${post.id})">Delete</button>
+                            ${post.status === 'draft' ? `<button class="btn btn-small btn-primary" onclick="publishExistingPost(${post.id})">Publish</button>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            postList.innerHTML = postsHtml;
+        }
+        
+        function deletePost(postId) {
+            if (!confirm('Are you sure you want to delete this post? This action cannot be undone.')) {
+                return;
+            }
+            
+            const postIndex = blogDatabase.posts.findIndex(p => p.id === postId);
+            if (postIndex === -1) {
+                showAdminMessage('Post not found!', 'error');
+                return;
+            }
+            
+            const post = blogDatabase.posts[postIndex];
+            blogDatabase.posts.splice(postIndex, 1);
+            blogDatabase.total_posts = blogDatabase.posts.length;
+            blogDatabase.generated = new Date().toISOString();
+            
+            // Save to local storage
+            localStorage.setItem('blogDatabase', JSON.stringify(blogDatabase));
+            
+            showAdminMessage(`Post "${post.title}" deleted successfully!`, 'success');
+            
+            // Refresh displays
+            populatePostList();
+            loadAndDisplayPosts();
+        }
+        
+        function publishExistingPost(postId) {
+            const postIndex = blogDatabase.posts.findIndex(p => p.id === postId);
+            if (postIndex === -1) {
+                showAdminMessage('Post not found!', 'error');
+                return;
+            }
+            
+            blogDatabase.posts[postIndex].status = 'published';
+            blogDatabase.posts[postIndex].modified = new Date().toISOString();
+            blogDatabase.generated = new Date().toISOString();
+            
+            // Save to local storage
+            localStorage.setItem('blogDatabase', JSON.stringify(blogDatabase));
+            
+            showAdminMessage(`Post "${blogDatabase.posts[postIndex].title}" published successfully!`, 'success');
+            
+            // Refresh displays
+            populatePostList();
+            loadAndDisplayPosts();
+        }
+        
+        // Quick image addition function
+        function quickAddImage(postId) {
+            // Open file picker for image
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.multiple = true;
+            
+            input.onchange = function(event) {
+                const files = event.target.files;
+                if (files.length === 0) return;
+                
+                const post = blogDatabase.posts.find(p => p.id === postId);
+                if (!post) {
+                    showAdminMessage('Post not found!', 'error');
+                    return;
+                }
+                
+                // Generate image tags for the files
+                const imageTags = [];
+                let processed = 0;
+                
+                for (let file of files) {
+                    if (file.type.startsWith('image/')) {
+                        const fileName = file.name;
+                        const imageTag = `<img src="images/${fileName}" alt="${fileName.replace(/\.[^/.]+$/, '')}" class="blog-image">`;
+                        imageTags.push(imageTag);
+                        
+                        // Create a download for the file
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const link = document.createElement('a');
+                            link.href = e.target.result;
+                            link.download = fileName;
+                            link.style.display = 'none';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                    processed++;
+                }
+                
+                if (imageTags.length > 0) {
+                    // Add image tags to post content
+                    const imageHtml = '\n\n' + imageTags.join('\n') + '\n\n';
+                    post.content += imageHtml;
+                    post.modified = new Date().toISOString();
+                    
+                    // Save to database
+                    blogDatabase.generated = new Date().toISOString();
+                    localStorage.setItem('blogDatabase', JSON.stringify(blogDatabase));
+                    
+                    showAdminMessage(`Added ${imageTags.length} image(s) to "${post.title}". Remember to save the downloaded images to the images/ folder.`, 'success');
+                    
+                    // Offer to edit the post
+                    setTimeout(() => {
+                        if (confirm('Would you like to edit the post to adjust the image placement?')) {
+                            editPost(postId);
+                        }
+                    }, 2000);
+                }
+            };
+            
+            input.click();
+        }
+
+        // ...existing code...
         
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
@@ -438,6 +738,9 @@
             }
         }
         
+        let isAdminMode = false;
+        let currentEditingPost = null;
+        
         function updateBlogGrid(posts) {
             console.log('🔍 updateBlogGrid called with posts:', posts);
             const blogGrid = document.querySelector('.blog-grid');
@@ -475,6 +778,7 @@
                 const article = document.createElement('article');
                 article.className = 'blog-post-card';
                 article.style.cursor = 'pointer';
+                article.style.position = 'relative';
                 
                 const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
                     year: 'numeric',
@@ -489,6 +793,7 @@
                     <div class="post-tags">
                         ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
+                    ${isAdminMode ? `<button class="edit-post-btn" onclick="editPost(${post.id}); event.stopPropagation();" title="Edit Post">✏️</button>` : ''}
                 `;
                 
                 // Add click handler to navigate to individual post
@@ -502,6 +807,150 @@
             });
             
             console.log('🔍 All posts rendered successfully');
+        }
+        
+        function editPost(postId) {
+            const post = blogDatabase.posts.find(p => p.id === postId);
+            if (!post) {
+                showAdminMessage('Post not found!', 'error');
+                return;
+            }
+            
+            currentEditingPost = post;
+            
+            // Fill form with post data
+            document.getElementById('postTitle').value = post.title;
+            document.getElementById('postDate').value = post.date;
+            document.getElementById('postTags').value = post.tags.join(', ');
+            document.getElementById('postExcerpt').value = post.excerpt;
+            document.getElementById('postContent').value = post.content;
+            
+            // Update form header
+            const formHeader = document.querySelector('#adminModal h2');
+            formHeader.textContent = `Edit Post: ${post.title}`;
+            
+            // Show/hide appropriate buttons
+            updateFormButtons();
+            
+            showAdminMessage(`Editing post: "${post.title}"`, 'info');
+        }
+        
+        function updatePost() {
+            if (!currentEditingPost) {
+                showAdminMessage('No post selected for editing!', 'error');
+                return;
+            }
+            
+            const form = document.getElementById('blogPostForm');
+            const formData = new FormData(form);
+            
+            if (!formData.get('title') || !formData.get('content')) {
+                showAdminMessage('Please fill in at least the title and content.', 'error');
+                return;
+            }
+            
+            // Find and update the post
+            const postIndex = blogDatabase.posts.findIndex(p => p.id === currentEditingPost.id);
+            if (postIndex === -1) {
+                showAdminMessage('Post not found in database!', 'error');
+                return;
+            }
+            
+            // Update post data
+            const updatedPost = {
+                ...currentEditingPost,
+                title: formData.get('title'),
+                slug: generateSlug(formData.get('title')),
+                date: formData.get('date'),
+                modified: new Date().toISOString(),
+                tags: formData.get('tags') ? formData.get('tags').split(',').map(tag => tag.trim()) : [],
+                excerpt: formData.get('excerpt') || '',
+                content: formData.get('content')
+            };
+            
+            blogDatabase.posts[postIndex] = updatedPost;
+            blogDatabase.generated = new Date().toISOString();
+            
+            // Save to local storage for persistence
+            localStorage.setItem('blogDatabase', JSON.stringify(blogDatabase));
+            
+            showAdminMessage(`Post "${updatedPost.title}" updated successfully!`, 'success');
+            
+            // Clear form and refresh
+            setTimeout(() => {
+                clearForm();
+                closeAdmin();
+                location.reload();
+            }, 2000);
+        }
+        
+        function clearPost(postId) {
+            const postIndex = blogDatabase.posts.findIndex(p => p.id === postId);
+            if (postIndex === -1) {
+                showAdminMessage('Post not found!', 'error');
+                return;
+            }
+            
+            // Remove from database
+            blogDatabase.posts.splice(postIndex, 1);
+            blogDatabase.total_posts = blogDatabase.posts.length;
+            blogDatabase.generated = new Date().toISOString();
+            
+            // Save to local storage for persistence
+            localStorage.setItem('blogDatabase', JSON.stringify(blogDatabase));
+            
+            showAdminMessage('Post deleted successfully!', 'success');
+            
+            // Refresh post list
+            loadAndDisplayPosts();
+        }
+        
+        function updateFormButtons() {
+            const formActions = document.querySelector('.form-actions');
+            
+            if (currentEditingPost) {
+                // Show update button, hide save draft and publish
+                formActions.innerHTML = `
+                    <button type="button" class="btn btn-primary" onclick="updatePost()">Update Post</button>
+                    <button type="button" class="btn btn-secondary" onclick="cancelEdit()">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick="clearForm()">Clear</button>
+                `;
+            } else {
+                // Show normal buttons
+                formActions.innerHTML = `
+                    <button type="button" class="btn btn-secondary" onclick="saveDraft()">Save Draft</button>
+                    <button type="button" class="btn btn-primary" onclick="publishPost()">Publish</button>
+                    <button type="button" class="btn btn-danger" onclick="clearForm()">Clear</button>
+                `;
+            }
+        }
+        
+        function cancelEdit() {
+            currentEditingPost = null;
+            clearForm();
+            
+            // Reset form header
+            const formHeader = document.querySelector('#adminModal h2');
+            formHeader.textContent = 'Create New Blog Post';
+            
+            // Reset buttons
+            updateFormButtons();
+            
+            showAdminMessage('Edit cancelled', 'info');
+        }
+        
+        function loadAndDisplayPosts() {
+            // Load posts and update the display
+            if (typeof blogDatabase !== 'undefined' && blogDatabase.posts) {
+                updateBlogGrid(blogDatabase.posts);
+            } else {
+                // Try to load from storage or fetch
+                loadBlogDatabase().then(() => {
+                    if (blogDatabase && blogDatabase.posts) {
+                        updateBlogGrid(blogDatabase.posts);
+                    }
+                });
+            }
         }
     </script>
 </body>
