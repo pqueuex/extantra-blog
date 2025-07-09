@@ -151,6 +151,10 @@
             <!-- Post Management Section -->
             <div class="post-management-section" style="margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
                 <h3>Manage Posts</h3>
+                <div style="margin-bottom: 15px;">
+                    <button type="button" class="btn btn-secondary" onclick="exportBlogDatabase()">📥 Export Database</button>
+                    <button type="button" class="btn btn-info" onclick="checkLocalStorage()">🔍 Check for Lost Posts</button>
+                </div>
                 <div class="post-list" id="postList">
                     <!-- Posts will be loaded here -->
                 </div>
@@ -220,6 +224,9 @@
                     updateBlogGrid(blogDatabase.posts);
                     populatePostList();
                 }
+                
+                // Check for lost posts in localStorage
+                checkLocalStorage();
             });
             
             // Reset form to new post mode
@@ -341,14 +348,14 @@
             // Save to local storage for persistence
             localStorage.setItem('blogDatabase', JSON.stringify(blogDatabase));
             
-            showAdminMessage(`Post "${post.title}" published successfully!`, 'success');
+            showAdminMessage(`Post "${post.title}" published successfully! 🎉\n\n⚠️ IMPORTANT: Click "Export Database" below and replace the server's blog-database.json file to make this post permanent.`, 'success');
             
             // Clear form and refresh page to show new post
             setTimeout(() => {
                 clearForm();
                 closeAdmin();
                 location.reload();
-            }, 2000);
+            }, 5000); // Give more time to read the message
         }
         
         function clearForm() {
@@ -950,6 +957,102 @@
                         updateBlogGrid(blogDatabase.posts);
                     }
                 });
+            }
+        }
+        
+        function exportBlogDatabase() {
+            if (!blogDatabase) {
+                showAdminMessage('No blog database loaded', 'error');
+                return;
+            }
+            
+            const dataStr = JSON.stringify(blogDatabase, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(dataBlob);
+            link.download = 'blog-database.json';
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showAdminMessage('Blog database exported successfully!', 'success');
+        }
+        
+        function checkLocalStorage() {
+            const savedDatabase = localStorage.getItem('blogDatabase');
+            if (savedDatabase) {
+                try {
+                    const localDB = JSON.parse(savedDatabase);
+                    const localPostCount = localDB.posts ? localDB.posts.length : 0;
+                    const serverPostCount = blogDatabase.posts ? blogDatabase.posts.length : 0;
+                    
+                    if (localPostCount > serverPostCount) {
+                        const lostPosts = localPostCount - serverPostCount;
+                        showAdminMessage(`⚠️ Found ${lostPosts} posts in browser storage that aren't on the server! Click "Recover Lost Posts" to restore them.`, 'warning');
+                        
+                        // Add recover button to form actions
+                        const formActions = document.querySelector('.form-actions');
+                        if (!document.getElementById('recoverBtn')) {
+                            const recoverBtn = document.createElement('button');
+                            recoverBtn.id = 'recoverBtn';
+                            recoverBtn.type = 'button';
+                            recoverBtn.className = 'btn btn-warning';
+                            recoverBtn.onclick = recoverLostPosts;
+                            recoverBtn.textContent = 'Recover Lost Posts';
+                            formActions.appendChild(recoverBtn);
+                        }
+                    }
+                    
+                    return localDB;
+                } catch (error) {
+                    console.error('Error parsing localStorage database:', error);
+                }
+            }
+            return null;
+        }
+        
+        function recoverLostPosts() {
+            const savedDatabase = localStorage.getItem('blogDatabase');
+            if (!savedDatabase) {
+                showAdminMessage('No posts found in browser storage', 'error');
+                return;
+            }
+            
+            try {
+                const localDB = JSON.parse(savedDatabase);
+                const currentIds = new Set(blogDatabase.posts.map(p => p.id));
+                const lostPosts = localDB.posts.filter(p => !currentIds.has(p.id));
+                
+                if (lostPosts.length === 0) {
+                    showAdminMessage('No lost posts found', 'info');
+                    return;
+                }
+                
+                // Add lost posts to current database
+                blogDatabase.posts.unshift(...lostPosts);
+                blogDatabase.total_posts = blogDatabase.posts.length;
+                blogDatabase.generated = new Date().toISOString();
+                
+                // Update localStorage with merged data
+                localStorage.setItem('blogDatabase', JSON.stringify(blogDatabase));
+                
+                showAdminMessage(`Recovered ${lostPosts.length} posts! Click "Export Database" to save them to a file.`, 'success');
+                
+                // Refresh displays
+                populatePostList();
+                loadAndDisplayPosts();
+                
+                // Remove recover button
+                const recoverBtn = document.getElementById('recoverBtn');
+                if (recoverBtn) {
+                    recoverBtn.remove();
+                }
+                
+            } catch (error) {
+                console.error('Error recovering posts:', error);
+                showAdminMessage('Error recovering posts', 'error');
             }
         }
     </script>
