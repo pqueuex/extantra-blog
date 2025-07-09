@@ -153,11 +153,13 @@ body {
     padding: 12px;
     background: linear-gradient(to top, black 0%, #330000 100%);
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .blog-post-card:hover {
     background: linear-gradient(to top, black 0%, #440000 100%);
     box-shadow: 0 2px 8px rgba(204, 0, 0, 0.3);
+    transform: translateY(-1px);
 }
 
 .post-date {

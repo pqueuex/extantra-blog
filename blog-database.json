@@ -1,7 +1,20 @@
 {
-  "generated": "2025-06-21T21:30:00.000Z",
-  "total_posts": 0,
+  "generated": "2025-07-08T12:00:00.000Z",
+  "total_posts": 1,
   "posts": [
-
+    {
+      "id": 1,
+      "title": "Welcome to EXTANTRA",
+      "slug": "welcome-to-extantra",
+      "date": "2025-07-08",
+      "created": "2025-07-08T12:00:00.000Z",
+      "modified": "2025-07-08T12:00:00.000Z",
+      "status": "published",
+      "tags": ["welcome", "introduction", "blog"],
+      "excerpt": "Welcome to my personal blog where I share thoughts on technology, creativity, and digital experiences.",
+      "content": "<p>Welcome to EXTANTRA, my personal space on the internet where I share thoughts, projects, and experiences.</p><p>This blog will feature content about:</p><ul><li>Technology and programming</li><li>Creative projects and digital art</li><li>Music production and audio experiments</li><li>Gaming and interactive experiences</li><li>Whatever else catches my interest</li></ul><p>Feel free to explore the different sections of the site using the navigation menu. You'll find my music, photos, 3D models, videos, and drawings.</p><p>Thanks for visiting, and check back soon for more content!</p>",
+      "author": "EXTANTRA",
+      "featured": false
+    }
   ]
 }

@@ -411,6 +411,7 @@
             publishedPosts.forEach(post => {
                 const article = document.createElement('article');
                 article.className = 'blog-post-card';
+                article.style.cursor = 'pointer';
                 
                 const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
                     year: 'numeric',
@@ -426,6 +427,11 @@
                         ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
                 `;
+                
+                // Add click handler to navigate to individual post
+                article.addEventListener('click', () => {
+                    window.location.href = `post.html?slug=${post.slug}`;
+                });
                 
                 blogGrid.appendChild(article);
             });
