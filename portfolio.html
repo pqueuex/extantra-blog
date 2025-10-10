@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Portfolio - EXTANTRA</title>
+    <meta name="description" content="Portfolio of EXTANTRA featuring animations, digital art, and creative works.">
+    <meta name="keywords" content="portfolio, animations, digital art, creative work, EXTANTRA">
+    <meta name="author" content="EXTANTRA">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Portfolio-specific styles */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .portfolio-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            background: #000;
+            border: none;
+            box-shadow: none;
+        }
+        
+        /* Main content area */
+        .portfolio-main {
+            flex: 1;
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #000000 0%, #1a0000 100%);
+        }
+        
+        /* Current item display */
+        .current-display {
+            width: 100%;
+            max-width: 90%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .current-display img,
+        .current-display video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border: 2px solid #cc0000;
+            box-shadow: 0 0 40px rgba(204, 0, 0, 0.5);
+        }
+        
+        .current-display video {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Side navigation panel (desktop) */
+        .side-nav {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 60px;
+            background: rgba(0, 0, 0, 0.95);
+            border-left: 1px solid #cc0000;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .side-nav.expanded {
+            width: 350px;
+        }
+        
+        .nav-header {
+            padding: 20px;
+            border-bottom: 1px solid #cc0000;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .side-nav.expanded .nav-tabs {
+            opacity: 1;
+        }
+        
+        .nav-tab {
+            flex: 1;
+            padding: 8px;
+            background: #000;
+            border: 1px solid #cc0000;
+            color: #fff;
+            font-family: 'DotGothic16', monospace;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+        
+        .nav-tab:hover {
+            background: #cc0000;
+            color: #000;
+        }
+        
+        .nav-tab.active {
+            background: #cc0000;
+            color: #000;
+        }
+        
+        /* Items container */
+        .nav-items {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 10px;
+        }
+        
+        .nav-item {
+            width: 100%;
+            margin-bottom: 15px;
+            cursor: pointer;
+            border: 1px solid #cc0000;
+            background: #000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center;
+            opacity: 0;
+            overflow: hidden;
+        }
+        
+        .side-nav.expanded .nav-item {
+            opacity: 1;
+        }
+        
+        .nav-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(204, 0, 0, 0.6);
+            border-color: #ff0000;
+        }
+        
+        .nav-item.active {
+            border-color: #ff0000;
+            box-shadow: 0 0 15px rgba(204, 0, 0, 0.4);
+        }
+        
+        .nav-item img,
+        .nav-item video {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .nav-item-info {
+            padding: 10px;
+            font-family: 'DotGothic16', monospace;
+            font-size: 10px;
+            color: #fff;
+            border-top: 1px solid #cc0000;
+        }
+        
+        .nav-item-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #cc0000;
+        }
+        
+        .nav-item-date {
+            opacity: 0.7;
+        }
+        
+        /* Contact section */
+        .contact-section {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #cc0000;
+            box-shadow: 0 0 40px rgba(204, 0, 0, 0.3);
+        }
+        
+        .contact-section h2 {
+            font-family: 'DotGothic16', monospace;
+            color: #cc0000;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .form-group label {
+            font-family: 'DotGothic16', monospace;
+            font-size: 12px;
+            color: #cc0000;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            background: #000;
+            border: 1px solid #cc0000;
+            color: #fff;
+            padding: 10px;
+            font-family: 'DotGothic16', monospace;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff0000;
+            box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: #cc0000;
+            color: #000;
+            border: 1px solid #cc0000;
+            padding: 12px 24px;
+            font-family: 'DotGothic16', monospace;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: bold;
+        }
+        
+        .submit-btn:hover {
+            background: #ff0000;
+            box-shadow: 0 0 15px rgba(204, 0, 0, 0.8);
+        }
+        
+        .contact-email {
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'DotGothic16', monospace;
+            font-size: 12px;
+            color: #cc0000;
+        }
+        
+        .contact-email a {
+            color: #cc0000;
+            text-decoration: underline;
+        }
+        
+        .contact-email a:hover {
+            color: #ff0000;
+        }
+        
+        /* Mobile top nav */
+        .top-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid #cc0000;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+        
+        .top-nav-toggle {
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            border-bottom: 1px solid #cc0000;
+            font-family: 'DotGothic16', monospace;
+            color: #cc0000;
+            font-size: 12px;
+        }
+        
+        .top-nav-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .top-nav.expanded .top-nav-content {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .top-nav-tabs {
+            display: flex;
+            gap: 5px;
+            padding: 10px;
+            border-bottom: 1px solid #cc0000;
+        }
+        
+        .top-nav-items {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .side-nav {
+                display: none;
+            }
+            
+            .top-nav {
+                display: block;
+            }
+            
+            .portfolio-main {
+                padding: 10px;
+                padding-top: 60px;
+            }
+            
+            .current-display {
+                height: 70vh;
+            }
+            
+            .contact-section {
+                padding: 20px;
+            }
+        }
+        
+        /* Loading state */
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #cc0000;
+            font-family: 'DotGothic16', monospace;
+            font-size: 18px;
+            z-index: 999;
+        }
+        
+        /* Hide scrollbar but keep functionality */
+        .nav-items::-webkit-scrollbar,
+        .top-nav-content::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        .nav-items::-webkit-scrollbar-track,
+        .top-nav-content::-webkit-scrollbar-track {
+            background: #000;
+        }
+        
+        .nav-items::-webkit-scrollbar-thumb,
+        .top-nav-content::-webkit-scrollbar-thumb {
+            background: #cc0000;
+        }
+        
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            color: #cc0000;
+            font-family: 'DotGothic16', monospace;
+            font-size: 18px;
+            padding: 40px;
+        }
+        
+        .empty-state p {
+            margin: 10px 0;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        /* See More button */
+        .see-more-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 900;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid #cc0000;
+            padding: 8px 20px;
+            font-family: 'DotGothic16', monospace;
+            font-size: 10px;
+            color: #cc0000;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .see-more-btn:hover {
+            background: #cc0000;
+            color: #000;
+            box-shadow: 0 0 15px rgba(204, 0, 0, 0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .see-more-btn {
+                bottom: 15px;
+                font-size: 9px;
+                padding: 6px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">Loading...</div>
+    
+    <div class="portfolio-container">
+        <!-- Main content area -->
+        <div class="portfolio-main">
+            <div class="current-display" id="currentDisplay">
+                <div class="empty-state">
+                    <div>EXTANTRA PORTFOLIO</div>
+                    <p>Select an item from the menu</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Desktop side navigation -->
+        <nav class="side-nav" id="sideNav">
+            <div class="nav-header">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-section="animations">Animations</button>
+                    <button class="nav-tab" data-section="drawings">Drawings</button>
+                    <button class="nav-tab" data-section="contact">Contact</button>
+                </div>
+            </div>
+            <div class="nav-items" id="navItems">
+                <!-- Items will be loaded here -->
+            </div>
+        </nav>
+        
+        <!-- Mobile top navigation -->
+        <nav class="top-nav" id="topNav">
+            <div class="top-nav-toggle" id="topNavToggle">
+                ☰ MENU
+            </div>
+            <div class="top-nav-content">
+                <div class="top-nav-tabs">
+                    <button class="nav-tab active" data-section="animations">Animations</button>
+                    <button class="nav-tab" data-section="drawings">Drawings</button>
+                    <button class="nav-tab" data-section="contact">Contact</button>
+                </div>
+                <div class="top-nav-items" id="topNavItems">
+                    <!-- Items will be loaded here -->
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- See More button -->
+    <a href="index.html" class="see-more-btn">See More</a>
+    
+    <script>
+        // State management
+        let currentSection = 'animations';
+        let animationsData = [];
+        let drawingsData = [];
+        let currentItemIndex = 0;
+        
+        // DOM elements
+        const sideNav = document.getElementById('sideNav');
+        const topNav = document.getElementById('topNav');
+        const topNavToggle = document.getElementById('topNavToggle');
+        const navItems = document.getElementById('navItems');
+        const topNavItems = document.getElementById('topNavItems');
+        const currentDisplay = document.getElementById('currentDisplay');
+        const loading = document.getElementById('loading');
+        
+        // Load data
+        async function loadData() {
+            try {
+                // Load animations (videos)
+                const videosResponse = await fetch('videos-database.json');
+                const videosData = await videosResponse.json();
+                animationsData = videosData.videos || [];
+                
+                // Load drawings
+                const drawingsResponse = await fetch('drawings-database.json');
+                const drawingsDataJSON = await drawingsResponse.json();
+                drawingsData = drawingsDataJSON.drawings || [];
+                
+                loading.style.display = 'none';
+                renderItems();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                loading.textContent = 'Error loading content';
+            }
+        }
+        
+        // Proximity detection for side nav (desktop)
+        let rafId = null;
+        let isHoveringNav = false;
+        
+        // Track when mouse is over the side nav
+        sideNav.addEventListener('mouseenter', () => {
+            isHoveringNav = true;
+            sideNav.classList.add('expanded');
+        });
+        
+        sideNav.addEventListener('mouseleave', () => {
+            isHoveringNav = false;
+        });
+        
+        function handleMouseMove(e) {
+            if (window.innerWidth <= 768) return;
+            
+            const windowWidth = window.innerWidth;
+            const mouseX = e.clientX;
+            const distanceFromRight = windowWidth - mouseX;
+            const threshold = 250; // Increased from 150 to 250
+            
+            // Keep expanded if hovering over nav OR within threshold
+            if (isHoveringNav || distanceFromRight < threshold) {
+                sideNav.classList.add('expanded');
+            } else {
+                sideNav.classList.remove('expanded');
+            }
+            
+            // Scale items based on mouse proximity
+            if (sideNav.classList.contains('expanded')) {
+                const items = navItems.querySelectorAll('.nav-item');
+                items.forEach((item) => {
+                    const rect = item.getBoundingClientRect();
+                    const itemCenterY = rect.top + rect.height / 2;
+                    const distance = Math.abs(e.clientY - itemCenterY);
+                    const maxDistance = 300;
+                    const scale = Math.max(0, 1 - (distance / maxDistance) * 0.5);
+                    const finalScale = 1 + (scale * 0.1); // Reduced from 0.15 to 0.1 for more consistent sizing
+                    
+                    item.style.transform = `scale(${finalScale})`;
+                });
+            } else {
+                // Reset transforms when collapsed
+                const items = navItems.querySelectorAll('.nav-item');
+                items.forEach((item) => {
+                    item.style.transform = 'scale(1)';
+                });
+            }
+        }
+        
+        document.addEventListener('mousemove', (e) => {
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+            }
+            rafId = requestAnimationFrame(() => handleMouseMove(e));
+        });
+        
+        // Mobile nav toggle
+        topNavToggle.addEventListener('click', () => {
+            topNav.classList.toggle('expanded');
+            topNavToggle.textContent = topNav.classList.contains('expanded') ? '✕ CLOSE' : '☰ MENU';
+        });
+        
+        // Tab switching
+        function switchSection(section) {
+            currentSection = section;
+            
+            // Update active tab
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.dataset.section === section) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            currentItemIndex = 0;
+            renderItems();
+            
+            if (section === 'contact') {
+                showContact();
+            } else {
+                showItem(0);
+            }
+        }
+        
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                switchSection(tab.dataset.section);
+                // Close mobile menu
+                if (window.innerWidth <= 768) {
+                    topNav.classList.remove('expanded');
+                    topNavToggle.textContent = '☰ MENU';
+                }
+            });
+        });
+        
+        // Render items in navigation
+        function renderItems() {
+            const data = currentSection === 'animations' ? animationsData : drawingsData;
+            
+            if (currentSection === 'contact') {
+                navItems.innerHTML = '';
+                topNavItems.innerHTML = '';
+                return;
+            }
+            
+            const itemsHTML = data.map((item, index) => {
+                if (currentSection === 'animations') {
+                    return `
+                        <div class="nav-item" data-index="${index}">
+                            <video src="videos/${item.filename}" muted></video>
+                            <div class="nav-item-info">
+                                <div class="nav-item-title">${item.title}</div>
+                                <div class="nav-item-date">${item.date} • ${item.duration_formatted}</div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    return `
+                        <div class="nav-item" data-index="${index}">
+                            <img src="drawings/${item.filename}" alt="${item.title}" loading="lazy">
+                            <div class="nav-item-info">
+                                <div class="nav-item-title">${item.title}</div>
+                                <div class="nav-item-date">${item.date}</div>
+                            </div>
+                        </div>
+                    `;
+                }
+            }).join('');
+            
+            navItems.innerHTML = itemsHTML;
+            topNavItems.innerHTML = itemsHTML;
+            
+            // Add click listeners
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const index = parseInt(item.dataset.index);
+                    showItem(index);
+                    
+                    // Update active state
+                    document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                    document.querySelectorAll(`.nav-item[data-index="${index}"]`).forEach(i => i.classList.add('active'));
+                    
+                    // Close mobile menu
+                    if (window.innerWidth <= 768) {
+                        topNav.classList.remove('expanded');
+                        topNavToggle.textContent = '☰ MENU';
+                    }
+                });
+            });
+        }
+        
+        // Show specific item
+        function showItem(index) {
+            const data = currentSection === 'animations' ? animationsData : drawingsData;
+            const item = data[index];
+            
+            if (!item) return;
+            
+            currentItemIndex = index;
+            
+            if (currentSection === 'animations') {
+                currentDisplay.innerHTML = `
+                    <video controls autoplay loop>
+                        <source src="videos/${item.filename}" type="video/mp4">
+                    </video>
+                `;
+            } else {
+                currentDisplay.innerHTML = `
+                    <img src="drawings/${item.filename}" alt="${item.title}">
+                `;
+            }
+        }
+        
+        // Show contact form
+        function showContact() {
+            currentDisplay.innerHTML = `
+                <div class="contact-section">
+                    <h2>Get In Touch</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                    </form>
+                    <div class="contact-email">
+                        <p>Or email directly: <a href="mailto:pq@extantra.net">pq@extantra.net</a></p>
+                    </div>
+                </div>
+            `;
+            
+            // Handle form submission
+            document.getElementById('contactForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                
+                const mailtoLink = `mailto:pq@extantra.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+                window.location.href = mailtoLink;
+            });
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (currentSection === 'contact') return;
+            
+            const data = currentSection === 'animations' ? animationsData : drawingsData;
+            
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                const nextIndex = (currentItemIndex + 1) % data.length;
+                showItem(nextIndex);
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                document.querySelectorAll(`.nav-item[data-index="${nextIndex}"]`).forEach(i => i.classList.add('active'));
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                const prevIndex = (currentItemIndex - 1 + data.length) % data.length;
+                showItem(prevIndex);
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                document.querySelectorAll(`.nav-item[data-index="${prevIndex}"]`).forEach(i => i.classList.add('active'));
+            }
+        });
+        
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>
