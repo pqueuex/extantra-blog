@@ -1,0 +1,64 @@
+# Development and build tools
+*.py
+*.sh
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+*.egg-info/
+
+# Documentation (not needed for live site)
+*.md
+!README.md
+
+# Batch processing scripts and requirements
+batch_*.py
+*_requirements.txt
+demo_*.py
+simple_*.py
+
+# Configuration files (deployment/server specific)
+*.conf
+nginx*.conf
+
+# Deployment scripts
+deploy-*.sh
+setup-*.sh
+update-*.sh
+check-*.sh
+clear-*.sh
+
+# Backup and recovery
+recovery-*.js
+*.zip
+*.backup
+
+# Generation scripts
+generate_*.py
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
