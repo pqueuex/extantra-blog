@@ -13,46 +13,45 @@ def generate_songs_database():
         return
     
     songs = []
-    song_id = 1
     
-    # Get all audio files (excluding subdirectories like preferablysilentgoblin)
+    # 1. Get all audio files
     audio_files = []
     for item in os.listdir(audio_dir):
         item_path = os.path.join(audio_dir, item)
         if os.path.isfile(item_path) and item.lower().endswith(('.mp3', '.wav', '.m4a', '.flac', '.ogg')):
-            audio_files.append(item)
+            if not item.startswith('.'):
+                audio_files.append(item)
     
-    # Sort files alphabetically
-    audio_files.sort()
+    # 2. Sort files by creation time (getctime)
+    # Use os.path.getmtime if you prefer "Last Modified" over "Created"
+    audio_files.sort(key=lambda x: os.path.getctime(os.path.join(audio_dir, x)))
     
-    for filename in audio_files:
-        if filename.startswith('.'):  # Skip hidden files
-            continue
-            
+    # If you want newest songs first, uncomment the line below:
+    # audio_files.reverse()
+
+    for song_id, filename in enumerate(audio_files, start=1):
         file_path = os.path.join(audio_dir, filename)
         
-        # Use filename as title (including extension as requested)
-        display_title = filename
+        # Get the actual creation time of the file
+        creation_time = os.path.getctime(file_path)
+        dt_object = datetime.fromtimestamp(creation_time, tz=timezone.utc)
         
-        # Create song entry
         song_entry = {
             "id": song_id,
             "filename": filename,
-            "title": display_title,
+            "title": filename,
             "artist": "EXTANTRA",
             "album": "",
-            "duration": 0,  # We'll set this to 0 since we can't get metadata easily
+            "duration": 0,
             "duration_formatted": "0:00",
             "file_size": os.path.getsize(file_path),
-            "added_date": datetime.now(timezone.utc).isoformat(),
+            "added_date": dt_object.isoformat(), # Now uses actual file date
             "tags": [],
             "plays": 0
         }
         
         songs.append(song_entry)
-        song_id += 1
     
-    # Create database structure
     database = {
         "generated": datetime.now(timezone.utc).isoformat(),
         "total_songs": len(songs),
@@ -61,19 +60,15 @@ def generate_songs_database():
         "songs": songs
     }
     
-    # Write to file
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(database, f, indent=2, ensure_ascii=False)
     
     print(f"✅ Generated {output_file}")
-    print(f"   📊 {len(songs)} songs processed")
+    print(f"   📊 {len(songs)} songs processed (Sorted by Date)")
     print(f"   💾 Total size: {format_file_size(database['total_size'])}")
 
 def format_file_size(size_bytes):
-    """Format file size in bytes to human readable format"""
-    if size_bytes == 0:
-        return "0 B"
-    
+    if size_bytes == 0: return "0 B"
     for unit in ['B', 'KB', 'MB', 'GB']:
         if size_bytes < 1024.0:
             return f"{size_bytes:.1f} {unit}"
