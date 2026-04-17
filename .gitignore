@@ -42,6 +42,7 @@ clear-*.sh
 recovery-*.js
 *.zip
 *.backup
+original_backup/
 
 # Generation scripts
 generate_*.py
