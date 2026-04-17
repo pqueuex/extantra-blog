@@ -1,0 +1,6 @@
+{
+  "name": "extantra-blog",
+  "scripts": {
+    "build": "mkdir -p dist && rsync -a --exclude='.git' --exclude='dist' --exclude='node_modules' --exclude='*.py' --exclude='*.sh' --exclude='*.md' --exclude='package.json' --exclude='package-lock.json' . dist/"
+  }
+}
