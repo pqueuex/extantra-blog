@@ -1,6 +1,6 @@
 {
   "name": "extantra-blog",
   "scripts": {
-    "build": "mkdir -p dist && rsync -a --exclude='.git' --exclude='dist' --exclude='node_modules' --exclude='*.py' --exclude='*.sh' --exclude='*.md' --exclude='package.json' --exclude='package-lock.json' . dist/"
+    "build": "rm -rf dist && mkdir -p dist && cp -R . dist && rm -rf dist/.git dist/node_modules dist/dist && find dist -name '*.py' -delete && find dist -name '*.sh' -delete && find dist -name '*.md' -delete && rm -f dist/package.json dist/package-lock.json"
   }
 }
