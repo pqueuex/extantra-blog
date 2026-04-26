@@ -1,6 +1,6 @@
 {
   "name": "extantra-blog",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp -R . dist && rm -rf dist/.git dist/node_modules dist/dist && find dist -name '*.py' -delete && find dist -name '*.sh' -delete && find dist -name '*.md' -delete && rm -f dist/package.json dist/package-lock.json"
+    "build": "rm -rf dist && mkdir -p dist && find . -mindepth 1 -maxdepth 1 ! -name dist ! -name node_modules ! -name .git ! -name '*.py' ! -name '*.sh' ! -name '*.md' ! -name package.json ! -name package-lock.json -exec cp -R '{}' dist/ \;"
   }
 }
