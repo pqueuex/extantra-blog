@@ -1,6 +1,6 @@
 {
   "name": "extantra-blog",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && for p in * .[^.]*; do [ \"$p\" = \"dist\" ] && continue; [ \"$p\" = \".git\" ] && continue; [ \"$p\" = \"node_modules\" ] && continue; [ \"$p\" = \"package.json\" ] && continue; [ \"$p\" = \"package-lock.json\" ] && continue; case \"$p\" in *.py|*.sh|*.md) continue ;; esac; cp -R \"$p\" dist/; done"
+    "build": "rm -rf dist && mkdir -p dist && for p in * .[!.]*; do [ \"$p\" = \"dist\" ] && continue; [ \"$p\" = \".git\" ] && continue; [ \"$p\" = \"node_modules\" ] && continue; [ \"$p\" = \"package.json\" ] && continue; [ \"$p\" = \"package-lock.json\" ] && continue; case \"$p\" in *.py|*.sh|*.md) continue ;; esac; cp -R \"$p\" dist/; done"
   }
 }
