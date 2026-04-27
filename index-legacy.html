@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>EXTANTRA</title>
+    <meta name="description" content="Personal blog of EXTANTRA featuring technology insights, gaming thoughts, and creative projects. Exploring the intersection of technology and creativity.">
+    <meta name="keywords" content="personal blog, technology blog, gaming blog, creative projects, digital art, programming, web development, indie games">
+    <meta name="author" content="EXTANTRA">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="EXTANTRA - Personal Blog">
+    <meta property="og:description" content="Personal blog featuring technology insights, gaming thoughts, and creative projects. Exploring digital creativity and innovation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://extantra.net">
+    <meta property="og:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    <meta property="og:site_name" content="EXTANTRA Blog">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EXTANTRA - Personal Blog">
+    <meta name="twitter:description" content="Personal blog featuring technology, gaming, and creative projects.">
+    <meta name="twitter:image" content="https://extantra.net/images/extantralogo-inverted.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://extantra.net">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
+    
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "EXTANTRA Blog",
+      "url": "https://extantra.net",
+      "description": "Personal blog featuring creative projects",
+      "author": {
+        "@type": "Person",
+        "name": "EXTANTRA"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "EXTANTRA"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="images/extantralogo-inverted.webp" alt="Extantra" class="logo-image">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('index.html')">Home</div>
+                    <div class="category" onclick="goToPage('photos.html')">Photos</div>
+                    <div class="category" onclick="goToPage('3d-models.html')">3D Models</div>
+                    <div class="category" onclick="goToPage('video.html')">Video</div>
+                    <div class="category" onclick="goToPage('drawings.html')">Drawings</div>
+                    <div class="category" onclick="goToPage('music.html')">Music</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>EXTANTRA</h1>
+                    <p class="tagline"> </p>
+                </div>
+
+                <div class="blog-grid">
+                    <!-- Blog posts will be loaded dynamically -->
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 EXTANTRA. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:contact@extantra.net">Contact</a>
+                    <a href="https://store.extantra.net">Store</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+        
+        // Load and display blog posts
+        async function loadBlogPosts() {
+            try {
+                // Add cache-busting parameter to ensure fresh data
+                const timestamp = new Date().getTime();
+                const url = `./blog-database.json?v=${timestamp}`;
+                
+                const response = await fetch(url);
+                
+                if (response.ok) {
+                    const database = await response.json();
+                    displayBlogPosts(database.posts);
+                } else {
+                    displayEmptyState();
+                }
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+                displayEmptyState();
+            }
+        }
+        
+        function displayBlogPosts(posts) {
+            const blogGrid = document.querySelector('.blog-grid');
+            
+            // Filter for published posts only
+            const publishedPosts = posts.filter(post => post.status === 'published');
+            
+            if (publishedPosts.length === 0) {
+                displayEmptyState();
+                return;
+            }
+            
+            // Clear existing content
+            blogGrid.innerHTML = '';
+            
+            // Create and display each post
+            publishedPosts.forEach(post => {
+                const article = document.createElement('article');
+                article.className = 'blog-post-card';
+                article.style.cursor = 'pointer';
+                
+                const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                article.innerHTML = `
+                    <div class="post-date">${formattedDate}</div>
+                    <h2 class="post-title">${post.title}</h2>
+                    <div class="post-excerpt">${post.excerpt}</div>
+                    <div class="post-tags">
+                        ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                `;
+                
+                // Add click handler to navigate to individual post
+                article.addEventListener('click', () => {
+                    window.location.href = `post.html?slug=${post.slug}`;
+                });
+                
+                blogGrid.appendChild(article);
+            });
+        }
+        
+        function displayEmptyState() {
+            const blogGrid = document.querySelector('.blog-grid');
+            blogGrid.innerHTML = `
+                <div style="text-align: center; padding: 40px 20px; color: #666;">
+                    <p>No blog posts yet.</p>
+                </div>
+            `;
+        }
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('EXTANTRA Blog loaded');
+            loadBlogPosts();
+        });
+    </script>
+</body>
+</html>

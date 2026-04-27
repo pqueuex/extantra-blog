@@ -1,0 +1,37 @@
+[
+  {
+    "handle": "tedwordnelson",
+    "displayName": "EXTANTRA",
+    "color": "#cc0000",
+    "accentDark": "#990000",
+    "accentDarker": "#aa0000",
+    "accentDim": "#330000",
+    "accentHover": "#440000",
+    "accentDimmer": "#220000",
+    "accentGlow": "rgba(204, 0, 0, 0.3)",
+    "sections": [
+      { "label": "Photos",    "href": "photos.html",    "type": "photo" },
+      { "label": "3D Models", "href": "3d-models.html", "type": "3d-model" },
+      { "label": "Video",     "href": "video.html",     "type": "video" },
+      { "label": "Drawings",  "href": "drawings.html",  "type": "drawing" },
+      { "label": "Music",     "href": "music.html",     "type": "audio" }
+    ]
+  },
+  {
+    "handle": "nyquilcigarettes",
+    "displayName": "nyquilcigarettes",
+    "color": "#1a3a8a",
+    "accentDark": "#102266",
+    "accentDarker": "#0d1a50",
+    "accentDim": "#071130",
+    "accentHover": "#0f1f45",
+    "accentDimmer": "#050b1c",
+    "accentGlow": "rgba(26, 58, 138, 0.3)",
+    "sections": [
+      { "label": "Travel",       "href": "travel.html",       "type": "travel" },
+      { "label": "Photo Diary",  "href": "photo-diary.html",  "type": "photo" },
+      { "label": "MP3",          "href": "mp3.html",          "type": "audio" },
+      { "label": "Music Videos", "href": "music-videos.html", "type": "music-video" }
+    ]
+  }
+]

@@ -1,3 +1,13 @@
+:root {
+    --accent: #cc0000;
+    --accent-dark: #990000;
+    --accent-darker: #aa0000;
+    --accent-dim: #330000;
+    --accent-hover: #440000;
+    --accent-dimmer: #220000;
+    --accent-glow: rgba(204, 0, 0, 0.3);
+}
+
 /* Google Fonts Import @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap'); */
 
 * {
@@ -28,17 +38,17 @@ body {
 
 .container {
     width: 480px;
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     background-color: black;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 20px rgba(204, 0, 0, 0.3);
+    box-shadow: 0 0 20px var(--accent-glow);
 }
 
 /* Header */
 .header {
-    border-bottom: 1px solid #cc0000;
+    border-bottom: 1px solid var(--accent);
     padding: 8px 10px;
     display: flex;
     align-items: center;
@@ -70,7 +80,7 @@ body {
 /* Sidebar */
 .sidebar {
     width: 100%;
-    border-bottom: 1px solid #cc0000;
+    border-bottom: 1px solid var(--accent);
     padding: 8px;
     background-color: black;
     display: flex;
@@ -87,7 +97,7 @@ body {
 }
 
 .category {
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     padding: 6px 8px;
     background-color: black;
     cursor: pointer;
@@ -100,7 +110,7 @@ body {
 }
 
 .category:hover {
-    background-color: #cc0000;
+    background-color: var(--accent);
     color: white;
 }
 
@@ -116,8 +126,8 @@ body {
     align-items: flex-start;
     margin-bottom: 20px;
     padding: 8px 0;
-    background: linear-gradient(to top, black 0%, #330000 100%);
-    border: 1px solid #cc0000;
+    background: linear-gradient(to top, black 0%, var(--accent-dim) 100%);
+    border: 1px solid var(--accent);
     height: 35px;
     position: relative;
 }
@@ -151,17 +161,17 @@ body {
 }
 
 .blog-post-card {
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     padding: 12px;
-    background: linear-gradient(to top, black 0%, #330000 100%);
+    background: linear-gradient(to top, black 0%, var(--accent-dim) 100%);
     transition: all 0.2s ease;
     cursor: pointer;
     position: relative;
 }
 
 .blog-post-card:hover {
-    background: linear-gradient(to top, black 0%, #440000 100%);
-    box-shadow: 0 2px 8px rgba(204, 0, 0, 0.3);
+    background: linear-gradient(to top, black 0%, var(--accent-hover) 100%);
+    box-shadow: 0 2px 8px var(--accent-glow);
     transform: translateY(-1px);
 }
 
@@ -193,7 +203,7 @@ body {
 }
 
 .tag {
-    background: #cc0000;
+    background: var(--accent);
     color: white;
     padding: 2px 6px;
     font-size: 8px;
@@ -211,7 +221,7 @@ body {
     color: white;
     margin-bottom: 15px;
     text-align: center;
-    border-bottom: 1px solid #cc0000;
+    border-bottom: 1px solid var(--accent);
     padding-bottom: 8px;
 }
 
@@ -222,14 +232,14 @@ body {
 }
 
 .project-card {
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     padding: 10px;
-    background: linear-gradient(to top, black 0%, #330000 100%);
+    background: linear-gradient(to top, black 0%, var(--accent-dim) 100%);
     transition: all 0.2s ease;
 }
 
 .project-card:hover {
-    background: linear-gradient(to top, black 0%, #440000 100%);
+    background: linear-gradient(to top, black 0%, var(--accent-hover) 100%);
 }
 
 .project-card h3 {
@@ -247,7 +257,7 @@ body {
 }
 
 .project-link {
-    color: #cc0000;
+    color: var(--accent);
     text-decoration: none;
     font-size: 10px;
     font-weight: bold;
@@ -255,7 +265,7 @@ body {
 }
 
 .project-link:hover {
-    color: #990000;
+    color: var(--accent-dark);
     text-decoration: underline;
 }
 
@@ -267,7 +277,7 @@ body {
 
 /* Footer */
 .footer {
-    border-top: 1px solid #cc0000;
+    border-top: 1px solid var(--accent);
     padding: 10px;
     background-color: black;
     margin-top: auto;
@@ -287,7 +297,7 @@ body {
 }
 
 .footer-links a {
-    color: #cc0000;
+    color: var(--accent);
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -308,8 +318,8 @@ body {
 .contact-preview {
     margin-bottom: 25px;
     padding: 15px;
-    border: 1px solid #cc0000;
-    background: linear-gradient(to top, black 0%, #330000 100%);
+    border: 1px solid var(--accent);
+    background: linear-gradient(to top, black 0%, var(--accent-dim) 100%);
 }
 
 .bio-section h2,
@@ -319,7 +329,7 @@ body {
     font-size: 14px;
     color: white;
     margin-bottom: 12px;
-    border-bottom: 1px solid #cc0000;
+    border-bottom: 1px solid var(--accent);
     padding-bottom: 5px;
 }
 
@@ -340,8 +350,8 @@ body {
 
 .interest-item {
     padding: 10px;
-    background: linear-gradient(to top, black 0%, #220000 100%);
-    border: 1px solid #cc0000;
+    background: linear-gradient(to top, black 0%, var(--accent-dimmer) 100%);
+    border: 1px solid var(--accent);
 }
 
 .interest-item h3 {
@@ -359,7 +369,7 @@ body {
 /* Featured Player Styles */
 .featured-player {
     background-color: black;
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     padding: 12px;
     margin-bottom: 24px;
     border-radius: 0;
@@ -375,7 +385,7 @@ body {
 }
 
 .ep-section:hover {
-    border-color: #cc0000;
+    border-color: var(--accent);
 }
 
 .ep-container {
@@ -403,7 +413,7 @@ body {
     height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 6px solid #cc0000;
+    border-top: 6px solid var(--accent);
     transition: transform 0.3s ease;
 }
 
@@ -436,7 +446,7 @@ body {
 
 .ep-info h3 {
     font-size: 12px;
-    color: #cc0000;
+    color: var(--accent);
     margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -450,7 +460,7 @@ body {
 }
 
 .download-btn {
-    background-color: #cc0000;
+    background-color: var(--accent);
     color: white;
     border: none;
     padding: 4px 8px;
@@ -466,7 +476,7 @@ body {
 }
 
 .download-btn:hover {
-    background-color: #aa0000;
+    background-color: var(--accent-darker);
 }
 
 .ep-tracklist {
@@ -484,7 +494,7 @@ body {
 
 .ep-tracklist h4 {
     font-size: 10px;
-    color: #cc0000;
+    color: var(--accent);
     margin-bottom: 6px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -513,7 +523,7 @@ body {
 
 .ep-track.loaded {
     background-color: #333;
-    border-left: 2px solid #cc0000;
+    border-left: 2px solid var(--accent);
     padding-left: 2px;
 }
 
@@ -556,7 +566,7 @@ body {
 
 .player-header h3 {
     font-size: 10px;
-    color: #cc0000;
+    color: var(--accent);
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -600,7 +610,7 @@ body {
 
 .play-pause-btn {
     background-color: transparent;
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     width: 24px;
     height: 24px;
     display: flex;
@@ -612,11 +622,11 @@ body {
 }
 
 .play-pause-btn:hover {
-    background-color: #cc0000;
+    background-color: var(--accent);
 }
 
 .play-pause-btn svg {
-    color: #cc0000;
+    color: var(--accent);
     transition: color 0.15s ease;
 }
 
@@ -653,7 +663,7 @@ body {
 
 .volume-handle:hover {
     r: 4;
-    filter: drop-shadow(0 0 3px #cc0000);
+    filter: drop-shadow(0 0 3px var(--accent));
 }
 
 .volume-control:active .volume-handle {
@@ -681,7 +691,7 @@ body {
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: #cc0000;
+    background-color: var(--accent);
     width: 0%;
     transition: width 0.05s linear;
     z-index: 3;
@@ -693,7 +703,7 @@ body {
     left: 0%;
     width: 2px;
     height: 6px;
-    background-color: #cc0000;
+    background-color: var(--accent);
     transform: translateX(-50%);
     cursor: pointer;
     z-index: 4;
@@ -756,7 +766,7 @@ body {
 
 .section-header h2 {
     font-size: 10px;
-    color: #cc0000;
+    color: var(--accent);
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -781,13 +791,13 @@ body {
 }
 
 .filter-btn:hover {
-    border-color: #cc0000;
-    color: #cc0000;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .filter-btn.active {
-    background-color: #cc0000;
-    border-color: #cc0000;
+    background-color: var(--accent);
+    border-color: var(--accent);
     color: white;
 }
 
@@ -808,7 +818,7 @@ body {
 }
 
 .song-card:hover {
-    border-color: #cc0000;
+    border-color: var(--accent);
 }
 
 .song-line {
@@ -878,17 +888,17 @@ body {
 }
 
 .load-btn:hover {
-    border-color: #cc0000;
-    color: #cc0000;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .song-card.loaded {
-    border-color: #cc0000;
+    border-color: var(--accent);
 }
 
 .song-card.loaded .load-btn {
-    border-color: #cc0000;
-    color: #cc0000;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .song-title {
@@ -917,7 +927,7 @@ body {
 /* 3D Model Viewer Styles */
 .model-viewer-section {
     background-color: black;
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     padding: 16px;
     margin-bottom: 24px;
     border-radius: 0;
@@ -933,7 +943,7 @@ body {
 
 .viewer-header h2 {
     font-size: 10px;
-    color: #cc0000;
+    color: var(--accent);
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -977,9 +987,9 @@ body {
 }
 
 .view-btn.active {
-    background: #cc0000;
+    background: var(--accent);
     color: white;
-    border-color: #cc0000;
+    border-color: var(--accent);
 }
 
 .model-selector {
@@ -1097,13 +1107,13 @@ body {
 }
 
 .filter-btn:hover {
-    border-color: #cc0000;
-    color: #cc0000;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .filter-btn.active {
-    background-color: #cc0000;
-    border-color: #cc0000;
+    background-color: var(--accent);
+    border-color: var(--accent);
     color: white;
 }
 
@@ -1120,7 +1130,7 @@ body {
 }
 
 .model-card:hover {
-    border-color: #cc0000;
+    border-color: var(--accent);
 }
 
 .model-line {
@@ -1151,7 +1161,7 @@ body {
 }
 
 .model-category {
-    color: #cc0000;
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -1162,8 +1172,8 @@ body {
 
 .load-to-viewer-btn {
     background-color: transparent;
-    border: 1px solid #cc0000;
-    color: #cc0000;
+    border: 1px solid var(--accent);
+    color: var(--accent);
     padding: 6px 16px;
     font-size: 9px;
     cursor: pointer;
@@ -1174,7 +1184,7 @@ body {
 }
 
 .load-to-viewer-btn:hover {
-    background-color: #cc0000;
+    background-color: var(--accent);
     color: white;
 }
 
@@ -1187,7 +1197,7 @@ body {
     width: 100%;
     max-height: 200px;
     background: black;
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     margin-bottom: 8px;
 }
 
@@ -1210,7 +1220,7 @@ body {
 }
 
 .video-btn {
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     padding: 4px 8px;
     background-color: black;
     color: white;
@@ -1220,23 +1230,23 @@ body {
 }
 
 .video-btn:hover {
-    background-color: #cc0000;
+    background-color: var(--accent);
 }
 
 .video-btn.active {
-    background-color: #cc0000;
+    background-color: var(--accent);
 }
 
 /* Video List */
 .video-list {
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     max-height: 300px;
     overflow-y: auto;
 }
 
 .video-item {
     padding: 6px 8px;
-    border-bottom: 1px solid rgba(204, 0, 0, 0.3);
+    border-bottom: 1px solid var(--accent-glow);
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
@@ -1246,7 +1256,7 @@ body {
 }
 
 .video-item.active {
-    background-color: #cc0000;
+    background-color: var(--accent);
 }
 
 .video-item:last-child {
@@ -1285,20 +1295,20 @@ body {
 }
 
 .main-video:focus {
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
 }
 
 .video-info {
     margin-top: 10px;
     padding-top: 10px;
-    border-top: 1px solid rgba(204, 0, 0, 0.3);
+    border-top: 1px solid var(--accent-glow);
 }
 
 .video-info h3 {
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #cc0000;
+    color: var(--accent);
 }
 
 .video-meta {
@@ -1315,13 +1325,13 @@ body {
     background: rgba(204, 0, 0, 0.1);
     padding: 2px 6px;
     border-radius: 3px;
-    border: 1px solid rgba(204, 0, 0, 0.3);
+    border: 1px solid var(--accent-glow);
 }
 
 /* Playlist Styles */
 .playlist-container {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     border-radius: 4px;
     backdrop-filter: blur(10px);
     max-height: 400px;
@@ -1332,7 +1342,7 @@ body {
 
 .playlist-header {
     padding: 8px 10px;
-    border-bottom: 1px solid rgba(204, 0, 0, 0.3);
+    border-bottom: 1px solid var(--accent-glow);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1342,7 +1352,7 @@ body {
 .playlist-header h3 {
     font-size: 12px;
     font-weight: bold;
-    color: #cc0000;
+    color: var(--accent);
 }
 
 .playlist-controls {
@@ -1364,13 +1374,13 @@ body {
 .control-btn:hover {
     background: rgba(204, 0, 0, 0.1);
     color: white;
-    border-color: #cc0000;
+    border-color: var(--accent);
 }
 
 .control-btn.active {
     background: rgba(204, 0, 0, 0.2);
-    color: #cc0000;
-    border-color: #cc0000;
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 .playlist {
@@ -1392,7 +1402,7 @@ body {
 
 .playlist-item.active {
     background: rgba(204, 0, 0, 0.2);
-    border-left: 3px solid #cc0000;
+    border-left: 3px solid var(--accent);
 }
 
 .playlist-item-info {
@@ -1409,7 +1419,7 @@ body {
 }
 
 .playlist-item.active .playlist-item-title {
-    color: #cc0000;
+    color: var(--accent);
 }
 
 .playlist-item-meta {
@@ -1460,7 +1470,7 @@ body {
 
 .admin-modal-content {
     background: black;
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     width: 480px;
     max-width: 90%;
     max-height: 90vh;
@@ -1488,7 +1498,7 @@ body {
 }
 
 .image-preview-item img {
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     border-radius: 2px;
 }
 
@@ -1508,15 +1518,15 @@ body {
 .btn-small {
     padding: 2px 6px;
     font-size: 9px;
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     background: transparent;
-    color: #cc0000;
+    color: var(--accent);
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .btn-small:hover {
-    background: #cc0000;
+    background: var(--accent);
     color: white;
 }
 
@@ -1530,12 +1540,12 @@ body {
 }
 
 .blog-image:hover {
-    border-color: #cc0000;
+    border-color: var(--accent);
 }
 
 .admin-header {
     padding: 8px 10px;
-    border-bottom: 1px solid #cc0000;
+    border-bottom: 1px solid var(--accent);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1550,7 +1560,7 @@ body {
 }
 
 .admin-close {
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     padding: 4px 8px;
     background-color: black;
     color: white;
@@ -1562,7 +1572,7 @@ body {
 }
 
 .admin-close:hover {
-    background-color: #cc0000;
+    background-color: var(--accent);
 }
 
 .blog-form {
@@ -1595,7 +1605,7 @@ body {
     width: 100%;
     padding: 4px 6px;
     background-color: black;
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     color: white;
     font-size: 10px;
     font-family: 'DotGothic16', 'MS Gothic', Osaka, monospace;
@@ -1606,7 +1616,7 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    background-color: #cc0000;
+    background-color: var(--accent);
     color: black;
 }
 
@@ -1627,11 +1637,11 @@ body {
     gap: 6px;
     margin-top: 10px;
     padding-top: 8px;
-    border-top: 1px solid #cc0000;
+    border-top: 1px solid var(--accent);
 }
 
 .btn {
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     padding: 6px 8px;
     background-color: black;
     cursor: pointer;
@@ -1645,7 +1655,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #cc0000;
+    background-color: var(--accent);
     color: white;
 }
 
@@ -1654,7 +1664,7 @@ body {
     padding: 6px 8px;
     font-size: 10px;
     text-align: center;
-    border: 1px solid #cc0000;
+    border: 1px solid var(--accent);
     background-color: black;
     color: white;
 }
@@ -1668,7 +1678,7 @@ body {
 }
 
 .admin-message.info {
-    color: #cc0000;
+    color: var(--accent);
 }
 
 .admin-message.warning {
@@ -1835,7 +1845,7 @@ body {
     position: relative;
     overflow: hidden;
     border: 2px solid #000;
-    outline: 1px solid #cc0000;
+    outline: 1px solid var(--accent);
 }
 
 .gallery-item:hover {
@@ -1924,7 +1934,7 @@ body {
 }
 
 .modal-close:hover {
-    color: #cc0000;
+    color: var(--accent);
 }
 
 /* Responsive Gallery */
