@@ -11,8 +11,8 @@
     <style>
         :root {
             --accent: #1a3a8a;
-            --accent-dark: #102266;
-            --accent-darker: #0d1a50;
+            --accent-dark: #0d1a50;
+            --accent-darker: #102266;
             --accent-dim: #071130;
             --accent-hover: #0f1f45;
             --accent-dimmer: #050b1c;
@@ -99,6 +99,7 @@
         function goToPage(page) { window.location.href = page; }
 
         let currentSong = null;
+        let songsIndex = {};  // id -> song object lookup
         const audio = document.getElementById('audioPlayer');
         const playIcon = document.querySelector('.play-icon');
         const pauseIcon = document.querySelector('.pause-icon');
@@ -166,18 +167,37 @@
 
                 grid.innerHTML = '';
                 songs.forEach(song => {
+                    // Store song in lookup map; reference by id in DOM only
+                    songsIndex[song.id] = song;
+
                     const card = document.createElement('div');
                     card.className = 'song-card';
                     card.dataset.id = song.id;
+
+                    const line = document.createElement('div');
+                    line.className = 'song-line';
+
+                    const info = document.createElement('div');
+                    info.className = 'song-info';
+
+                    const titleEl = document.createElement('span');
+                    titleEl.className = 'song-title';
+                    titleEl.textContent = song.title;
+
                     const dur = (song.metadata && song.metadata.duration_formatted) || '0:00';
-                    card.innerHTML = `
-                        <div class="song-line">
-                            <div class="song-info">
-                                <span class="song-title">${song.title}</span>
-                                <span class="song-duration">${dur}</span>
-                            </div>
-                            <button class="load-btn" onclick="loadTrack(${JSON.stringify(song).replace(/"/g, '&quot;')})">LOAD</button>
-                        </div>`;
+                    const durEl = document.createElement('span');
+                    durEl.className = 'song-duration';
+                    durEl.textContent = dur;
+
+                    const btn = document.createElement('button');
+                    btn.className = 'load-btn';
+                    btn.textContent = 'LOAD';
+                    btn.dataset.songId = song.id;
+                    btn.addEventListener('click', () => loadTrack(songsIndex[song.id]));
+
+                    info.append(titleEl, durEl);
+                    line.append(info, btn);
+                    card.appendChild(line);
                     grid.appendChild(card);
                 });
             } catch (err) {
