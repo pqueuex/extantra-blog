@@ -3,92 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>EXTANTRA</title>
-    <meta name="description" content="Personal blog of EXTANTRA featuring technology insights, gaming thoughts, and creative projects. Exploring the intersection of technology and creativity.">
-    <meta name="keywords" content="personal blog, technology blog, gaming blog, creative projects, digital art, programming, web development, indie games">
-    <meta name="author" content="EXTANTRA">
+    <title>EXTANTRA — Feed</title>
+    <meta name="description" content="Unified media feed — tedwordnelson & nyquilcigarettes.">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
     <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-    
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="EXTANTRA - Personal Blog">
-    <meta property="og:description" content="Personal blog featuring technology insights, gaming thoughts, and creative projects. Exploring digital creativity and innovation.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://extantra.net">
-    <meta property="og:image" content="https://extantra.net/images/extantralogo-inverted.webp">
-    <meta property="og:site_name" content="EXTANTRA Blog">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="EXTANTRA - Personal Blog">
-    <meta name="twitter:description" content="Personal blog featuring technology, gaming, and creative projects.">
-    <meta name="twitter:image" content="https://extantra.net/images/extantralogo-inverted.webp">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://extantra.net">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/webp" href="images/extantralogo-inverted.webp">
-    
-    <link rel="stylesheet" href="styles.css?v=1.2">
-    
-    <!-- Structured Data for Blog -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "EXTANTRA Blog",
-      "url": "https://extantra.net",
-      "description": "Personal blog featuring creative projects",
-      "author": {
-        "@type": "Person",
-        "name": "EXTANTRA"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "EXTANTRA"
-      }
-    }
-    </script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --accent: #cc0000;
+            --accent-dark: #990000;
+            --accent-darker: #aa0000;
+            --accent-dim: #330000;
+            --accent-hover: #440000;
+            --accent-dimmer: #220000;
+            --accent-glow: rgba(204, 0, 0, 0.3);
+        }
+        .user-label {
+            display: inline-block;
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 1px 6px;
+            border-radius: 0;
+            margin-right: 6px;
+        }
+        .type-badge {
+            font-size: 8px;
+            padding: 1px 5px;
+            border: 1px solid #444;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 4px;
+        }
+        .filter-bar {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .filter-bar button {
+            background: transparent;
+            border: 1px solid #333;
+            color: #666;
+            padding: 3px 10px;
+            font-size: 9px;
+            cursor: pointer;
+            font-family: inherit;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.15s ease;
+        }
+        .filter-bar button:hover { border-color: #555; color: #aaa; }
+        .filter-bar button.active { background: #333; border-color: #555; color: white; }
+        .post-meta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+        .media-card-link { text-decoration: none; color: inherit; display: block; }
+        .sidebar-user { cursor: pointer; padding: 6px 8px; font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-left: 2px solid transparent; transition: all 0.15s ease; }
+        .sidebar-user:hover { border-left-color: #444; color: white; }
+        .sidebar-section-label { font-size: 8px; color: #444; text-transform: uppercase; letter-spacing: 1px; padding: 8px 8px 4px; }
+    </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="logo-space">
-                <img src="images/extantralogo-inverted.webp" alt="Extantra" class="logo-image">
+                <img src="images/extantralogo-inverted.webp" alt="EXTANTRA" class="logo-image">
             </div>
         </header>
 
         <div class="main-container">
             <aside class="sidebar">
                 <div class="categories-section">
-                    <div class="category" onclick="goToPage('index.html')">Home</div>
-                    <div class="category" onclick="goToPage('photos.html')">Photos</div>
-                    <div class="category" onclick="goToPage('3d-models.html')">3D Models</div>
-                    <div class="category" onclick="goToPage('video.html')">Video</div>
-                    <div class="category" onclick="goToPage('drawings.html')">Drawings</div>
-                    <div class="category" onclick="goToPage('music.html')">Music</div>
+                    <div class="category active" onclick="setUserFilter('all')">Feed</div>
+                    <div class="sidebar-section-label">Users</div>
+                    <div id="userLinks"></div>
                 </div>
             </aside>
 
             <main class="content">
                 <div class="content-header">
-                    <h1>EXTANTRA</h1>
-                    <p class="tagline"> </p>
+                    <h1 id="feedTitle">Feed</h1>
+                    <p class="tagline" id="feedSubtitle"> </p>
                 </div>
 
-                <div class="blog-grid">
-                    <!-- Blog posts will be loaded dynamically -->
+                <div class="filter-bar" id="typeFilterBar">
+                    <button class="active" data-type="all">All</button>
+                    <button data-type="post">Posts</button>
+                    <button data-type="photo">Photos</button>
+                    <button data-type="audio">Music</button>
+                    <button data-type="video">Video</button>
+                    <button data-type="drawing">Drawings</button>
+                    <button data-type="3d-model">3D Models</button>
+                    <button data-type="travel">Travel</button>
+                    <button data-type="music-video">Music Videos</button>
+                </div>
+
+                <div class="blog-grid" id="feedGrid">
+                    <div style="text-align:center;padding:40px 20px;color:#666;">Loading feed…</div>
                 </div>
             </main>
         </div>
 
         <footer class="footer">
             <div class="footer-content">
-                <p>&copy; 2025 EXTANTRA. All rights reserved.</p>
+                <p>&copy; 2026 EXTANTRA. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="mailto:contact@extantra.net">Contact</a>
                     <a href="https://store.extantra.net">Store</a>
@@ -98,89 +119,148 @@
     </div>
 
     <script>
-        function goToPage(page) {
-            window.location.href = page;
+        let users = [];
+        let allEntities = [];
+        let activeUser = 'all';
+        let activeType = 'all';
+
+        // ── helpers ──────────────────────────────────────────────────────────
+        function getEntityUrl(entity) {
+            const base = `${entity.author}/`;
+            if (entity.type === 'post')         return `${base}post.html?slug=${entity.slug}`;
+            if (entity.type === 'photo')         return `${base}photos.html#${entity.id}`;
+            if (entity.type === 'audio')         return `${base}music.html#${entity.id}`;
+            if (entity.type === 'video')         return `${base}video.html#${entity.id}`;
+            if (entity.type === 'drawing')       return `${base}drawings.html#${entity.id}`;
+            if (entity.type === '3d-model')      return `${base}3d-models.html#${entity.id}`;
+            if (entity.type === 'travel')        return `${base}travel.html#${entity.id}`;
+            if (entity.type === 'music-video')   return `${base}music-videos.html#${entity.id}`;
+            return `${base}index.html`;
         }
-        
-        // Load and display blog posts
-        async function loadBlogPosts() {
-            try {
-                // Add cache-busting parameter to ensure fresh data
-                const timestamp = new Date().getTime();
-                const url = `./blog-database.json?v=${timestamp}`;
-                
-                const response = await fetch(url);
-                
-                if (response.ok) {
-                    const database = await response.json();
-                    displayBlogPosts(database.posts);
-                } else {
-                    displayEmptyState();
-                }
-            } catch (error) {
-                console.error('Error loading blog posts:', error);
-                displayEmptyState();
-            }
+
+        function getUserColor(handle) {
+            const u = users.find(u => u.handle === handle);
+            return u ? u.color : '#666';
         }
-        
-        function displayBlogPosts(posts) {
-            const blogGrid = document.querySelector('.blog-grid');
-            
-            // Filter for published posts only
-            const publishedPosts = posts.filter(post => post.status === 'published');
-            
-            if (publishedPosts.length === 0) {
-                displayEmptyState();
+
+        // ── rendering ────────────────────────────────────────────────────────
+        function renderFeed() {
+            const grid = document.getElementById('feedGrid');
+
+            let entities = allEntities;
+            if (activeUser !== 'all') entities = entities.filter(e => e.author === activeUser);
+            if (activeType !== 'all') entities = entities.filter(e => e.type === activeType);
+
+            if (entities.length === 0) {
+                grid.innerHTML = '<div style="text-align:center;padding:40px 20px;color:#666;">No content yet.</div>';
                 return;
             }
-            
-            // Clear existing content
-            blogGrid.innerHTML = '';
-            
-            // Create and display each post
-            publishedPosts.forEach(post => {
-                const article = document.createElement('article');
-                article.className = 'blog-post-card';
-                article.style.cursor = 'pointer';
-                
-                const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
+
+            grid.innerHTML = '';
+            entities.forEach(entity => {
+                const formattedDate = new Date(entity.date).toLocaleDateString('en-US', {
+                    year: 'numeric', month: 'long', day: 'numeric'
                 });
-                
-                article.innerHTML = `
-                    <div class="post-date">${formattedDate}</div>
-                    <h2 class="post-title">${post.title}</h2>
-                    <div class="post-excerpt">${post.excerpt}</div>
-                    <div class="post-tags">
-                        ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                    </div>
-                `;
-                
-                // Add click handler to navigate to individual post
-                article.addEventListener('click', () => {
-                    window.location.href = `post.html?slug=${post.slug}`;
-                });
-                
-                blogGrid.appendChild(article);
+                const userColor = getUserColor(entity.author);
+                const userDisplay = users.find(u => u.handle === entity.author);
+
+                const card = document.createElement('article');
+                card.className = 'blog-post-card';
+
+                const thumb = entity.thumbnail
+                    ? `<div style="margin-bottom:8px;"><img src="${entity.thumbnail}" style="width:100%;max-height:80px;object-fit:cover;" loading="lazy"></div>`
+                    : '';
+
+                card.innerHTML = `
+                    <a class="media-card-link" href="${getEntityUrl(entity)}">
+                        ${thumb}
+                        <div class="post-meta-row">
+                            <span class="user-label" style="background:${userColor};color:white;">${userDisplay ? userDisplay.displayName : entity.author}</span>
+                            <span class="type-badge">${entity.type}</span>
+                            <span class="post-date" style="margin:0;font-size:9px;color:#666;">${formattedDate}</span>
+                        </div>
+                        <h2 class="post-title">${entity.title}</h2>
+                        ${entity.excerpt ? `<div class="post-excerpt">${entity.excerpt}</div>` : ''}
+                        ${entity.tags && entity.tags.length > 0 ? `
+                            <div class="post-tags">
+                                ${entity.tags.filter(Boolean).map(t => `<span class="tag">${t}</span>`).join('')}
+                            </div>` : ''}
+                    </a>`;
+                grid.appendChild(card);
             });
         }
-        
-        function displayEmptyState() {
-            const blogGrid = document.querySelector('.blog-grid');
-            blogGrid.innerHTML = `
-                <div style="text-align: center; padding: 40px 20px; color: #666;">
-                    <p>No blog posts yet.</p>
-                </div>
-            `;
+
+        function buildUserSidebar() {
+            const container = document.getElementById('userLinks');
+            container.innerHTML = '';
+            users.forEach(user => {
+                const div = document.createElement('div');
+                div.className = 'sidebar-user';
+                div.style.borderLeftColor = activeUser === user.handle ? user.color : 'transparent';
+                div.style.color = activeUser === user.handle ? user.color : '';
+                div.textContent = user.displayName;
+                div.onclick = () => {
+                    window.location.href = `${user.handle}/index.html`;
+                };
+                container.appendChild(div);
+            });
         }
-        
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('EXTANTRA Blog loaded');
-            loadBlogPosts();
+
+        function setUserFilter(handle) {
+            activeUser = handle;
+            buildUserSidebar();
+            renderFeed();
+        }
+
+        // ── data loading ─────────────────────────────────────────────────────
+        async function loadFeed() {
+            try {
+                // Load users.json
+                const usersRes = await fetch('./users.json');
+                if (!usersRes.ok) throw new Error('Could not load users.json');
+                users = await usersRes.json();
+
+                // Build sidebar immediately with user list
+                buildUserSidebar();
+
+                // Fetch each user's media-database.json in parallel
+                const dbPromises = users.map(async user => {
+                    try {
+                        const ts = new Date().getTime();
+                        const res = await fetch(`./${user.handle}/media-database.json?v=${ts}`);
+                        if (!res.ok) return [];
+                        const db = await res.json();
+                        return db.entities || [];
+                    } catch (err) {
+                        console.warn(`Could not load ${user.handle}/media-database.json:`, err);
+                        return [];
+                    }
+                });
+
+                const results = await Promise.all(dbPromises);
+                allEntities = results.flat()
+                    .filter(e => e.status === 'published')
+                    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                renderFeed();
+            } catch (err) {
+                console.error(err);
+                document.getElementById('feedGrid').innerHTML =
+                    '<div style="text-align:center;padding:40px 20px;color:#666;">Could not load feed.</div>';
+            }
+        }
+
+        // ── event listeners ───────────────────────────────────────────────────
+        document.getElementById('typeFilterBar').addEventListener('click', e => {
+            const btn = e.target.closest('button');
+            if (!btn) return;
+            document.querySelectorAll('.filter-bar button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeType = btn.dataset.type;
+            renderFeed();
         });
+
+        document.addEventListener('DOMContentLoaded', loadFeed);
     </script>
 </body>
 </html>

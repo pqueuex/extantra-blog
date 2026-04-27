@@ -1,0 +1,6791 @@
+{
+  "author": "tedwordnelson",
+  "total": 309,
+  "entities": [
+    {
+      "id": 1,
+      "type": "post",
+      "title": "Welcome to EXTANTRA",
+      "slug": "welcome-to-extantra",
+      "author": "tedwordnelson",
+      "date": "2025-07-08",
+      "status": "published",
+      "tags": [
+        "welcome",
+        "introduction",
+        "blog"
+      ],
+      "excerpt": "Welcome to my personal blog where I share thoughts on technology, creativity, and digital experiences.",
+      "content": "<p>Welcome to EXTANTRA, my personal space on the internet where I share thoughts, projects, and experiences.</p><p>This blog will feature content about:</p><ul><li>Technology and programming</li><li>Creative projects and digital art</li><li>Music production and audio experiments</li><li>Gaming and interactive experiences</li><li>Whatever else catches my interest</li></ul><p>Feel free to explore the different sections of the site using the navigation menu. You'll find my music, photos, 3D models, videos, and drawings.</p><p>Thanks for visiting, and check back soon for more content!</p>",
+      "mediaUrl": null,
+      "thumbnail": null,
+      "metadata": {
+        "featured": false
+      }
+    },
+    {
+      "id": 2,
+      "type": "photo",
+      "title": "Photo 2009 #1",
+      "slug": "photo-2009-1",
+      "author": "tedwordnelson",
+      "date": "2009-01-08",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090108_001.jpg",
+      "thumbnail": "../photos/20090108_001.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 3,
+      "type": "photo",
+      "title": "Photo 2009 #2",
+      "slug": "photo-2009-2",
+      "author": "tedwordnelson",
+      "date": "2009-01-10",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090110_001.jpg",
+      "thumbnail": "../photos/20090110_001.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 4,
+      "type": "photo",
+      "title": "Photo 2009 #3",
+      "slug": "photo-2009-3",
+      "author": "tedwordnelson",
+      "date": "2009-01-19",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090119_001.jpg",
+      "thumbnail": "../photos/20090119_001.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 5,
+      "type": "photo",
+      "title": "Photo 2009 #4",
+      "slug": "photo-2009-4",
+      "author": "tedwordnelson",
+      "date": "2009-03-17",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090317_001.jpg",
+      "thumbnail": "../photos/20090317_001.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 6,
+      "type": "photo",
+      "title": "Photo 2009 #5",
+      "slug": "photo-2009-5",
+      "author": "tedwordnelson",
+      "date": "2009-03-17",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090317_002.jpg",
+      "thumbnail": "../photos/20090317_002.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 7,
+      "type": "photo",
+      "title": "Photo 2009 #6",
+      "slug": "photo-2009-6",
+      "author": "tedwordnelson",
+      "date": "2009-04-14",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090414_001.jpg",
+      "thumbnail": "../photos/20090414_001.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 8,
+      "type": "photo",
+      "title": "Photo 2009 #7",
+      "slug": "photo-2009-7",
+      "author": "tedwordnelson",
+      "date": "2009-04-24",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090424_001.jpg",
+      "thumbnail": "../photos/20090424_001.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 9,
+      "type": "photo",
+      "title": "Photo 2009 #8",
+      "slug": "photo-2009-8",
+      "author": "tedwordnelson",
+      "date": "2009-04-29",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090429_001.jpg",
+      "thumbnail": "../photos/20090429_001.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 10,
+      "type": "photo",
+      "title": "Photo 2009 #9",
+      "slug": "photo-2009-9",
+      "author": "tedwordnelson",
+      "date": "2009-06-28",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090628_001.jpg",
+      "thumbnail": "../photos/20090628_001.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 11,
+      "type": "photo",
+      "title": "Photo 2009 #10",
+      "slug": "photo-2009-10",
+      "author": "tedwordnelson",
+      "date": "2009-06-28",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Captured in 2009",
+      "content": null,
+      "mediaUrl": "../photos/20090628_002.jpg",
+      "thumbnail": "../photos/20090628_002.jpg",
+      "metadata": {
+        "camera": "Sony DSC",
+        "location": "Unknown",
+        "year": "2009",
+        "category": "Archive"
+      }
+    },
+    {
+      "id": 12,
+      "type": "photo",
+      "title": "Photo 2023 #11",
+      "slug": "photo-2023-11",
+      "author": "tedwordnelson",
+      "date": "2023-06-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Captured in 2023",
+      "content": null,
+      "mediaUrl": "../photos/20230601_001.jpg",
+      "thumbnail": "../photos/20230601_001.jpg",
+      "metadata": {
+        "camera": "Digital Camera",
+        "location": "Unknown",
+        "year": "2023",
+        "category": "Recent"
+      }
+    },
+    {
+      "id": 13,
+      "type": "photo",
+      "title": "Photo 2023 #12",
+      "slug": "photo-2023-12",
+      "author": "tedwordnelson",
+      "date": "2023-06-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Captured in 2023",
+      "content": null,
+      "mediaUrl": "../photos/20230601_002.jpg",
+      "thumbnail": "../photos/20230601_002.jpg",
+      "metadata": {
+        "camera": "Digital Camera",
+        "location": "Unknown",
+        "year": "2023",
+        "category": "Recent"
+      }
+    },
+    {
+      "id": 14,
+      "type": "photo",
+      "title": "Photo 2023 #13",
+      "slug": "photo-2023-13",
+      "author": "tedwordnelson",
+      "date": "2023-06-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Captured in 2023",
+      "content": null,
+      "mediaUrl": "../photos/20230601_003.jpg",
+      "thumbnail": "../photos/20230601_003.jpg",
+      "metadata": {
+        "camera": "Digital Camera",
+        "location": "Unknown",
+        "year": "2023",
+        "category": "Recent"
+      }
+    },
+    {
+      "id": 15,
+      "type": "photo",
+      "title": "Photo 2023 #14",
+      "slug": "photo-2023-14",
+      "author": "tedwordnelson",
+      "date": "2023-06-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Captured in 2023",
+      "content": null,
+      "mediaUrl": "../photos/20230601_004.jpg",
+      "thumbnail": "../photos/20230601_004.jpg",
+      "metadata": {
+        "camera": "Digital Camera",
+        "location": "Unknown",
+        "year": "2023",
+        "category": "Recent"
+      }
+    },
+    {
+      "id": 16,
+      "type": "photo",
+      "title": "Photo 2023 #15",
+      "slug": "photo-2023-15",
+      "author": "tedwordnelson",
+      "date": "2023-06-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Captured in 2023",
+      "content": null,
+      "mediaUrl": "../photos/20230601_005.jpg",
+      "thumbnail": "../photos/20230601_005.jpg",
+      "metadata": {
+        "camera": "Digital Camera",
+        "location": "Unknown",
+        "year": "2023",
+        "category": "Recent"
+      }
+    },
+    {
+      "id": 17,
+      "type": "photo",
+      "title": "Photo 2023 #16",
+      "slug": "photo-2023-16",
+      "author": "tedwordnelson",
+      "date": "2023-11-28",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Captured in 2023",
+      "content": null,
+      "mediaUrl": "../photos/20231128_001.jpg",
+      "thumbnail": "../photos/20231128_001.jpg",
+      "metadata": {
+        "camera": "Digital Camera",
+        "location": "Unknown",
+        "year": "2023",
+        "category": "Recent"
+      }
+    },
+    {
+      "id": 18,
+      "type": "photo",
+      "title": "Photo 2023 #17",
+      "slug": "photo-2023-17",
+      "author": "tedwordnelson",
+      "date": "2023-12-20",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Captured in 2023",
+      "content": null,
+      "mediaUrl": "../photos/20231220_001.jpg",
+      "thumbnail": "../photos/20231220_001.jpg",
+      "metadata": {
+        "camera": "Digital Camera",
+        "location": "Unknown",
+        "year": "2023",
+        "category": "Recent"
+      }
+    },
+    {
+      "id": 19,
+      "type": "photo",
+      "title": "Photo 2023 #18",
+      "slug": "photo-2023-18",
+      "author": "tedwordnelson",
+      "date": "2023-12-25",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Captured in 2023",
+      "content": null,
+      "mediaUrl": "../photos/20231225_001.jpg",
+      "thumbnail": "../photos/20231225_001.jpg",
+      "metadata": {
+        "camera": "Digital Camera",
+        "location": "Unknown",
+        "year": "2023",
+        "category": "Recent"
+      }
+    },
+    {
+      "id": 20,
+      "type": "photo",
+      "title": "Photo 2024 #19",
+      "slug": "photo-2024-19",
+      "author": "tedwordnelson",
+      "date": "2024-01-02",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240102_001.jpg",
+      "thumbnail": "../photos/20240102_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 21,
+      "type": "photo",
+      "title": "Photo 2024 #20",
+      "slug": "photo-2024-20",
+      "author": "tedwordnelson",
+      "date": "2024-01-24",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240124_001.jpg",
+      "thumbnail": "../photos/20240124_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 22,
+      "type": "photo",
+      "title": "Photo 2024 #21",
+      "slug": "photo-2024-21",
+      "author": "tedwordnelson",
+      "date": "2024-01-30",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240130_001.jpg",
+      "thumbnail": "../photos/20240130_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 23,
+      "type": "photo",
+      "title": "Photo 2024 #22",
+      "slug": "photo-2024-22",
+      "author": "tedwordnelson",
+      "date": "2024-02-15",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240215_001.jpg",
+      "thumbnail": "../photos/20240215_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 24,
+      "type": "photo",
+      "title": "Photo 2023 #23",
+      "slug": "photo-2023-23",
+      "author": "tedwordnelson",
+      "date": "2023-02-19",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2023",
+      "content": null,
+      "mediaUrl": "../photos/20240219_001.jpg",
+      "thumbnail": "../photos/20240219_001.jpg",
+      "metadata": {
+        "camera": "Disposable Camera",
+        "location": "Unknown",
+        "year": "2023",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 25,
+      "type": "photo",
+      "title": "Photo 2024 #24",
+      "slug": "photo-2024-24",
+      "author": "tedwordnelson",
+      "date": "2024-02-22",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240222_001.jpg",
+      "thumbnail": "../photos/20240222_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 26,
+      "type": "photo",
+      "title": "Photo 2024 #25",
+      "slug": "photo-2024-25",
+      "author": "tedwordnelson",
+      "date": "2024-02-25",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240225_001.jpg",
+      "thumbnail": "../photos/20240225_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 27,
+      "type": "photo",
+      "title": "Photo 2024 #26",
+      "slug": "photo-2024-26",
+      "author": "tedwordnelson",
+      "date": "2024-03-31",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240331_001.jpg",
+      "thumbnail": "../photos/20240331_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 28,
+      "type": "photo",
+      "title": "Photo 2024 #27",
+      "slug": "photo-2024-27",
+      "author": "tedwordnelson",
+      "date": "2024-05-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240529_001.jpg",
+      "thumbnail": "../photos/20240529_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 29,
+      "type": "photo",
+      "title": "Photo 2024 #28",
+      "slug": "photo-2024-28",
+      "author": "tedwordnelson",
+      "date": "2024-05-31",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240531_001.jpg",
+      "thumbnail": "../photos/20240531_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 30,
+      "type": "photo",
+      "title": "Photo 2024 #29",
+      "slug": "photo-2024-29",
+      "author": "tedwordnelson",
+      "date": "2024-08-04",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240804_001.jpg",
+      "thumbnail": "../photos/20240804_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 31,
+      "type": "photo",
+      "title": "Photo 2024 #30",
+      "slug": "photo-2024-30",
+      "author": "tedwordnelson",
+      "date": "2024-08-13",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240813_001.jpg",
+      "thumbnail": "../photos/20240813_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 32,
+      "type": "photo",
+      "title": "Photo 2024 #31",
+      "slug": "photo-2024-31",
+      "author": "tedwordnelson",
+      "date": "2024-08-13",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240813_002.jpg",
+      "thumbnail": "../photos/20240813_002.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 33,
+      "type": "photo",
+      "title": "Photo 2024 #32",
+      "slug": "photo-2024-32",
+      "author": "tedwordnelson",
+      "date": "2024-08-20",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240820_001.jpg",
+      "thumbnail": "../photos/20240820_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 34,
+      "type": "photo",
+      "title": "Photo 2024 #33",
+      "slug": "photo-2024-33",
+      "author": "tedwordnelson",
+      "date": "2024-09-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20240929_001.jpg",
+      "thumbnail": "../photos/20240929_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 35,
+      "type": "photo",
+      "title": "Photo 2024 #34",
+      "slug": "photo-2024-34",
+      "author": "tedwordnelson",
+      "date": "2024-11-24",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20241124_001.jpg",
+      "thumbnail": "../photos/20241124_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 36,
+      "type": "photo",
+      "title": "Photo 2024 #35",
+      "slug": "photo-2024-35",
+      "author": "tedwordnelson",
+      "date": "2024-11-24",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2024",
+      "content": null,
+      "mediaUrl": "../photos/20241124_002.jpg",
+      "thumbnail": "../photos/20241124_002.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2024",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 37,
+      "type": "photo",
+      "title": "Photo 2025 #36",
+      "slug": "photo-2025-36",
+      "author": "tedwordnelson",
+      "date": "2025-01-12",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250112_001.jpg",
+      "thumbnail": "../photos/20250112_001.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 38,
+      "type": "photo",
+      "title": "Photo 2025 #37",
+      "slug": "photo-2025-37",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_001.jpg",
+      "thumbnail": "../photos/20250116_001.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 39,
+      "type": "photo",
+      "title": "Photo 2025 #38",
+      "slug": "photo-2025-38",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_002.jpg",
+      "thumbnail": "../photos/20250116_002.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 40,
+      "type": "photo",
+      "title": "Photo 2025 #39",
+      "slug": "photo-2025-39",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_003.jpg",
+      "thumbnail": "../photos/20250116_003.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 41,
+      "type": "photo",
+      "title": "Photo 2025 #40",
+      "slug": "photo-2025-40",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_004.jpg",
+      "thumbnail": "../photos/20250116_004.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 42,
+      "type": "photo",
+      "title": "Photo 2025 #41",
+      "slug": "photo-2025-41",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_005.jpg",
+      "thumbnail": "../photos/20250116_005.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 43,
+      "type": "photo",
+      "title": "Photo 2025 #42",
+      "slug": "photo-2025-42",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_006.jpg",
+      "thumbnail": "../photos/20250116_006.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 44,
+      "type": "photo",
+      "title": "Photo 2025 #43",
+      "slug": "photo-2025-43",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_007.jpg",
+      "thumbnail": "../photos/20250116_007.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 45,
+      "type": "photo",
+      "title": "Photo 2025 #44",
+      "slug": "photo-2025-44",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_008.jpg",
+      "thumbnail": "../photos/20250116_008.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 46,
+      "type": "photo",
+      "title": "Photo 2025 #45",
+      "slug": "photo-2025-45",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_009.jpg",
+      "thumbnail": "../photos/20250116_009.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 47,
+      "type": "photo",
+      "title": "Photo 2025 #46",
+      "slug": "photo-2025-46",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_010.jpg",
+      "thumbnail": "../photos/20250116_010.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 48,
+      "type": "photo",
+      "title": "Photo 2025 #47",
+      "slug": "photo-2025-47",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_011.jpg",
+      "thumbnail": "../photos/20250116_011.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 49,
+      "type": "photo",
+      "title": "Photo 2025 #48",
+      "slug": "photo-2025-48",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_012.jpg",
+      "thumbnail": "../photos/20250116_012.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 50,
+      "type": "photo",
+      "title": "Photo 2025 #49",
+      "slug": "photo-2025-49",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_013.jpg",
+      "thumbnail": "../photos/20250116_013.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 51,
+      "type": "photo",
+      "title": "Photo 2025 #50",
+      "slug": "photo-2025-50",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_014.jpg",
+      "thumbnail": "../photos/20250116_014.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 52,
+      "type": "photo",
+      "title": "Photo 2025 #51",
+      "slug": "photo-2025-51",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_015.jpg",
+      "thumbnail": "../photos/20250116_015.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 53,
+      "type": "photo",
+      "title": "Photo 2025 #52",
+      "slug": "photo-2025-52",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_016.jpg",
+      "thumbnail": "../photos/20250116_016.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 54,
+      "type": "photo",
+      "title": "Photo 2025 #53",
+      "slug": "photo-2025-53",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_017.jpg",
+      "thumbnail": "../photos/20250116_017.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 55,
+      "type": "photo",
+      "title": "Photo 2025 #54",
+      "slug": "photo-2025-54",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_018.jpg",
+      "thumbnail": "../photos/20250116_018.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 56,
+      "type": "photo",
+      "title": "Photo 2025 #55",
+      "slug": "photo-2025-55",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_019.jpg",
+      "thumbnail": "../photos/20250116_019.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 57,
+      "type": "photo",
+      "title": "Photo 2025 #56",
+      "slug": "photo-2025-56",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_020.jpg",
+      "thumbnail": "../photos/20250116_020.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 58,
+      "type": "photo",
+      "title": "Photo 2025 #57",
+      "slug": "photo-2025-57",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_021.jpg",
+      "thumbnail": "../photos/20250116_021.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 59,
+      "type": "photo",
+      "title": "Photo 2025 #58",
+      "slug": "photo-2025-58",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_022.jpg",
+      "thumbnail": "../photos/20250116_022.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 60,
+      "type": "photo",
+      "title": "Photo 2025 #59",
+      "slug": "photo-2025-59",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_023.jpg",
+      "thumbnail": "../photos/20250116_023.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 61,
+      "type": "photo",
+      "title": "Photo 2025 #60",
+      "slug": "photo-2025-60",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_024.jpg",
+      "thumbnail": "../photos/20250116_024.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 62,
+      "type": "photo",
+      "title": "Photo 2025 #61",
+      "slug": "photo-2025-61",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_025.jpg",
+      "thumbnail": "../photos/20250116_025.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 63,
+      "type": "photo",
+      "title": "Photo 2025 #62",
+      "slug": "photo-2025-62",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_026.jpg",
+      "thumbnail": "../photos/20250116_026.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 64,
+      "type": "photo",
+      "title": "Photo 2025 #63",
+      "slug": "photo-2025-63",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_027.jpg",
+      "thumbnail": "../photos/20250116_027.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 65,
+      "type": "photo",
+      "title": "Photo 2025 #64",
+      "slug": "photo-2025-64",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_028.jpg",
+      "thumbnail": "../photos/20250116_028.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 66,
+      "type": "photo",
+      "title": "Photo 2025 #65",
+      "slug": "photo-2025-65",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_029.jpg",
+      "thumbnail": "../photos/20250116_029.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 67,
+      "type": "photo",
+      "title": "Photo 2025 #66",
+      "slug": "photo-2025-66",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_030.jpg",
+      "thumbnail": "../photos/20250116_030.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 68,
+      "type": "photo",
+      "title": "Photo 2025 #67",
+      "slug": "photo-2025-67",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_031.jpg",
+      "thumbnail": "../photos/20250116_031.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 69,
+      "type": "photo",
+      "title": "Photo 2025 #68",
+      "slug": "photo-2025-68",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_032.jpg",
+      "thumbnail": "../photos/20250116_032.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 70,
+      "type": "photo",
+      "title": "Photo 2025 #69",
+      "slug": "photo-2025-69",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_033.jpg",
+      "thumbnail": "../photos/20250116_033.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 71,
+      "type": "photo",
+      "title": "Photo 2025 #70",
+      "slug": "photo-2025-70",
+      "author": "tedwordnelson",
+      "date": "2025-01-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250116_034.jpg",
+      "thumbnail": "../photos/20250116_034.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 72,
+      "type": "photo",
+      "title": "Photo 2025 #71",
+      "slug": "photo-2025-71",
+      "author": "tedwordnelson",
+      "date": "2025-01-17",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250117_001.jpg",
+      "thumbnail": "../photos/20250117_001.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 73,
+      "type": "photo",
+      "title": "Photo 2025 #72",
+      "slug": "photo-2025-72",
+      "author": "tedwordnelson",
+      "date": "2025-01-17",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250117_002.jpg",
+      "thumbnail": "../photos/20250117_002.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 74,
+      "type": "photo",
+      "title": "Photo 2025 #73",
+      "slug": "photo-2025-73",
+      "author": "tedwordnelson",
+      "date": "2025-01-17",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250117_003.jpg",
+      "thumbnail": "../photos/20250117_003.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 75,
+      "type": "photo",
+      "title": "Photo 2025 #74",
+      "slug": "photo-2025-74",
+      "author": "tedwordnelson",
+      "date": "2025-01-17",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250117_004.jpg",
+      "thumbnail": "../photos/20250117_004.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 76,
+      "type": "photo",
+      "title": "Photo 2025 #75",
+      "slug": "photo-2025-75",
+      "author": "tedwordnelson",
+      "date": "2025-01-18",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250118_001.jpg",
+      "thumbnail": "../photos/20250118_001.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 77,
+      "type": "photo",
+      "title": "Photo 2025 #76",
+      "slug": "photo-2025-76",
+      "author": "tedwordnelson",
+      "date": "2025-01-18",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250118_002.jpg",
+      "thumbnail": "../photos/20250118_002.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 78,
+      "type": "photo",
+      "title": "Photo 2025 #77",
+      "slug": "photo-2025-77",
+      "author": "tedwordnelson",
+      "date": "2025-01-18",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250118_003.jpg",
+      "thumbnail": "../photos/20250118_003.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 79,
+      "type": "photo",
+      "title": "Photo 2025 #78",
+      "slug": "photo-2025-78",
+      "author": "tedwordnelson",
+      "date": "2025-01-18",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250118_004.jpg",
+      "thumbnail": "../photos/20250118_004.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 80,
+      "type": "photo",
+      "title": "Photo 2025 #79",
+      "slug": "photo-2025-79",
+      "author": "tedwordnelson",
+      "date": "2025-01-18",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250118_005.jpg",
+      "thumbnail": "../photos/20250118_005.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 81,
+      "type": "photo",
+      "title": "Photo 2025 #80",
+      "slug": "photo-2025-80",
+      "author": "tedwordnelson",
+      "date": "2025-01-19",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250119_001.jpg",
+      "thumbnail": "../photos/20250119_001.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 82,
+      "type": "photo",
+      "title": "Photo 2025 #81",
+      "slug": "photo-2025-81",
+      "author": "tedwordnelson",
+      "date": "2025-01-22",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250122_001.jpg",
+      "thumbnail": "../photos/20250122_001.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 83,
+      "type": "photo",
+      "title": "Photo 2025 #82",
+      "slug": "photo-2025-82",
+      "author": "tedwordnelson",
+      "date": "2025-01-23",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250123_001.jpg",
+      "thumbnail": "../photos/20250123_001.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 84,
+      "type": "photo",
+      "title": "Photo 2025 #83",
+      "slug": "photo-2025-83",
+      "author": "tedwordnelson",
+      "date": "2025-01-23",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250123_002.jpg",
+      "thumbnail": "../photos/20250123_002.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 85,
+      "type": "photo",
+      "title": "Photo 2025 #84",
+      "slug": "photo-2025-84",
+      "author": "tedwordnelson",
+      "date": "2025-01-23",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250123_003.jpg",
+      "thumbnail": "../photos/20250123_003.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 86,
+      "type": "photo",
+      "title": "Photo 2025 #85",
+      "slug": "photo-2025-85",
+      "author": "tedwordnelson",
+      "date": "2025-01-23",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250123_004.jpg",
+      "thumbnail": "../photos/20250123_004.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 87,
+      "type": "photo",
+      "title": "Photo 2025 #86",
+      "slug": "photo-2025-86",
+      "author": "tedwordnelson",
+      "date": "2025-01-23",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250123_005.jpg",
+      "thumbnail": "../photos/20250123_005.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 88,
+      "type": "photo",
+      "title": "Photo 2025 #87",
+      "slug": "photo-2025-87",
+      "author": "tedwordnelson",
+      "date": "2025-01-28",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250128_001.jpg",
+      "thumbnail": "../photos/20250128_001.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 89,
+      "type": "photo",
+      "title": "Photo 2025 #88",
+      "slug": "photo-2025-88",
+      "author": "tedwordnelson",
+      "date": "2025-04-19",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/20250419_001.jpg",
+      "thumbnail": "../photos/20250419_001.jpg",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 90,
+      "type": "photo",
+      "title": "Photo 2025 #89",
+      "slug": "photo-2025-89",
+      "author": "tedwordnelson",
+      "date": "2025-07-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/HPIM1430.JPG",
+      "thumbnail": "../photos/HPIM1430.JPG",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 91,
+      "type": "photo",
+      "title": "Photo 2025 #90",
+      "slug": "photo-2025-90",
+      "author": "tedwordnelson",
+      "date": "2025-07-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/HPIM1433.JPG",
+      "thumbnail": "../photos/HPIM1433.JPG",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 92,
+      "type": "photo",
+      "title": "Photo 2025 #91",
+      "slug": "photo-2025-91",
+      "author": "tedwordnelson",
+      "date": "2025-09-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/HPIM1445.JPG",
+      "thumbnail": "../photos/HPIM1445.JPG",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 93,
+      "type": "photo",
+      "title": "Photo 2025 #92",
+      "slug": "photo-2025-92",
+      "author": "tedwordnelson",
+      "date": "2025-09-16",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/HPIM1447.JPG",
+      "thumbnail": "../photos/HPIM1447.JPG",
+      "metadata": {
+        "camera": "HP Photosmart",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 94,
+      "type": "photo",
+      "title": "Photo 2025 #93",
+      "slug": "photo-2025-93",
+      "author": "tedwordnelson",
+      "date": "2025-11-09",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/IMG_0086.jpg",
+      "thumbnail": "../photos/IMG_0086.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 95,
+      "type": "photo",
+      "title": "Photo 2026 #94",
+      "slug": "photo-2026-94",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/IMG_0901.jpg",
+      "thumbnail": "../photos/IMG_0901.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 96,
+      "type": "photo",
+      "title": "Photo 2026 #95",
+      "slug": "photo-2026-95",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/IMG_1183.jpg",
+      "thumbnail": "../photos/IMG_1183.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 97,
+      "type": "photo",
+      "title": "Photo 2026 #96",
+      "slug": "photo-2026-96",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/IMG_1395.jpg",
+      "thumbnail": "../photos/IMG_1395.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 98,
+      "type": "photo",
+      "title": "Photo 2026 #97",
+      "slug": "photo-2026-97",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/IMG_1706.jpg",
+      "thumbnail": "../photos/IMG_1706.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 99,
+      "type": "photo",
+      "title": "Photo 2026 #98",
+      "slug": "photo-2026-98",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/IMG_1881.jpg",
+      "thumbnail": "../photos/IMG_1881.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 100,
+      "type": "photo",
+      "title": "Photo 2026 #99",
+      "slug": "photo-2026-99",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/IMG_2260.jpg",
+      "thumbnail": "../photos/IMG_2260.jpg",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 101,
+      "type": "photo",
+      "title": "Photo 2026 #100",
+      "slug": "photo-2026-100",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.12.13\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.12.13\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 102,
+      "type": "photo",
+      "title": "Photo 2026 #101",
+      "slug": "photo-2026-101",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.32.52\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.32.52\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 103,
+      "type": "photo",
+      "title": "Photo 2026 #102",
+      "slug": "photo-2026-102",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.37.40\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.37.40\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 104,
+      "type": "photo",
+      "title": "Photo 2026 #103",
+      "slug": "photo-2026-103",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.37.56\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.37.56\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 105,
+      "type": "photo",
+      "title": "Photo 2026 #104",
+      "slug": "photo-2026-104",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.38.54\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.38.54\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 106,
+      "type": "photo",
+      "title": "Photo 2026 #105",
+      "slug": "photo-2026-105",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.39.35\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.39.35\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 107,
+      "type": "photo",
+      "title": "Photo 2026 #106",
+      "slug": "photo-2026-106",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.40.00\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.40.00\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 108,
+      "type": "photo",
+      "title": "Photo 2026 #107",
+      "slug": "photo-2026-107",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.42.15\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.42.15\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 109,
+      "type": "photo",
+      "title": "Photo 2025 #108",
+      "slug": "photo-2025-108",
+      "author": "tedwordnelson",
+      "date": "2025-11-09",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2025",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.43.05\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.43.05\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2025",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 110,
+      "type": "photo",
+      "title": "Photo 2026 #109",
+      "slug": "photo-2026-109",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.45.13\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.45.13\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 111,
+      "type": "photo",
+      "title": "Photo 2026 #110",
+      "slug": "photo-2026-110",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.45.25\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.45.25\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 112,
+      "type": "photo",
+      "title": "Photo 2026 #111",
+      "slug": "photo-2026-111",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.48.14\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.48.14\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 113,
+      "type": "photo",
+      "title": "Photo 2026 #112",
+      "slug": "photo-2026-112",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.52.12\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.52.12\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 114,
+      "type": "photo",
+      "title": "Photo 2026 #113",
+      "slug": "photo-2026-113",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.56.58\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.56.58\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 115,
+      "type": "photo",
+      "title": "Photo 2026 #114",
+      "slug": "photo-2026-114",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Captured in 2026",
+      "content": null,
+      "mediaUrl": "../photos/Screenshot 2026-01-16 at 8.59.15\u202fAM.png",
+      "thumbnail": "../photos/Screenshot 2026-01-16 at 8.59.15\u202fAM.png",
+      "metadata": {
+        "camera": "iPhone",
+        "location": "Unknown",
+        "year": "2026",
+        "category": "Latest"
+      }
+    },
+    {
+      "id": 116,
+      "type": "audio",
+      "title": "06.mp3",
+      "slug": "audio-06-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "06.mp3",
+      "content": null,
+      "mediaUrl": "../audio/06.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 3157739,
+        "filename": "06.mp3"
+      }
+    },
+    {
+      "id": 117,
+      "type": "audio",
+      "title": "5796709888.mp3",
+      "slug": "audio-5796709888-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "5796709888.mp3",
+      "content": null,
+      "mediaUrl": "../audio/5796709888.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 720346,
+        "filename": "5796709888.mp3"
+      }
+    },
+    {
+      "id": 118,
+      "type": "audio",
+      "title": "bad.mp3",
+      "slug": "audio-bad-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "bad.mp3",
+      "content": null,
+      "mediaUrl": "../audio/bad.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 165910,
+        "filename": "bad.mp3"
+      }
+    },
+    {
+      "id": 119,
+      "type": "audio",
+      "title": "bleakcast.mp3",
+      "slug": "audio-bleakcast-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "bleakcast.mp3",
+      "content": null,
+      "mediaUrl": "../audio/bleakcast.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1921625,
+        "filename": "bleakcast.mp3"
+      }
+    },
+    {
+      "id": 120,
+      "type": "audio",
+      "title": "bloodencorer1.mp3",
+      "slug": "audio-bloodencorer1-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "bloodencorer1.mp3",
+      "content": null,
+      "mediaUrl": "../audio/bloodencorer1.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 2276890,
+        "filename": "bloodencorer1.mp3"
+      }
+    },
+    {
+      "id": 121,
+      "type": "audio",
+      "title": "breakerboycover.mp3",
+      "slug": "audio-breakerboycover-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "breakerboycover.mp3",
+      "content": null,
+      "mediaUrl": "../audio/breakerboycover.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 8035323,
+        "filename": "breakerboycover.mp3"
+      }
+    },
+    {
+      "id": 122,
+      "type": "audio",
+      "title": "breakerboycoverslowed.mp3",
+      "slug": "audio-breakerboycoverslowed-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "breakerboycoverslowed.mp3",
+      "content": null,
+      "mediaUrl": "../audio/breakerboycoverslowed.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 9362343,
+        "filename": "breakerboycoverslowed.mp3"
+      }
+    },
+    {
+      "id": 123,
+      "type": "audio",
+      "title": "britmix.mp3",
+      "slug": "audio-britmix-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "britmix.mp3",
+      "content": null,
+      "mediaUrl": "../audio/britmix.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 2206534,
+        "filename": "britmix.mp3"
+      }
+    },
+    {
+      "id": 124,
+      "type": "audio",
+      "title": "brokedown.mp3",
+      "slug": "audio-brokedown-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "brokedown.mp3",
+      "content": null,
+      "mediaUrl": "../audio/brokedown.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1161984,
+        "filename": "brokedown.mp3"
+      }
+    },
+    {
+      "id": 125,
+      "type": "audio",
+      "title": "canaberal1.mp3",
+      "slug": "audio-canaberal1-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "canaberal1.mp3",
+      "content": null,
+      "mediaUrl": "../audio/canaberal1.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 5123192,
+        "filename": "canaberal1.mp3"
+      }
+    },
+    {
+      "id": 126,
+      "type": "audio",
+      "title": "carri.mp3",
+      "slug": "audio-carri-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "carri.mp3",
+      "content": null,
+      "mediaUrl": "../audio/carri.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1375143,
+        "filename": "carri.mp3"
+      }
+    },
+    {
+      "id": 127,
+      "type": "audio",
+      "title": "crew.mp3",
+      "slug": "audio-crew-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "crew.mp3",
+      "content": null,
+      "mediaUrl": "../audio/crew.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1399738,
+        "filename": "crew.mp3"
+      }
+    },
+    {
+      "id": 128,
+      "type": "audio",
+      "title": "crosh.mp3",
+      "slug": "audio-crosh-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "crosh.mp3",
+      "content": null,
+      "mediaUrl": "../audio/crosh.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 707454,
+        "filename": "crosh.mp3"
+      }
+    },
+    {
+      "id": 129,
+      "type": "audio",
+      "title": "dander.mp3",
+      "slug": "audio-dander-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "dander.mp3",
+      "content": null,
+      "mediaUrl": "../audio/dander.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 557925,
+        "filename": "dander.mp3"
+      }
+    },
+    {
+      "id": 130,
+      "type": "audio",
+      "title": "dayjob.mp3",
+      "slug": "audio-dayjob-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "dayjob.mp3",
+      "content": null,
+      "mediaUrl": "../audio/dayjob.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 7458017,
+        "filename": "dayjob.mp3"
+      }
+    },
+    {
+      "id": 131,
+      "type": "audio",
+      "title": "debtpe.mp3",
+      "slug": "audio-debtpe-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "debtpe.mp3",
+      "content": null,
+      "mediaUrl": "../audio/debtpe.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 532329,
+        "filename": "debtpe.mp3"
+      }
+    },
+    {
+      "id": 132,
+      "type": "audio",
+      "title": "drag_en.mp3",
+      "slug": "audio-drag-en-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "drag_en.mp3",
+      "content": null,
+      "mediaUrl": "../audio/drag_en.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 2966523,
+        "filename": "drag_en.mp3"
+      }
+    },
+    {
+      "id": 133,
+      "type": "audio",
+      "title": "emosong1.mp3",
+      "slug": "audio-emosong1-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "emosong1.mp3",
+      "content": null,
+      "mediaUrl": "../audio/emosong1.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 986232,
+        "filename": "emosong1.mp3"
+      }
+    },
+    {
+      "id": 134,
+      "type": "audio",
+      "title": "enders2.mp3",
+      "slug": "audio-enders2-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "enders2.mp3",
+      "content": null,
+      "mediaUrl": "../audio/enders2.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1749217,
+        "filename": "enders2.mp3"
+      }
+    },
+    {
+      "id": 135,
+      "type": "audio",
+      "title": "endleton.mp3",
+      "slug": "audio-endleton-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "endleton.mp3",
+      "content": null,
+      "mediaUrl": "../audio/endleton.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 310522,
+        "filename": "endleton.mp3"
+      }
+    },
+    {
+      "id": 136,
+      "type": "audio",
+      "title": "envidious.mp3",
+      "slug": "audio-envidious-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "envidious.mp3",
+      "content": null,
+      "mediaUrl": "../audio/envidious.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 7339421,
+        "filename": "envidious.mp3"
+      }
+    },
+    {
+      "id": 137,
+      "type": "audio",
+      "title": "eterius.mp3",
+      "slug": "audio-eterius-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "eterius.mp3",
+      "content": null,
+      "mediaUrl": "../audio/eterius.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1099290,
+        "filename": "eterius.mp3"
+      }
+    },
+    {
+      "id": 138,
+      "type": "audio",
+      "title": "frailt.mp3",
+      "slug": "audio-frailt-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "frailt.mp3",
+      "content": null,
+      "mediaUrl": "../audio/frailt.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 7973674,
+        "filename": "frailt.mp3"
+      }
+    },
+    {
+      "id": 139,
+      "type": "audio",
+      "title": "fuckover.mp3",
+      "slug": "audio-fuckover-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "fuckover.mp3",
+      "content": null,
+      "mediaUrl": "../audio/fuckover.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 550719,
+        "filename": "fuckover.mp3"
+      }
+    },
+    {
+      "id": 140,
+      "type": "audio",
+      "title": "gag.mp3",
+      "slug": "audio-gag-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "gag.mp3",
+      "content": null,
+      "mediaUrl": "../audio/gag.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1827910,
+        "filename": "gag.mp3"
+      }
+    },
+    {
+      "id": 141,
+      "type": "audio",
+      "title": "global_cus_elite.mp3",
+      "slug": "audio-global-cus-elite-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "global_cus_elite.mp3",
+      "content": null,
+      "mediaUrl": "../audio/global_cus_elite.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 5780433,
+        "filename": "global_cus_elite.mp3"
+      }
+    },
+    {
+      "id": 142,
+      "type": "audio",
+      "title": "gmode.mp3",
+      "slug": "audio-gmode-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "gmode.mp3",
+      "content": null,
+      "mediaUrl": "../audio/gmode.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 987800,
+        "filename": "gmode.mp3"
+      }
+    },
+    {
+      "id": 143,
+      "type": "audio",
+      "title": "gog1.mp3",
+      "slug": "audio-gog1-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "gog1.mp3",
+      "content": null,
+      "mediaUrl": "../audio/gog1.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 164938,
+        "filename": "gog1.mp3"
+      }
+    },
+    {
+      "id": 144,
+      "type": "audio",
+      "title": "gooup1.mp3",
+      "slug": "audio-gooup1-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "gooup1.mp3",
+      "content": null,
+      "mediaUrl": "../audio/gooup1.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 493978,
+        "filename": "gooup1.mp3"
+      }
+    },
+    {
+      "id": 145,
+      "type": "audio",
+      "title": "gooup2.mp3",
+      "slug": "audio-gooup2-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "gooup2.mp3",
+      "content": null,
+      "mediaUrl": "../audio/gooup2.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 658858,
+        "filename": "gooup2.mp3"
+      }
+    },
+    {
+      "id": 146,
+      "type": "audio",
+      "title": "grilla.mp3",
+      "slug": "audio-grilla-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "grilla.mp3",
+      "content": null,
+      "mediaUrl": "../audio/grilla.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 761632,
+        "filename": "grilla.mp3"
+      }
+    },
+    {
+      "id": 147,
+      "type": "audio",
+      "title": "grisp.mp3",
+      "slug": "audio-grisp-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "grisp.mp3",
+      "content": null,
+      "mediaUrl": "../audio/grisp.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 384371,
+        "filename": "grisp.mp3"
+      }
+    },
+    {
+      "id": 148,
+      "type": "audio",
+      "title": "hungg.mp3",
+      "slug": "audio-hungg-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "hungg.mp3",
+      "content": null,
+      "mediaUrl": "../audio/hungg.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 265566,
+        "filename": "hungg.mp3"
+      }
+    },
+    {
+      "id": 149,
+      "type": "audio",
+      "title": "i always hurt you in my dreams (touchyrself In Water Ending REMIX).mp3",
+      "slug": "audio-i-always-hurt-you-in-my-dreams-touchyrself-in-water-ending-remix-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "i always hurt you in my dreams (touchyrself In Water Ending REMIX).mp3",
+      "content": null,
+      "mediaUrl": "../audio/i always hurt you in my dreams (touchyrself In Water Ending REMIX).mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 2330546,
+        "filename": "i always hurt you in my dreams (touchyrself In Water Ending REMIX).mp3"
+      }
+    },
+    {
+      "id": 150,
+      "type": "audio",
+      "title": "ironsight.mp3",
+      "slug": "audio-ironsight-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "ironsight.mp3",
+      "content": null,
+      "mediaUrl": "../audio/ironsight.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 614679,
+        "filename": "ironsight.mp3"
+      }
+    },
+    {
+      "id": 151,
+      "type": "audio",
+      "title": "jhardor.mp3",
+      "slug": "audio-jhardor-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "jhardor.mp3",
+      "content": null,
+      "mediaUrl": "../audio/jhardor.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 2585135,
+        "filename": "jhardor.mp3"
+      }
+    },
+    {
+      "id": 152,
+      "type": "audio",
+      "title": "kmkeys.mp3",
+      "slug": "audio-kmkeys-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "kmkeys.mp3",
+      "content": null,
+      "mediaUrl": "../audio/kmkeys.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 878608,
+        "filename": "kmkeys.mp3"
+      }
+    },
+    {
+      "id": 153,
+      "type": "audio",
+      "title": "lifelike.mp3",
+      "slug": "audio-lifelike-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "lifelike.mp3",
+      "content": null,
+      "mediaUrl": "../audio/lifelike.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 10084368,
+        "filename": "lifelike.mp3"
+      }
+    },
+    {
+      "id": 154,
+      "type": "audio",
+      "title": "lowpoignant severed dreams (unformed crown).mp3",
+      "slug": "audio-lowpoignant-severed-dreams-unformed-crown-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "lowpoignant severed dreams (unformed crown).mp3",
+      "content": null,
+      "mediaUrl": "../audio/lowpoignant severed dreams (unformed crown).mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 5925465,
+        "filename": "lowpoignant severed dreams (unformed crown).mp3"
+      }
+    },
+    {
+      "id": 155,
+      "type": "audio",
+      "title": "maby.mp3",
+      "slug": "audio-maby-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "maby.mp3",
+      "content": null,
+      "mediaUrl": "../audio/maby.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 463261,
+        "filename": "maby.mp3"
+      }
+    },
+    {
+      "id": 156,
+      "type": "audio",
+      "title": "maoning.mp3",
+      "slug": "audio-maoning-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "maoning.mp3",
+      "content": null,
+      "mediaUrl": "../audio/maoning.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 2403323,
+        "filename": "maoning.mp3"
+      }
+    },
+    {
+      "id": 157,
+      "type": "audio",
+      "title": "mudaoukindo2.mp3",
+      "slug": "audio-mudaoukindo2-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "mudaoukindo2.mp3",
+      "content": null,
+      "mediaUrl": "../audio/mudaoukindo2.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 4939290,
+        "filename": "mudaoukindo2.mp3"
+      }
+    },
+    {
+      "id": 158,
+      "type": "audio",
+      "title": "myemis3.mp3",
+      "slug": "audio-myemis3-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "myemis3.mp3",
+      "content": null,
+      "mediaUrl": "../audio/myemis3.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 3845282,
+        "filename": "myemis3.mp3"
+      }
+    },
+    {
+      "id": 159,
+      "type": "audio",
+      "title": "nicethings.mp3",
+      "slug": "audio-nicethings-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "nicethings.mp3",
+      "content": null,
+      "mediaUrl": "../audio/nicethings.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1099258,
+        "filename": "nicethings.mp3"
+      }
+    },
+    {
+      "id": 160,
+      "type": "audio",
+      "title": "or_postbin.mp3",
+      "slug": "audio-or-postbin-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "or_postbin.mp3",
+      "content": null,
+      "mediaUrl": "../audio/or_postbin.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 4829576,
+        "filename": "or_postbin.mp3"
+      }
+    },
+    {
+      "id": 161,
+      "type": "audio",
+      "title": "organpie.mp3",
+      "slug": "audio-organpie-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "organpie.mp3",
+      "content": null,
+      "mediaUrl": "../audio/organpie.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 216352,
+        "filename": "organpie.mp3"
+      }
+    },
+    {
+      "id": 162,
+      "type": "audio",
+      "title": "p1.mp3",
+      "slug": "audio-p1-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "p1.mp3",
+      "content": null,
+      "mediaUrl": "../audio/p1.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 338408,
+        "filename": "p1.mp3"
+      }
+    },
+    {
+      "id": 163,
+      "type": "audio",
+      "title": "pall.mp3",
+      "slug": "audio-pall-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "pall.mp3",
+      "content": null,
+      "mediaUrl": "../audio/pall.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 277126,
+        "filename": "pall.mp3"
+      }
+    },
+    {
+      "id": 164,
+      "type": "audio",
+      "title": "partin.mp3",
+      "slug": "audio-partin-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "partin.mp3",
+      "content": null,
+      "mediaUrl": "../audio/partin.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 658858,
+        "filename": "partin.mp3"
+      }
+    },
+    {
+      "id": 165,
+      "type": "audio",
+      "title": "pf_oounun.mp3",
+      "slug": "audio-pf-oounun-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "pf_oounun.mp3",
+      "content": null,
+      "mediaUrl": "../audio/pf_oounun.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 3468074,
+        "filename": "pf_oounun.mp3"
+      }
+    },
+    {
+      "id": 166,
+      "type": "audio",
+      "title": "plugdj.mp3",
+      "slug": "audio-plugdj-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "plugdj.mp3",
+      "content": null,
+      "mediaUrl": "../audio/plugdj.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 11161658,
+        "filename": "plugdj.mp3"
+      }
+    },
+    {
+      "id": 167,
+      "type": "audio",
+      "title": "punkt.mp3",
+      "slug": "audio-punkt-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "punkt.mp3",
+      "content": null,
+      "mediaUrl": "../audio/punkt.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1166733,
+        "filename": "punkt.mp3"
+      }
+    },
+    {
+      "id": 168,
+      "type": "audio",
+      "title": "redfield_choppedtest.mp3",
+      "slug": "audio-redfield-choppedtest-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "redfield_choppedtest.mp3",
+      "content": null,
+      "mediaUrl": "../audio/redfield_choppedtest.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 611166,
+        "filename": "redfield_choppedtest.mp3"
+      }
+    },
+    {
+      "id": 169,
+      "type": "audio",
+      "title": "rendar.mp3",
+      "slug": "audio-rendar-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "rendar.mp3",
+      "content": null,
+      "mediaUrl": "../audio/rendar.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 687082,
+        "filename": "rendar.mp3"
+      }
+    },
+    {
+      "id": 170,
+      "type": "audio",
+      "title": "rp.mp3",
+      "slug": "audio-rp-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "rp.mp3",
+      "content": null,
+      "mediaUrl": "../audio/rp.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 71007,
+        "filename": "rp.mp3"
+      }
+    },
+    {
+      "id": 171,
+      "type": "audio",
+      "title": "rusicri.mp3",
+      "slug": "audio-rusicri-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "rusicri.mp3",
+      "content": null,
+      "mediaUrl": "../audio/rusicri.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 518746,
+        "filename": "rusicri.mp3"
+      }
+    },
+    {
+      "id": 172,
+      "type": "audio",
+      "title": "shouts.mp3",
+      "slug": "audio-shouts-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "shouts.mp3",
+      "content": null,
+      "mediaUrl": "../audio/shouts.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 487642,
+        "filename": "shouts.mp3"
+      }
+    },
+    {
+      "id": 173,
+      "type": "audio",
+      "title": "skid.mp3",
+      "slug": "audio-skid-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "skid.mp3",
+      "content": null,
+      "mediaUrl": "../audio/skid.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 890154,
+        "filename": "skid.mp3"
+      }
+    },
+    {
+      "id": 174,
+      "type": "audio",
+      "title": "smokesenecas.mp3",
+      "slug": "audio-smokesenecas-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "smokesenecas.mp3",
+      "content": null,
+      "mediaUrl": "../audio/smokesenecas.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 4801364,
+        "filename": "smokesenecas.mp3"
+      }
+    },
+    {
+      "id": 175,
+      "type": "audio",
+      "title": "solid.mp3",
+      "slug": "audio-solid-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "solid.mp3",
+      "content": null,
+      "mediaUrl": "../audio/solid.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1824511,
+        "filename": "solid.mp3"
+      }
+    },
+    {
+      "id": 176,
+      "type": "audio",
+      "title": "steetprofit.mp3",
+      "slug": "audio-steetprofit-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "steetprofit.mp3",
+      "content": null,
+      "mediaUrl": "../audio/steetprofit.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 591261,
+        "filename": "steetprofit.mp3"
+      }
+    },
+    {
+      "id": 177,
+      "type": "audio",
+      "title": "stillpattern.mp3",
+      "slug": "audio-stillpattern-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "stillpattern.mp3",
+      "content": null,
+      "mediaUrl": "../audio/stillpattern.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 464229,
+        "filename": "stillpattern.mp3"
+      }
+    },
+    {
+      "id": 178,
+      "type": "audio",
+      "title": "sweetthings.mp3",
+      "slug": "audio-sweetthings-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "sweetthings.mp3",
+      "content": null,
+      "mediaUrl": "../audio/sweetthings.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 4939258,
+        "filename": "sweetthings.mp3"
+      }
+    },
+    {
+      "id": 179,
+      "type": "audio",
+      "title": "te.mp3",
+      "slug": "audio-te-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "te.mp3",
+      "content": null,
+      "mediaUrl": "../audio/te.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 133894,
+        "filename": "te.mp3"
+      }
+    },
+    {
+      "id": 180,
+      "type": "audio",
+      "title": "tears.mp3",
+      "slug": "audio-tears-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "tears.mp3",
+      "content": null,
+      "mediaUrl": "../audio/tears.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 7468988,
+        "filename": "tears.mp3"
+      }
+    },
+    {
+      "id": 181,
+      "type": "audio",
+      "title": "trnks.mp3",
+      "slug": "audio-trnks-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "trnks.mp3",
+      "content": null,
+      "mediaUrl": "../audio/trnks.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 699629,
+        "filename": "trnks.mp3"
+      }
+    },
+    {
+      "id": 182,
+      "type": "audio",
+      "title": "two1.mp3",
+      "slug": "audio-two1-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "two1.mp3",
+      "content": null,
+      "mediaUrl": "../audio/two1.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 7946507,
+        "filename": "two1.mp3"
+      }
+    },
+    {
+      "id": 183,
+      "type": "audio",
+      "title": "unevenmix.mp3",
+      "slug": "audio-unevenmix-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "unevenmix.mp3",
+      "content": null,
+      "mediaUrl": "../audio/unevenmix.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 2392966,
+        "filename": "unevenmix.mp3"
+      }
+    },
+    {
+      "id": 184,
+      "type": "audio",
+      "title": "unimport_o.mp3",
+      "slug": "audio-unimport-o-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "unimport_o.mp3",
+      "content": null,
+      "mediaUrl": "../audio/unimport_o.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 6560972,
+        "filename": "unimport_o.mp3"
+      }
+    },
+    {
+      "id": 185,
+      "type": "audio",
+      "title": "vexcited.mp3",
+      "slug": "audio-vexcited-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "vexcited.mp3",
+      "content": null,
+      "mediaUrl": "../audio/vexcited.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 3292858,
+        "filename": "vexcited.mp3"
+      }
+    },
+    {
+      "id": 186,
+      "type": "audio",
+      "title": "viol.mp3",
+      "slug": "audio-viol-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "viol.mp3",
+      "content": null,
+      "mediaUrl": "../audio/viol.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 674853,
+        "filename": "viol.mp3"
+      }
+    },
+    {
+      "id": 187,
+      "type": "audio",
+      "title": "whip.mp3",
+      "slug": "audio-whip-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "whip.mp3",
+      "content": null,
+      "mediaUrl": "../audio/whip.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 133258,
+        "filename": "whip.mp3"
+      }
+    },
+    {
+      "id": 188,
+      "type": "audio",
+      "title": "windows.mp3",
+      "slug": "audio-windows-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "windows.mp3",
+      "content": null,
+      "mediaUrl": "../audio/windows.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1921625,
+        "filename": "windows.mp3"
+      }
+    },
+    {
+      "id": 189,
+      "type": "audio",
+      "title": "withoutu2.mp3",
+      "slug": "audio-withoutu2-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "withoutu2.mp3",
+      "content": null,
+      "mediaUrl": "../audio/withoutu2.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 171212,
+        "filename": "withoutu2.mp3"
+      }
+    },
+    {
+      "id": 190,
+      "type": "audio",
+      "title": "x2whitedress.mp3",
+      "slug": "audio-x2whitedress-mp3",
+      "author": "tedwordnelson",
+      "date": "2026-01-29",
+      "status": "published",
+      "tags": [],
+      "excerpt": "x2whitedress.mp3",
+      "content": null,
+      "mediaUrl": "../audio/x2whitedress.mp3",
+      "thumbnail": null,
+      "metadata": {
+        "artist": "EXTANTRA",
+        "album": "",
+        "duration": 0,
+        "duration_formatted": "0:00",
+        "file_size": 1042618,
+        "filename": "x2whitedress.mp3"
+      }
+    },
+    {
+      "id": 191,
+      "type": "video",
+      "title": "Video 01 - 1m 41s - 640x480 - 2020",
+      "slug": "video-20200101-001",
+      "author": "tedwordnelson",
+      "date": "2020-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 01 - 1m 41s - 640x480 - 2020",
+      "content": null,
+      "mediaUrl": "../videos/20200101_001.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 101.532,
+        "duration_formatted": "1m 41s",
+        "resolution": "640x480",
+        "fps": 29.96,
+        "filename": "20200101_001.mp4"
+      }
+    },
+    {
+      "id": 192,
+      "type": "video",
+      "title": "Video 02 - 18s - 640x480 - 2020",
+      "slug": "video-20200101-002",
+      "author": "tedwordnelson",
+      "date": "2020-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 02 - 18s - 640x480 - 2020",
+      "content": null,
+      "mediaUrl": "../videos/20200101_002.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 18.604,
+        "duration_formatted": "18s",
+        "resolution": "640x480",
+        "fps": 29.94,
+        "filename": "20200101_002.mp4"
+      }
+    },
+    {
+      "id": 193,
+      "type": "video",
+      "title": "Video 03 - 14s - 640x480 - 2020",
+      "slug": "video-20200101-003",
+      "author": "tedwordnelson",
+      "date": "2020-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 03 - 14s - 640x480 - 2020",
+      "content": null,
+      "mediaUrl": "../videos/20200101_003.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 14.071,
+        "duration_formatted": "14s",
+        "resolution": "640x480",
+        "fps": 29.92,
+        "filename": "20200101_003.mp4"
+      }
+    },
+    {
+      "id": 194,
+      "type": "video",
+      "title": "Video 04 - 50s - 320x240 - 2021",
+      "slug": "video-20210101-001",
+      "author": "tedwordnelson",
+      "date": "2021-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 04 - 50s - 320x240 - 2021",
+      "content": null,
+      "mediaUrl": "../videos/20210101_001.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 50.8508,
+        "duration_formatted": "50s",
+        "resolution": "320x240",
+        "fps": 29.97,
+        "filename": "20210101_001.mp4"
+      }
+    },
+    {
+      "id": 195,
+      "type": "video",
+      "title": "Video 05 - 20s - 320x240 - 2021",
+      "slug": "video-20210101-002",
+      "author": "tedwordnelson",
+      "date": "2021-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 05 - 20s - 320x240 - 2021",
+      "content": null,
+      "mediaUrl": "../videos/20210101_002.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 20.601995,
+        "duration_formatted": "20s",
+        "resolution": "320x240",
+        "fps": 29.97,
+        "filename": "20210101_002.mp4"
+      }
+    },
+    {
+      "id": 196,
+      "type": "video",
+      "title": "Video 06 - 10s - 320x240 - 2021",
+      "slug": "video-20210101-003",
+      "author": "tedwordnelson",
+      "date": "2021-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 06 - 10s - 320x240 - 2021",
+      "content": null,
+      "mediaUrl": "../videos/20210101_003.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 10.3103,
+        "duration_formatted": "10s",
+        "resolution": "320x240",
+        "fps": 29.97,
+        "filename": "20210101_003.mp4"
+      }
+    },
+    {
+      "id": 197,
+      "type": "video",
+      "title": "Video 07 - 5s - 640x480 - 2023",
+      "slug": "video-20230101-001",
+      "author": "tedwordnelson",
+      "date": "2023-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 07 - 5s - 640x480 - 2023",
+      "content": null,
+      "mediaUrl": "../videos/20230101_001.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 5.833333,
+        "duration_formatted": "5s",
+        "resolution": "640x480",
+        "fps": 24.0,
+        "filename": "20230101_001.mp4"
+      }
+    },
+    {
+      "id": 198,
+      "type": "video",
+      "title": "Video 08 - 5s - 480x320 - 2023",
+      "slug": "video-20230101-002",
+      "author": "tedwordnelson",
+      "date": "2023-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 08 - 5s - 480x320 - 2023",
+      "content": null,
+      "mediaUrl": "../videos/20230101_002.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 5.083333,
+        "duration_formatted": "5s",
+        "resolution": "480x320",
+        "fps": 12.0,
+        "filename": "20230101_002.mp4"
+      }
+    },
+    {
+      "id": 199,
+      "type": "video",
+      "title": "Video 09 - 15s - 416x420 - 2024",
+      "slug": "video-20240101-001",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 09 - 15s - 416x420 - 2024",
+      "content": null,
+      "mediaUrl": "../videos/20240101_001.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 15.021995,
+        "duration_formatted": "15s",
+        "resolution": "416x420",
+        "fps": 12.0,
+        "filename": "20240101_001.mp4"
+      }
+    },
+    {
+      "id": 200,
+      "type": "video",
+      "title": "Video 10 - 20s - 320x240 - 2024",
+      "slug": "video-20240101-002",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 10 - 20s - 320x240 - 2024",
+      "content": null,
+      "mediaUrl": "../videos/20240101_002.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 20.553867,
+        "duration_formatted": "20s",
+        "resolution": "320x240",
+        "fps": 29.97,
+        "filename": "20240101_002.mp4"
+      }
+    },
+    {
+      "id": 201,
+      "type": "video",
+      "title": "Video 11 - 8s - 640x480 - 2024",
+      "slug": "video-20240101-003",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 11 - 8s - 640x480 - 2024",
+      "content": null,
+      "mediaUrl": "../videos/20240101_003.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 8.0,
+        "duration_formatted": "8s",
+        "resolution": "640x480",
+        "fps": 6.0,
+        "filename": "20240101_003.mp4"
+      }
+    },
+    {
+      "id": 202,
+      "type": "video",
+      "title": "Video 12 - 7s - 900x800 - 2024",
+      "slug": "video-20240101-004",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [],
+      "excerpt": "Video 12 - 7s - 900x800 - 2024",
+      "content": null,
+      "mediaUrl": "../videos/20240101_004.mp4",
+      "thumbnail": null,
+      "metadata": {
+        "duration": 7.5,
+        "duration_formatted": "7s",
+        "resolution": "900x800",
+        "fps": 6.0,
+        "filename": "20240101_004.mp4"
+      }
+    },
+    {
+      "id": 203,
+      "type": "drawing",
+      "title": "Drawing 2021-09-22 #001",
+      "slug": "drawing-drawing-2021-09-22-001",
+      "author": "tedwordnelson",
+      "date": "2021-09-22",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Digital artwork from 2021-09-22",
+      "content": null,
+      "mediaUrl": "../drawings/20210922_001.webp",
+      "thumbnail": "../drawings/20210922_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Archive",
+        "year": "2021"
+      }
+    },
+    {
+      "id": 204,
+      "type": "drawing",
+      "title": "Drawing 2022-04-11 #001",
+      "slug": "drawing-drawing-2022-04-11-001",
+      "author": "tedwordnelson",
+      "date": "2022-04-11",
+      "status": "published",
+      "tags": [
+        "archive"
+      ],
+      "excerpt": "Digital artwork from 2022-04-11",
+      "content": null,
+      "mediaUrl": "../drawings/20220411_001.webp",
+      "thumbnail": "../drawings/20220411_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Archive",
+        "year": "2022"
+      }
+    },
+    {
+      "id": 205,
+      "type": "drawing",
+      "title": "Drawing 2023-05-07 #001",
+      "slug": "drawing-drawing-2023-05-07-001",
+      "author": "tedwordnelson",
+      "date": "2023-05-07",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-05-07",
+      "content": null,
+      "mediaUrl": "../drawings/20230507_001.webp",
+      "thumbnail": "../drawings/20230507_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 206,
+      "type": "drawing",
+      "title": "Drawing 2023-06-01 #001",
+      "slug": "drawing-drawing-2023-06-01-001",
+      "author": "tedwordnelson",
+      "date": "2023-06-01",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-06-01",
+      "content": null,
+      "mediaUrl": "../drawings/20230601_001.webp",
+      "thumbnail": "../drawings/20230601_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 207,
+      "type": "drawing",
+      "title": "Drawing 2023-11-27 #001",
+      "slug": "drawing-drawing-2023-11-27-001",
+      "author": "tedwordnelson",
+      "date": "2023-11-27",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-11-27",
+      "content": null,
+      "mediaUrl": "../drawings/20231127_001.webp",
+      "thumbnail": "../drawings/20231127_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 208,
+      "type": "drawing",
+      "title": "Drawing 2023-12-14 #001",
+      "slug": "drawing-drawing-2023-12-14-001",
+      "author": "tedwordnelson",
+      "date": "2023-12-14",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-12-14",
+      "content": null,
+      "mediaUrl": "../drawings/20231214_001.webp",
+      "thumbnail": "../drawings/20231214_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 209,
+      "type": "drawing",
+      "title": "Drawing 2023-12-14 #002",
+      "slug": "drawing-drawing-2023-12-14-002",
+      "author": "tedwordnelson",
+      "date": "2023-12-14",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-12-14",
+      "content": null,
+      "mediaUrl": "../drawings/20231214_002.webp",
+      "thumbnail": "../drawings/20231214_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 210,
+      "type": "drawing",
+      "title": "Drawing 2023-12-16 #001",
+      "slug": "drawing-drawing-2023-12-16-001",
+      "author": "tedwordnelson",
+      "date": "2023-12-16",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-12-16",
+      "content": null,
+      "mediaUrl": "../drawings/20231216_001.webp",
+      "thumbnail": "../drawings/20231216_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 211,
+      "type": "drawing",
+      "title": "Drawing 2023-12-16 #002",
+      "slug": "drawing-drawing-2023-12-16-002",
+      "author": "tedwordnelson",
+      "date": "2023-12-16",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-12-16",
+      "content": null,
+      "mediaUrl": "../drawings/20231216_002.webp",
+      "thumbnail": "../drawings/20231216_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 212,
+      "type": "drawing",
+      "title": "Drawing 2023-12-16 #003",
+      "slug": "drawing-drawing-2023-12-16-003",
+      "author": "tedwordnelson",
+      "date": "2023-12-16",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-12-16",
+      "content": null,
+      "mediaUrl": "../drawings/20231216_003.webp",
+      "thumbnail": "../drawings/20231216_003.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 213,
+      "type": "drawing",
+      "title": "Drawing 2023-12-16 #004",
+      "slug": "drawing-drawing-2023-12-16-004",
+      "author": "tedwordnelson",
+      "date": "2023-12-16",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-12-16",
+      "content": null,
+      "mediaUrl": "../drawings/20231216_004.webp",
+      "thumbnail": "../drawings/20231216_004.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 214,
+      "type": "drawing",
+      "title": "Drawing 2023-12-16 #005",
+      "slug": "drawing-drawing-2023-12-16-005",
+      "author": "tedwordnelson",
+      "date": "2023-12-16",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-12-16",
+      "content": null,
+      "mediaUrl": "../drawings/20231216_005.webp",
+      "thumbnail": "../drawings/20231216_005.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 215,
+      "type": "drawing",
+      "title": "Drawing 2023-12-29 #001",
+      "slug": "drawing-drawing-2023-12-29-001",
+      "author": "tedwordnelson",
+      "date": "2023-12-29",
+      "status": "published",
+      "tags": [
+        "vintage"
+      ],
+      "excerpt": "Digital artwork from 2023-12-29",
+      "content": null,
+      "mediaUrl": "../drawings/20231229_001.webp",
+      "thumbnail": "../drawings/20231229_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Vintage",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 216,
+      "type": "drawing",
+      "title": "Drawing 2024-01-10 #001",
+      "slug": "drawing-drawing-2024-01-10-001",
+      "author": "tedwordnelson",
+      "date": "2024-01-10",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-01-10",
+      "content": null,
+      "mediaUrl": "../drawings/20240110_001.webp",
+      "thumbnail": "../drawings/20240110_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 217,
+      "type": "drawing",
+      "title": "Drawing 2024-01-10 #002",
+      "slug": "drawing-drawing-2024-01-10-002",
+      "author": "tedwordnelson",
+      "date": "2024-01-10",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-01-10",
+      "content": null,
+      "mediaUrl": "../drawings/20240110_002.webp",
+      "thumbnail": "../drawings/20240110_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 218,
+      "type": "drawing",
+      "title": "Drawing 2024-01-12 #001",
+      "slug": "drawing-drawing-2024-01-12-001",
+      "author": "tedwordnelson",
+      "date": "2024-01-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-01-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240112_001.webp",
+      "thumbnail": "../drawings/20240112_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 219,
+      "type": "drawing",
+      "title": "Drawing 2024-01-12 #002",
+      "slug": "drawing-drawing-2024-01-12-002",
+      "author": "tedwordnelson",
+      "date": "2024-01-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-01-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240112_002.webp",
+      "thumbnail": "../drawings/20240112_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 220,
+      "type": "drawing",
+      "title": "Drawing 2024-01-16 #001",
+      "slug": "drawing-drawing-2024-01-16-001",
+      "author": "tedwordnelson",
+      "date": "2024-01-16",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-01-16",
+      "content": null,
+      "mediaUrl": "../drawings/20240116_001.webp",
+      "thumbnail": "../drawings/20240116_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 221,
+      "type": "drawing",
+      "title": "Drawing 2024-01-20 #001",
+      "slug": "drawing-drawing-2024-01-20-001",
+      "author": "tedwordnelson",
+      "date": "2024-01-20",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-01-20",
+      "content": null,
+      "mediaUrl": "../drawings/20240120_001.webp",
+      "thumbnail": "../drawings/20240120_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 222,
+      "type": "drawing",
+      "title": "Drawing 2024-01-20 #002",
+      "slug": "drawing-drawing-2024-01-20-002",
+      "author": "tedwordnelson",
+      "date": "2024-01-20",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-01-20",
+      "content": null,
+      "mediaUrl": "../drawings/20240120_002.webp",
+      "thumbnail": "../drawings/20240120_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 223,
+      "type": "drawing",
+      "title": "Drawing 2024-01-26 #001",
+      "slug": "drawing-drawing-2024-01-26-001",
+      "author": "tedwordnelson",
+      "date": "2024-01-26",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-01-26",
+      "content": null,
+      "mediaUrl": "../drawings/20240126_001.webp",
+      "thumbnail": "../drawings/20240126_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 224,
+      "type": "drawing",
+      "title": "Drawing 2024-02-02 #001",
+      "slug": "drawing-drawing-2024-02-02-001",
+      "author": "tedwordnelson",
+      "date": "2024-02-02",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-02-02",
+      "content": null,
+      "mediaUrl": "../drawings/20240202_001.webp",
+      "thumbnail": "../drawings/20240202_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 225,
+      "type": "drawing",
+      "title": "Drawing 2024-02-02 #002",
+      "slug": "drawing-drawing-2024-02-02-002",
+      "author": "tedwordnelson",
+      "date": "2024-02-02",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-02-02",
+      "content": null,
+      "mediaUrl": "../drawings/20240202_002.webp",
+      "thumbnail": "../drawings/20240202_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 226,
+      "type": "drawing",
+      "title": "Drawing 2024-02-09 #001",
+      "slug": "drawing-drawing-2024-02-09-001",
+      "author": "tedwordnelson",
+      "date": "2024-02-09",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-02-09",
+      "content": null,
+      "mediaUrl": "../drawings/20240209_001.webp",
+      "thumbnail": "../drawings/20240209_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 227,
+      "type": "drawing",
+      "title": "Drawing 2024-03-05 #001",
+      "slug": "drawing-drawing-2024-03-05-001",
+      "author": "tedwordnelson",
+      "date": "2024-03-05",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-03-05",
+      "content": null,
+      "mediaUrl": "../drawings/20240305_001.webp",
+      "thumbnail": "../drawings/20240305_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 228,
+      "type": "drawing",
+      "title": "Drawing 2024-03-17 #001",
+      "slug": "drawing-drawing-2024-03-17-001",
+      "author": "tedwordnelson",
+      "date": "2024-03-17",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-03-17",
+      "content": null,
+      "mediaUrl": "../drawings/20240317_001.webp",
+      "thumbnail": "../drawings/20240317_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 229,
+      "type": "drawing",
+      "title": "Drawing 2024-03-17 #002",
+      "slug": "drawing-drawing-2024-03-17-002",
+      "author": "tedwordnelson",
+      "date": "2024-03-17",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-03-17",
+      "content": null,
+      "mediaUrl": "../drawings/20240317_002.webp",
+      "thumbnail": "../drawings/20240317_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 230,
+      "type": "drawing",
+      "title": "Drawing 2024-03-17 #003",
+      "slug": "drawing-drawing-2024-03-17-003",
+      "author": "tedwordnelson",
+      "date": "2024-03-17",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-03-17",
+      "content": null,
+      "mediaUrl": "../drawings/20240317_003.webp",
+      "thumbnail": "../drawings/20240317_003.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 231,
+      "type": "drawing",
+      "title": "Drawing 2024-03-17 #004",
+      "slug": "drawing-drawing-2024-03-17-004",
+      "author": "tedwordnelson",
+      "date": "2024-03-17",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-03-17",
+      "content": null,
+      "mediaUrl": "../drawings/20240317_004.webp",
+      "thumbnail": "../drawings/20240317_004.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 232,
+      "type": "drawing",
+      "title": "Drawing 2024-05-03 #001",
+      "slug": "drawing-drawing-2024-05-03-001",
+      "author": "tedwordnelson",
+      "date": "2024-05-03",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-05-03",
+      "content": null,
+      "mediaUrl": "../drawings/20240503_001.webp",
+      "thumbnail": "../drawings/20240503_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 233,
+      "type": "drawing",
+      "title": "Drawing 2024-05-03 #002",
+      "slug": "drawing-drawing-2024-05-03-002",
+      "author": "tedwordnelson",
+      "date": "2024-05-03",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-05-03",
+      "content": null,
+      "mediaUrl": "../drawings/20240503_002.webp",
+      "thumbnail": "../drawings/20240503_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 234,
+      "type": "drawing",
+      "title": "Drawing 2024-05-21 #001",
+      "slug": "drawing-drawing-2024-05-21-001",
+      "author": "tedwordnelson",
+      "date": "2024-05-21",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-05-21",
+      "content": null,
+      "mediaUrl": "../drawings/20240521_001.webp",
+      "thumbnail": "../drawings/20240521_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 235,
+      "type": "drawing",
+      "title": "Drawing 2024-06-04 #001",
+      "slug": "drawing-drawing-2024-06-04-001",
+      "author": "tedwordnelson",
+      "date": "2024-06-04",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-04",
+      "content": null,
+      "mediaUrl": "../drawings/20240604_001.webp",
+      "thumbnail": "../drawings/20240604_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 236,
+      "type": "drawing",
+      "title": "Drawing 2024-06-04 #002",
+      "slug": "drawing-drawing-2024-06-04-002",
+      "author": "tedwordnelson",
+      "date": "2024-06-04",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-04",
+      "content": null,
+      "mediaUrl": "../drawings/20240604_002.webp",
+      "thumbnail": "../drawings/20240604_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 237,
+      "type": "drawing",
+      "title": "Drawing 2024-06-04 #003",
+      "slug": "drawing-drawing-2024-06-04-003",
+      "author": "tedwordnelson",
+      "date": "2024-06-04",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-04",
+      "content": null,
+      "mediaUrl": "../drawings/20240604_003.webp",
+      "thumbnail": "../drawings/20240604_003.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 238,
+      "type": "drawing",
+      "title": "Drawing 2024-06-25 #001",
+      "slug": "drawing-drawing-2024-06-25-001",
+      "author": "tedwordnelson",
+      "date": "2024-06-25",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-25",
+      "content": null,
+      "mediaUrl": "../drawings/20240625_001.webp",
+      "thumbnail": "../drawings/20240625_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 239,
+      "type": "drawing",
+      "title": "Drawing 2024-06-25 #002",
+      "slug": "drawing-drawing-2024-06-25-002",
+      "author": "tedwordnelson",
+      "date": "2024-06-25",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-25",
+      "content": null,
+      "mediaUrl": "../drawings/20240625_002.webp",
+      "thumbnail": "../drawings/20240625_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 240,
+      "type": "drawing",
+      "title": "Drawing 2024-06-25 #003",
+      "slug": "drawing-drawing-2024-06-25-003",
+      "author": "tedwordnelson",
+      "date": "2024-06-25",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-25",
+      "content": null,
+      "mediaUrl": "../drawings/20240625_003.webp",
+      "thumbnail": "../drawings/20240625_003.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 241,
+      "type": "drawing",
+      "title": "Drawing 2024-06-25 #004",
+      "slug": "drawing-drawing-2024-06-25-004",
+      "author": "tedwordnelson",
+      "date": "2024-06-25",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-25",
+      "content": null,
+      "mediaUrl": "../drawings/20240625_004.webp",
+      "thumbnail": "../drawings/20240625_004.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 242,
+      "type": "drawing",
+      "title": "Drawing 2024-06-27 #001",
+      "slug": "drawing-drawing-2024-06-27-001",
+      "author": "tedwordnelson",
+      "date": "2024-06-27",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-27",
+      "content": null,
+      "mediaUrl": "../drawings/20240627_001.webp",
+      "thumbnail": "../drawings/20240627_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 243,
+      "type": "drawing",
+      "title": "Drawing 2024-06-30 #001",
+      "slug": "drawing-drawing-2024-06-30-001",
+      "author": "tedwordnelson",
+      "date": "2024-06-30",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-30",
+      "content": null,
+      "mediaUrl": "../drawings/20240630_001.webp",
+      "thumbnail": "../drawings/20240630_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 244,
+      "type": "drawing",
+      "title": "Drawing 2024-06-30 #002",
+      "slug": "drawing-drawing-2024-06-30-002",
+      "author": "tedwordnelson",
+      "date": "2024-06-30",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-06-30",
+      "content": null,
+      "mediaUrl": "../drawings/20240630_002.webp",
+      "thumbnail": "../drawings/20240630_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 245,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #001",
+      "slug": "drawing-drawing-2024-07-12-001",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_001.webp",
+      "thumbnail": "../drawings/20240712_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 246,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #002",
+      "slug": "drawing-drawing-2024-07-12-002",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_002.webp",
+      "thumbnail": "../drawings/20240712_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 247,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #003",
+      "slug": "drawing-drawing-2024-07-12-003",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_003.webp",
+      "thumbnail": "../drawings/20240712_003.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 248,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #004",
+      "slug": "drawing-drawing-2024-07-12-004",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_004.webp",
+      "thumbnail": "../drawings/20240712_004.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 249,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #005",
+      "slug": "drawing-drawing-2024-07-12-005",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_005.webp",
+      "thumbnail": "../drawings/20240712_005.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 250,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #006",
+      "slug": "drawing-drawing-2024-07-12-006",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_006.webp",
+      "thumbnail": "../drawings/20240712_006.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 251,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #007",
+      "slug": "drawing-drawing-2024-07-12-007",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_007.webp",
+      "thumbnail": "../drawings/20240712_007.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 252,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #008",
+      "slug": "drawing-drawing-2024-07-12-008",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_008.webp",
+      "thumbnail": "../drawings/20240712_008.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 253,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #009",
+      "slug": "drawing-drawing-2024-07-12-009",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_009.webp",
+      "thumbnail": "../drawings/20240712_009.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 254,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #010",
+      "slug": "drawing-drawing-2024-07-12-010",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_010.webp",
+      "thumbnail": "../drawings/20240712_010.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 255,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #011",
+      "slug": "drawing-drawing-2024-07-12-011",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_011.webp",
+      "thumbnail": "../drawings/20240712_011.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 256,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #012",
+      "slug": "drawing-drawing-2024-07-12-012",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_012.webp",
+      "thumbnail": "../drawings/20240712_012.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 257,
+      "type": "drawing",
+      "title": "Drawing 2024-07-12 #013",
+      "slug": "drawing-drawing-2024-07-12-013",
+      "author": "tedwordnelson",
+      "date": "2024-07-12",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-12",
+      "content": null,
+      "mediaUrl": "../drawings/20240712_013.webp",
+      "thumbnail": "../drawings/20240712_013.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 258,
+      "type": "drawing",
+      "title": "Drawing 2024-07-16 #001",
+      "slug": "drawing-drawing-2024-07-16-001",
+      "author": "tedwordnelson",
+      "date": "2024-07-16",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-07-16",
+      "content": null,
+      "mediaUrl": "../drawings/20240716_001.webp",
+      "thumbnail": "../drawings/20240716_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 259,
+      "type": "drawing",
+      "title": "Drawing 2024-08-19 #001",
+      "slug": "drawing-drawing-2024-08-19-001",
+      "author": "tedwordnelson",
+      "date": "2024-08-19",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-08-19",
+      "content": null,
+      "mediaUrl": "../drawings/20240819_001.webp",
+      "thumbnail": "../drawings/20240819_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 260,
+      "type": "drawing",
+      "title": "Drawing 2024-08-21 #001",
+      "slug": "drawing-drawing-2024-08-21-001",
+      "author": "tedwordnelson",
+      "date": "2024-08-21",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-08-21",
+      "content": null,
+      "mediaUrl": "../drawings/20240821_001.webp",
+      "thumbnail": "../drawings/20240821_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 261,
+      "type": "drawing",
+      "title": "Drawing 2024-08-21 #002",
+      "slug": "drawing-drawing-2024-08-21-002",
+      "author": "tedwordnelson",
+      "date": "2024-08-21",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-08-21",
+      "content": null,
+      "mediaUrl": "../drawings/20240821_002.webp",
+      "thumbnail": "../drawings/20240821_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 262,
+      "type": "drawing",
+      "title": "Drawing 2024-08-21 #003",
+      "slug": "drawing-drawing-2024-08-21-003",
+      "author": "tedwordnelson",
+      "date": "2024-08-21",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-08-21",
+      "content": null,
+      "mediaUrl": "../drawings/20240821_003.webp",
+      "thumbnail": "../drawings/20240821_003.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 263,
+      "type": "drawing",
+      "title": "Drawing 2024-09-01 #001",
+      "slug": "drawing-drawing-2024-09-01-001",
+      "author": "tedwordnelson",
+      "date": "2024-09-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-09-01",
+      "content": null,
+      "mediaUrl": "../drawings/20240901_001.webp",
+      "thumbnail": "../drawings/20240901_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 264,
+      "type": "drawing",
+      "title": "Drawing 2024-09-01 #002",
+      "slug": "drawing-drawing-2024-09-01-002",
+      "author": "tedwordnelson",
+      "date": "2024-09-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-09-01",
+      "content": null,
+      "mediaUrl": "../drawings/20240901_002.webp",
+      "thumbnail": "../drawings/20240901_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 265,
+      "type": "drawing",
+      "title": "Drawing 2024-09-01 #003",
+      "slug": "drawing-drawing-2024-09-01-003",
+      "author": "tedwordnelson",
+      "date": "2024-09-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-09-01",
+      "content": null,
+      "mediaUrl": "../drawings/20240901_003.webp",
+      "thumbnail": "../drawings/20240901_003.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 266,
+      "type": "drawing",
+      "title": "Drawing 2024-09-01 #004",
+      "slug": "drawing-drawing-2024-09-01-004",
+      "author": "tedwordnelson",
+      "date": "2024-09-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-09-01",
+      "content": null,
+      "mediaUrl": "../drawings/20240901_004.webp",
+      "thumbnail": "../drawings/20240901_004.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 267,
+      "type": "drawing",
+      "title": "Drawing 2024-09-01 #005",
+      "slug": "drawing-drawing-2024-09-01-005",
+      "author": "tedwordnelson",
+      "date": "2024-09-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-09-01",
+      "content": null,
+      "mediaUrl": "../drawings/20240901_005.webp",
+      "thumbnail": "../drawings/20240901_005.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 268,
+      "type": "drawing",
+      "title": "Drawing 2024-09-01 #006",
+      "slug": "drawing-drawing-2024-09-01-006",
+      "author": "tedwordnelson",
+      "date": "2024-09-01",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-09-01",
+      "content": null,
+      "mediaUrl": "../drawings/20240901_006.webp",
+      "thumbnail": "../drawings/20240901_006.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 269,
+      "type": "drawing",
+      "title": "Drawing 2024-09-02 #001",
+      "slug": "drawing-drawing-2024-09-02-001",
+      "author": "tedwordnelson",
+      "date": "2024-09-02",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-09-02",
+      "content": null,
+      "mediaUrl": "../drawings/20240902_001.webp",
+      "thumbnail": "../drawings/20240902_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 270,
+      "type": "drawing",
+      "title": "Drawing 2024-12-17 #001",
+      "slug": "drawing-drawing-2024-12-17-001",
+      "author": "tedwordnelson",
+      "date": "2024-12-17",
+      "status": "published",
+      "tags": [
+        "recent"
+      ],
+      "excerpt": "Digital artwork from 2024-12-17",
+      "content": null,
+      "mediaUrl": "../drawings/20241217_001.webp",
+      "thumbnail": "../drawings/20241217_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Recent",
+        "year": "2024"
+      }
+    },
+    {
+      "id": 271,
+      "type": "drawing",
+      "title": "Drawing 2025-02-11 #001",
+      "slug": "drawing-drawing-2025-02-11-001",
+      "author": "tedwordnelson",
+      "date": "2025-02-11",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-02-11",
+      "content": null,
+      "mediaUrl": "../drawings/20250211_001.webp",
+      "thumbnail": "../drawings/20250211_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 272,
+      "type": "drawing",
+      "title": "Drawing 2025-03-30 #001",
+      "slug": "drawing-drawing-2025-03-30-001",
+      "author": "tedwordnelson",
+      "date": "2025-03-30",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-03-30",
+      "content": null,
+      "mediaUrl": "../drawings/20250330_001.webp",
+      "thumbnail": "../drawings/20250330_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 273,
+      "type": "drawing",
+      "title": "Drawing 2025-04-03 #001",
+      "slug": "drawing-drawing-2025-04-03-001",
+      "author": "tedwordnelson",
+      "date": "2025-04-03",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-04-03",
+      "content": null,
+      "mediaUrl": "../drawings/20250403_001.webp",
+      "thumbnail": "../drawings/20250403_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 274,
+      "type": "drawing",
+      "title": "Drawing 2025-04-28 #001",
+      "slug": "drawing-drawing-2025-04-28-001",
+      "author": "tedwordnelson",
+      "date": "2025-04-28",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-04-28",
+      "content": null,
+      "mediaUrl": "../drawings/20250428_001.webp",
+      "thumbnail": "../drawings/20250428_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 275,
+      "type": "drawing",
+      "title": "Drawing 2025-05-29 #001",
+      "slug": "drawing-drawing-2025-05-29-001",
+      "author": "tedwordnelson",
+      "date": "2025-05-29",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-05-29",
+      "content": null,
+      "mediaUrl": "../drawings/20250529_001.webp",
+      "thumbnail": "../drawings/20250529_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 276,
+      "type": "drawing",
+      "title": "Drawing 2025-05-30 #001",
+      "slug": "drawing-drawing-2025-05-30-001",
+      "author": "tedwordnelson",
+      "date": "2025-05-30",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-05-30",
+      "content": null,
+      "mediaUrl": "../drawings/20250530_001.webp",
+      "thumbnail": "../drawings/20250530_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 277,
+      "type": "drawing",
+      "title": "Drawing 2025-05-30 #002",
+      "slug": "drawing-drawing-2025-05-30-002",
+      "author": "tedwordnelson",
+      "date": "2025-05-30",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-05-30",
+      "content": null,
+      "mediaUrl": "../drawings/20250530_002.webp",
+      "thumbnail": "../drawings/20250530_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 278,
+      "type": "drawing",
+      "title": "Drawing 2025-06-08 #001",
+      "slug": "drawing-drawing-2025-06-08-001",
+      "author": "tedwordnelson",
+      "date": "2025-06-08",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-08",
+      "content": null,
+      "mediaUrl": "../drawings/20250608_001.webp",
+      "thumbnail": "../drawings/20250608_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 279,
+      "type": "drawing",
+      "title": "Drawing 2025-06-13 #001",
+      "slug": "drawing-drawing-2025-06-13-001",
+      "author": "tedwordnelson",
+      "date": "2025-06-13",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-13",
+      "content": null,
+      "mediaUrl": "../drawings/20250613_001.webp",
+      "thumbnail": "../drawings/20250613_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 280,
+      "type": "drawing",
+      "title": "Drawing 2025-06-15 #001",
+      "slug": "drawing-drawing-2025-06-15-001",
+      "author": "tedwordnelson",
+      "date": "2025-06-15",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-15",
+      "content": null,
+      "mediaUrl": "../drawings/20250615_001.webp",
+      "thumbnail": "../drawings/20250615_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 281,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #001",
+      "slug": "drawing-drawing-2025-06-21-001",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_001.webp",
+      "thumbnail": "../drawings/20250621_001.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 282,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #002",
+      "slug": "drawing-drawing-2025-06-21-002",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_002.webp",
+      "thumbnail": "../drawings/20250621_002.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 283,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #003",
+      "slug": "drawing-drawing-2025-06-21-003",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_003.webp",
+      "thumbnail": "../drawings/20250621_003.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 284,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #004",
+      "slug": "drawing-drawing-2025-06-21-004",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_004.webp",
+      "thumbnail": "../drawings/20250621_004.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 285,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #005",
+      "slug": "drawing-drawing-2025-06-21-005",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_005.webp",
+      "thumbnail": "../drawings/20250621_005.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 286,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #006",
+      "slug": "drawing-drawing-2025-06-21-006",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_006.webp",
+      "thumbnail": "../drawings/20250621_006.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 287,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #007",
+      "slug": "drawing-drawing-2025-06-21-007",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_007.webp",
+      "thumbnail": "../drawings/20250621_007.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 288,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #008",
+      "slug": "drawing-drawing-2025-06-21-008",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_008.webp",
+      "thumbnail": "../drawings/20250621_008.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 289,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #009",
+      "slug": "drawing-drawing-2025-06-21-009",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_009.webp",
+      "thumbnail": "../drawings/20250621_009.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 290,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #010",
+      "slug": "drawing-drawing-2025-06-21-010",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_010.webp",
+      "thumbnail": "../drawings/20250621_010.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 291,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #011",
+      "slug": "drawing-drawing-2025-06-21-011",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_011.webp",
+      "thumbnail": "../drawings/20250621_011.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 292,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #012",
+      "slug": "drawing-drawing-2025-06-21-012",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_012.webp",
+      "thumbnail": "../drawings/20250621_012.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 293,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #013",
+      "slug": "drawing-drawing-2025-06-21-013",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_013.webp",
+      "thumbnail": "../drawings/20250621_013.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 294,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #014",
+      "slug": "drawing-drawing-2025-06-21-014",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_014.webp",
+      "thumbnail": "../drawings/20250621_014.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 295,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #015",
+      "slug": "drawing-drawing-2025-06-21-015",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_015.webp",
+      "thumbnail": "../drawings/20250621_015.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 296,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #016",
+      "slug": "drawing-drawing-2025-06-21-016",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_016.webp",
+      "thumbnail": "../drawings/20250621_016.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 297,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #017",
+      "slug": "drawing-drawing-2025-06-21-017",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_017.webp",
+      "thumbnail": "../drawings/20250621_017.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 298,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #018",
+      "slug": "drawing-drawing-2025-06-21-018",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_018.webp",
+      "thumbnail": "../drawings/20250621_018.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 299,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #019",
+      "slug": "drawing-drawing-2025-06-21-019",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_019.webp",
+      "thumbnail": "../drawings/20250621_019.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 300,
+      "type": "drawing",
+      "title": "Drawing 2025-06-21 #020",
+      "slug": "drawing-drawing-2025-06-21-020",
+      "author": "tedwordnelson",
+      "date": "2025-06-21",
+      "status": "published",
+      "tags": [
+        "latest"
+      ],
+      "excerpt": "Digital artwork from 2025-06-21",
+      "content": null,
+      "mediaUrl": "../drawings/20250621_020.webp",
+      "thumbnail": "../drawings/20250621_020.webp",
+      "metadata": {
+        "medium": "Digital",
+        "format": "WebP",
+        "category": "Latest",
+        "year": "2025"
+      }
+    },
+    {
+      "id": 301,
+      "type": "3d-model",
+      "title": "Spikevirus",
+      "slug": "3d-spikevirus",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [
+        "abstract"
+      ],
+      "excerpt": "Viral-inspired spiky geometric form",
+      "content": null,
+      "mediaUrl": "../models/Spikevirus.glb",
+      "thumbnail": null,
+      "metadata": {
+        "category": "Abstract",
+        "polyCount": "Unknown",
+        "fileSize": "Unknown",
+        "filename": "Spikevirus.glb"
+      }
+    },
+    {
+      "id": 302,
+      "type": "3d-model",
+      "title": "Anime Girl - Blonde",
+      "slug": "3d-anime-girl-blonde",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [
+        "character"
+      ],
+      "excerpt": "Blonde anime character model",
+      "content": null,
+      "mediaUrl": "../models/anime_girl_blonde.glb",
+      "thumbnail": null,
+      "metadata": {
+        "category": "Character",
+        "polyCount": "Unknown",
+        "fileSize": "Unknown",
+        "filename": "anime_girl_blonde.glb"
+      }
+    },
+    {
+      "id": 303,
+      "type": "3d-model",
+      "title": "Anime Girl - Gray",
+      "slug": "3d-anime-girl-gray",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [
+        "character"
+      ],
+      "excerpt": "Gray anime character model",
+      "content": null,
+      "mediaUrl": "../models/anime_girl_gray.glb",
+      "thumbnail": null,
+      "metadata": {
+        "category": "Character",
+        "polyCount": "Unknown",
+        "fileSize": "Unknown",
+        "filename": "anime_girl_gray.glb"
+      }
+    },
+    {
+      "id": 304,
+      "type": "3d-model",
+      "title": "Anime Girl - Green",
+      "slug": "3d-anime-girl-green",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [
+        "character"
+      ],
+      "excerpt": "Green anime character model",
+      "content": null,
+      "mediaUrl": "../models/anime_girl_green.glb",
+      "thumbnail": null,
+      "metadata": {
+        "category": "Character",
+        "polyCount": "Unknown",
+        "fileSize": "Unknown",
+        "filename": "anime_girl_green.glb"
+      }
+    },
+    {
+      "id": 305,
+      "type": "3d-model",
+      "title": "Castle Entrance",
+      "slug": "3d-castle-entrance",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [
+        "architectural"
+      ],
+      "excerpt": "Medieval castle entrance structure",
+      "content": null,
+      "mediaUrl": "../models/castle_entrance.glb",
+      "thumbnail": null,
+      "metadata": {
+        "category": "Architectural",
+        "polyCount": "Unknown",
+        "fileSize": "Unknown",
+        "filename": "castle_entrance.glb"
+      }
+    },
+    {
+      "id": 306,
+      "type": "3d-model",
+      "title": "Gruel Guy",
+      "slug": "3d-gruel-guy",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [
+        "character"
+      ],
+      "excerpt": "Quirky character model",
+      "content": null,
+      "mediaUrl": "../models/gruel_guy.glb",
+      "thumbnail": null,
+      "metadata": {
+        "category": "Character",
+        "polyCount": "Unknown",
+        "fileSize": "Unknown",
+        "filename": "gruel_guy.glb"
+      }
+    },
+    {
+      "id": 307,
+      "type": "3d-model",
+      "title": "Jet",
+      "slug": "3d-jet",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [
+        "vehicle"
+      ],
+      "excerpt": "Military jet aircraft model",
+      "content": null,
+      "mediaUrl": "../models/jet.glb",
+      "thumbnail": null,
+      "metadata": {
+        "category": "Vehicle",
+        "polyCount": "Unknown",
+        "fileSize": "Unknown",
+        "filename": "jet.glb"
+      }
+    },
+    {
+      "id": 308,
+      "type": "3d-model",
+      "title": "PQ Avi",
+      "slug": "3d-pq-avi",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [
+        "character"
+      ],
+      "excerpt": "Avatar character model",
+      "content": null,
+      "mediaUrl": "../models/pq_avi.glb",
+      "thumbnail": null,
+      "metadata": {
+        "category": "Character",
+        "polyCount": "Unknown",
+        "fileSize": "Unknown",
+        "filename": "pq_avi.glb"
+      }
+    },
+    {
+      "id": 309,
+      "type": "3d-model",
+      "title": "Stan",
+      "slug": "3d-stan",
+      "author": "tedwordnelson",
+      "date": "2024-01-01",
+      "status": "published",
+      "tags": [
+        "character"
+      ],
+      "excerpt": "Character model named Stan",
+      "content": null,
+      "mediaUrl": "../models/stan.glb",
+      "thumbnail": null,
+      "metadata": {
+        "category": "Character",
+        "polyCount": "Unknown",
+        "fileSize": "Unknown",
+        "filename": "stan.glb"
+      }
+    }
+  ]
+}

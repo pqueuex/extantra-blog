@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - EXTANTRA | Photography & Visual Arts</title>
+    <meta name="description" content="Photography and visual arts collection by tedwordnelson (EXTANTRA).">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <link rel="icon" type="image/webp" href="../images/extantralogo-inverted.webp">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        :root {
+            --accent: #cc0000;
+            --accent-dark: #aa0000;
+            --accent-darker: #990000;
+            --accent-dim: #330000;
+            --accent-hover: #440000;
+            --accent-dimmer: #220000;
+            --accent-glow: rgba(204, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="../images/extantralogo-inverted.webp" alt="EXTANTRA Logo" class="logo-image">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('../index.html')">← Feed</div>
+                    <div class="category" onclick="goToPage('index.html')">tedwordnelson</div>
+                    <div class="category active" onclick="goToPage('photos.html')">Photos</div>
+                    <div class="category" onclick="goToPage('3d-models.html')">3D Models</div>
+                    <div class="category" onclick="goToPage('video.html')">Video</div>
+                    <div class="category" onclick="goToPage('drawings.html')">Drawings</div>
+                    <div class="category" onclick="goToPage('music.html')">Music</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>Photos</h1>
+                </div>
+                <div class="gallery-section">
+                    <div class="section-header">
+                        <h2>The Photo Dump</h2>
+                    </div>
+                    <div class="image-gallery" id="photosGallery"></div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 EXTANTRA. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:contact@extantra.net">Contact</a>
+                    <a href="https://store.extantra.net">Store</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goToPage(page) { window.location.href = page; }
+
+        async function loadPhotos() {
+            try {
+                const ts = new Date().getTime();
+                const res = await fetch(`./media-database.json?v=${ts}`);
+                if (!res.ok) throw new Error('Failed to load database');
+                const db = await res.json();
+                const photos = db.entities
+                    .filter(e => e.type === 'photo' && e.status === 'published')
+                    .sort((a, b) => new Date(b.date) - new Date(a.date));
+                renderGallery(photos);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        function renderGallery(photos) {
+            const gallery = document.getElementById('photosGallery');
+            gallery.innerHTML = '';
+            photos.forEach(photo => {
+                const card = document.createElement('div');
+                card.className = 'gallery-item';
+                card.style.cursor = 'pointer';
+                card.innerHTML = `
+                    <div class="gallery-image-container">
+                        <img src="${photo.mediaUrl}" alt="${photo.title}" class="gallery-image" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">${photo.title}</h3>
+                            <p class="gallery-meta">${photo.date} • ${(photo.metadata && photo.metadata.camera) || ''}</p>
+                        </div>
+                    </div>
+                `;
+                card.addEventListener('click', () => openImageModal(photo.mediaUrl, photo.title, photo));
+                gallery.appendChild(card);
+            });
+        }
+
+        function openImageModal(imagePath, title, photo) {
+            const modal = document.createElement('div');
+            modal.className = 'image-modal';
+            const meta = photo ? `
+                <div class="modal-meta">
+                    <p>${photo.excerpt || ''}</p>
+                    <p><strong>Date:</strong> ${photo.date} | <strong>Camera:</strong> ${(photo.metadata && photo.metadata.camera) || 'Unknown'}</p>
+                </div>` : '';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeImageModal()">&times;</span>
+                    <img src="${imagePath}" alt="${title}" class="modal-image">
+                    <h3 class="modal-title">${title}</h3>
+                    ${meta}
+                </div>`;
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+            modal.addEventListener('click', e => { if (e.target === modal) closeImageModal(); });
+            const handleEsc = e => { if (e.key === 'Escape') { closeImageModal(); document.removeEventListener('keydown', handleEsc); } };
+            document.addEventListener('keydown', handleEsc);
+        }
+
+        function closeImageModal() {
+            const modal = document.querySelector('.image-modal');
+            if (modal) { document.body.style.overflow = ''; modal.remove(); }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadPhotos);
+    </script>
+</body>
+</html>

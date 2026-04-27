@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 - nyquilcigarettes</title>
+    <meta name="description" content="Music and audio by nyquilcigarettes.">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <link rel="icon" type="image/webp" href="../images/extantralogo-inverted.webp">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        :root {
+            --accent: #1a3a8a;
+            --accent-dark: #0d1a50;
+            --accent-darker: #102266;
+            --accent-dim: #071130;
+            --accent-hover: #0f1f45;
+            --accent-dimmer: #050b1c;
+            --accent-glow: rgba(26, 58, 138, 0.3);
+        }
+        .empty-state { text-align: center; padding: 60px 20px; color: #444; }
+        .empty-state h2 { color: var(--accent); font-size: 16px; margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="../images/extantralogo-inverted.webp" alt="Logo" class="logo-image">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('../index.html')">← Feed</div>
+                    <div class="category" onclick="goToPage('index.html')">nyquilcigarettes</div>
+                    <div class="category" onclick="goToPage('travel.html')">Travel</div>
+                    <div class="category" onclick="goToPage('photo-diary.html')">Photo Diary</div>
+                    <div class="category active" onclick="goToPage('mp3.html')">MP3</div>
+                    <div class="category" onclick="goToPage('music-videos.html')">Music Videos</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>MP3</h1>
+                    <p class="tagline">Music & Audio</p>
+                </div>
+
+                <!-- Simple audio player -->
+                <div class="featured-player" id="playerSection" style="display:none;">
+                    <audio id="audioPlayer" preload="metadata"></audio>
+                    <div class="player-header">
+                        <h3>Now Playing</h3>
+                        <span class="track-title" id="trackTitle">Select a track to play</span>
+                    </div>
+                    <div class="player-controls">
+                        <div class="controls-left">
+                            <button class="play-pause-btn" id="playPauseBtn" onclick="togglePlay()">
+                                <svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <svg class="pause-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="time-display">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="library-container">
+                    <div class="songs-section">
+                        <div class="section-header"><h2>Tracks</h2></div>
+                        <div class="songs-grid" id="songsGrid"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 nyquilcigarettes. All rights reserved.</p>
+                <div class="footer-links"><a href="../index.html">Feed</a></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goToPage(page) { window.location.href = page; }
+
+        let currentSong = null;
+        let songsIndex = {};  // id -> song object lookup
+        const audio = document.getElementById('audioPlayer');
+        const playIcon = document.querySelector('.play-icon');
+        const pauseIcon = document.querySelector('.pause-icon');
+
+        function formatTime(s) {
+            if (!s || isNaN(s)) return '0:00';
+            const m = Math.floor(s / 60), sec = Math.floor(s % 60);
+            return `${m}:${sec.toString().padStart(2, '0')}`;
+        }
+
+        function togglePlay() {
+            if (!currentSong) return;
+            if (audio.paused) { audio.play(); playIcon.style.display = 'none'; pauseIcon.style.display = 'block'; }
+            else { audio.pause(); playIcon.style.display = 'block'; pauseIcon.style.display = 'none'; }
+        }
+
+        function loadTrack(song) {
+            currentSong = song;
+            audio.src = song.mediaUrl;
+            document.getElementById('trackTitle').textContent = song.title;
+            document.getElementById('playerSection').style.display = '';
+            audio.load();
+            audio.play().then(() => {
+                playIcon.style.display = 'none'; pauseIcon.style.display = 'block';
+            }).catch(() => {});
+            document.querySelectorAll('.song-card').forEach(c => c.classList.remove('loaded'));
+            const card = document.querySelector(`.song-card[data-id="${song.id}"]`);
+            if (card) card.classList.add('loaded');
+        }
+
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const pct = (audio.currentTime / audio.duration) * 100;
+                document.getElementById('progressFill').style.width = pct + '%';
+                document.getElementById('currentTime').textContent = formatTime(audio.currentTime);
+            }
+        });
+        audio.addEventListener('loadedmetadata', () => {
+            document.getElementById('duration').textContent = formatTime(audio.duration);
+        });
+        audio.addEventListener('ended', () => {
+            playIcon.style.display = 'block'; pauseIcon.style.display = 'none';
+        });
+        document.getElementById('progressBar').addEventListener('click', e => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const pct = (e.clientX - rect.left) / rect.width;
+            if (audio.duration) audio.currentTime = pct * audio.duration;
+        });
+
+        async function loadSongs() {
+            const grid = document.getElementById('songsGrid');
+            try {
+                const ts = new Date().getTime();
+                const res = await fetch(`./media-database.json?v=${ts}`);
+                if (!res.ok) throw new Error('Failed');
+                const db = await res.json();
+                const songs = db.entities
+                    .filter(e => e.type === 'audio' && e.status === 'published')
+                    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                if (songs.length === 0) {
+                    grid.innerHTML = `<div style="text-align:center;padding:40px 20px;color:#444;">No tracks yet.</div>`;
+                    return;
+                }
+
+                grid.innerHTML = '';
+                songs.forEach(song => {
+                    // Store song in lookup map; reference by id in DOM only
+                    songsIndex[song.id] = song;
+
+                    const card = document.createElement('div');
+                    card.className = 'song-card';
+                    card.dataset.id = song.id;
+
+                    const line = document.createElement('div');
+                    line.className = 'song-line';
+
+                    const info = document.createElement('div');
+                    info.className = 'song-info';
+
+                    const titleEl = document.createElement('span');
+                    titleEl.className = 'song-title';
+                    titleEl.textContent = song.title;
+
+                    const dur = (song.metadata && song.metadata.duration_formatted) || '0:00';
+                    const durEl = document.createElement('span');
+                    durEl.className = 'song-duration';
+                    durEl.textContent = dur;
+
+                    const btn = document.createElement('button');
+                    btn.className = 'load-btn';
+                    btn.textContent = 'LOAD';
+                    btn.dataset.songId = song.id;
+                    btn.addEventListener('click', () => loadTrack(songsIndex[song.id]));
+
+                    info.append(titleEl, durEl);
+                    line.append(info, btn);
+                    card.appendChild(line);
+                    grid.appendChild(card);
+                });
+            } catch (err) {
+                console.error(err);
+                grid.innerHTML = `<div style="text-align:center;padding:40px 20px;color:#444;">No tracks yet.</div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadSongs);
+    </script>
+</body>
+</html>

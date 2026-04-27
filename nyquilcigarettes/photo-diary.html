@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Diary - nyquilcigarettes</title>
+    <meta name="description" content="Photo diary by nyquilcigarettes.">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <link rel="icon" type="image/webp" href="../images/extantralogo-inverted.webp">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        :root {
+            --accent: #1a3a8a;
+            --accent-dark: #0d1a50;
+            --accent-darker: #102266;
+            --accent-dim: #071130;
+            --accent-hover: #0f1f45;
+            --accent-dimmer: #050b1c;
+            --accent-glow: rgba(26, 58, 138, 0.3);
+        }
+        .empty-state { text-align: center; padding: 60px 20px; color: #444; }
+        .empty-state h2 { color: var(--accent); font-size: 16px; margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="../images/extantralogo-inverted.webp" alt="Logo" class="logo-image">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('../index.html')">← Feed</div>
+                    <div class="category" onclick="goToPage('index.html')">nyquilcigarettes</div>
+                    <div class="category" onclick="goToPage('travel.html')">Travel</div>
+                    <div class="category active" onclick="goToPage('photo-diary.html')">Photo Diary</div>
+                    <div class="category" onclick="goToPage('mp3.html')">MP3</div>
+                    <div class="category" onclick="goToPage('music-videos.html')">Music Videos</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>Photo Diary</h1>
+                </div>
+                <div class="gallery-section">
+                    <div class="section-header"><h2>Photos</h2></div>
+                    <div class="image-gallery" id="photoDiaryGallery"></div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 nyquilcigarettes. All rights reserved.</p>
+                <div class="footer-links"><a href="../index.html">Feed</a></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goToPage(page) { window.location.href = page; }
+
+        async function loadPhotos() {
+            const gallery = document.getElementById('photoDiaryGallery');
+            try {
+                const ts = new Date().getTime();
+                const res = await fetch(`./media-database.json?v=${ts}`);
+                if (!res.ok) throw new Error('Failed');
+                const db = await res.json();
+                const photos = db.entities
+                    .filter(e => e.type === 'photo' && e.status === 'published')
+                    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                if (photos.length === 0) {
+                    gallery.innerHTML = `<div class="empty-state"><h2>No photos yet</h2><p>Check back soon.</p></div>`;
+                    return;
+                }
+
+                gallery.innerHTML = '';
+                photos.forEach(photo => {
+                    const card = document.createElement('div');
+                    card.className = 'gallery-item';
+                    card.style.cursor = 'pointer';
+                    card.id = `photo-${photo.id}`;
+                    card.innerHTML = `
+                        <div class="gallery-image-container">
+                            <img src="${photo.mediaUrl}" alt="${photo.title}" class="gallery-image" loading="lazy">
+                            <div class="gallery-overlay">
+                                <h3 class="gallery-title">${photo.title}</h3>
+                                <p class="gallery-meta">${photo.date}</p>
+                            </div>
+                        </div>
+                    `;
+                    card.addEventListener('click', () => openModal(photo.mediaUrl, photo.title, photo));
+                    gallery.appendChild(card);
+                });
+            } catch (err) {
+                console.error(err);
+                gallery.innerHTML = `<div class="empty-state"><h2>No photos yet</h2></div>`;
+            }
+        }
+
+        function openModal(src, title, photo) {
+            const modal = document.createElement('div');
+            modal.className = 'image-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="modal-close" onclick="this.closest('.image-modal').remove(); document.body.style.overflow=''">&times;</span>
+                    <img src="${src}" alt="${title}" class="modal-image">
+                    <h3 class="modal-title">${title}</h3>
+                    ${photo.excerpt ? `<div class="modal-meta"><p>${photo.excerpt}</p></div>` : ''}
+                </div>`;
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+            modal.addEventListener('click', e => { if (e.target === modal) { modal.remove(); document.body.style.overflow = ''; } });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadPhotos);
+    </script>
+</body>
+</html>

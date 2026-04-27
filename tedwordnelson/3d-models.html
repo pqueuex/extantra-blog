@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Models - EXTANTRA | 3D Art & Digital Modeling</title>
+    <meta name="description" content="3D models and digital art creations by tedwordnelson (EXTANTRA).">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <link rel="icon" type="image/webp" href="../images/extantralogo-inverted.webp">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <style>
+        :root {
+            --accent: #cc0000;
+            --accent-dark: #aa0000;
+            --accent-darker: #990000;
+            --accent-dim: #330000;
+            --accent-hover: #440000;
+            --accent-dimmer: #220000;
+            --accent-glow: rgba(204, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-space">
+                <img src="../images/extantralogo-inverted.webp" alt="EXTANTRA Logo" class="logo-image">
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="categories-section">
+                    <div class="category" onclick="goToPage('../index.html')">← Feed</div>
+                    <div class="category" onclick="goToPage('index.html')">tedwordnelson</div>
+                    <div class="category" onclick="goToPage('photos.html')">Photos</div>
+                    <div class="category active" onclick="goToPage('3d-models.html')">3D Models</div>
+                    <div class="category" onclick="goToPage('video.html')">Video</div>
+                    <div class="category" onclick="goToPage('drawings.html')">Drawings</div>
+                    <div class="category" onclick="goToPage('music.html')">Music</div>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content-header">
+                    <h1>3D Models</h1>
+                    <p class="tagline">3D Art & Digital Modeling</p>
+                </div>
+
+                <!-- Interactive 3D Viewer -->
+                <div class="model-viewer-section">
+                    <div class="viewer-header">
+                        <h2>Interactive 3D Viewer</h2>
+                        <div class="viewer-controls-top">
+                            <div class="model-selector">
+                                <select id="modelSelect">
+                                    <option value="">Select a model to load</option>
+                                </select>
+                                <button id="loadModelBtn">Load Model</button>
+                            </div>
+                            <div class="material-controls">
+                                <button class="view-btn active" data-view="material">Material</button>
+                                <button class="view-btn" data-view="wireframe">Wireframe</button>
+                                <button class="view-btn" data-view="no-material">No Material</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-viewer" id="modelViewer">
+                        <canvas id="threejsCanvas"></canvas>
+                        <div class="viewer-controls">
+                            <div class="control-info">
+                                <span>🖱️ Drag to rotate</span>
+                                <span>🔍 Scroll to zoom</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Models Collection -->
+                <div class="models-section">
+                    <div class="section-header">
+                        <h2>3D Models Collection</h2>
+                        <div class="category-filter">
+                            <button class="filter-btn active" data-category="all">All</button>
+                            <button class="filter-btn" data-category="Character">Character</button>
+                            <button class="filter-btn" data-category="Abstract">Abstract</button>
+                            <button class="filter-btn" data-category="Architectural">Architectural</button>
+                            <button class="filter-btn" data-category="Vehicle">Vehicle</button>
+                        </div>
+                    </div>
+                    <div class="models-grid" id="modelsGrid"></div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 EXTANTRA. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:contact@extantra.net">Contact</a>
+                    <a href="https://store.extantra.net">Store</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goToPage(page) { window.location.href = page; }
+
+        // ── Three.js Viewer ──────────────────────────────────────────────────
+        class ModelViewer {
+            constructor() {
+                this.scene = null; this.camera = null; this.renderer = null;
+                this.controls = null; this.currentModel = null; this.animationId = null;
+                this.loader = null; this.currentMaterials = []; this.currentView = 'material';
+                this.init();
+            }
+            init() {
+                const canvas = document.getElementById('threejsCanvas');
+                const container = document.getElementById('modelViewer');
+                this.scene = new THREE.Scene();
+                this.scene.background = new THREE.Color(0x000000);
+                this.camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+                this.camera.position.set(5, 5, 5);
+                this.renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+                this.renderer.setSize(container.clientWidth, container.clientHeight);
+                this.renderer.setPixelRatio(window.devicePixelRatio);
+                this.renderer.shadowMap.enabled = true;
+                this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+                this.controls.enableDamping = true; this.controls.dampingFactor = 0.05;
+                this.controls.minDistance = 2; this.controls.maxDistance = 20;
+                this.loader = new THREE.GLTFLoader();
+                this.setupLighting();
+                this.loadModel('cube');
+                window.addEventListener('resize', () => this.onWindowResize());
+                document.getElementById('loadModelBtn').addEventListener('click', () => {
+                    const val = document.getElementById('modelSelect').value;
+                    if (val) this.loadExternalModel(`../models/${val}`, val);
+                    else this.loadModel('cube');
+                });
+                this.setupMaterialControls();
+                this.animate();
+            }
+            setupLighting() {
+                this.scene.add(new THREE.AmbientLight(0x404040, 0.6));
+                const dir = new THREE.DirectionalLight(0xffffff, 0.8);
+                dir.position.set(10, 10, 5); dir.castShadow = true; this.scene.add(dir);
+                const accent = new THREE.PointLight(0xcc0000, 0.5, 50);
+                accent.position.set(-5, 5, 5); this.scene.add(accent);
+            }
+            loadModel(type) {
+                if (this.currentModel) this.scene.remove(this.currentModel);
+                let geometry;
+                if (type === 'sphere') geometry = new THREE.SphereGeometry(1.5, 32, 32);
+                else if (type === 'torus') geometry = new THREE.TorusGeometry(1.2, 0.4, 16, 100);
+                else geometry = new THREE.BoxGeometry(2, 2, 2);
+                const material = new THREE.MeshPhongMaterial({ color: 0x666666, shininess: 100, specular: 0xcc0000 });
+                this.currentModel = new THREE.Mesh(geometry, material);
+                this.currentModel.castShadow = true; this.currentModel.receiveShadow = true;
+                this.scene.add(this.currentModel);
+                this.storeMaterials(); this.setMaterialView(this.currentView);
+                this.controls.reset();
+            }
+            loadExternalModel(filePath, modelName) {
+                if (this.currentModel) this.scene.remove(this.currentModel);
+                this.loader.load(filePath, gltf => {
+                    this.currentModel = gltf.scene;
+                    this.currentModel.castShadow = true; this.currentModel.receiveShadow = true;
+                    const box = new THREE.Box3().setFromObject(this.currentModel);
+                    const center = box.getCenter(new THREE.Vector3());
+                    const size = box.getSize(new THREE.Vector3());
+                    this.currentModel.position.sub(center);
+                    const scale = 3 / Math.max(size.x, size.y, size.z);
+                    this.currentModel.scale.setScalar(scale);
+                    this.scene.add(this.currentModel);
+                    this.controls.reset(); this.storeMaterials(); this.setMaterialView(this.currentView);
+                }, null, () => this.loadModel('cube'));
+            }
+            animate() {
+                this.animationId = requestAnimationFrame(() => this.animate());
+                if (this.currentModel) this.currentModel.rotation.y += 0.005;
+                this.controls.update(); this.renderer.render(this.scene, this.camera);
+            }
+            storeMaterials() {
+                this.currentMaterials = [];
+                if (this.currentModel) this.currentModel.traverse(child => {
+                    if (child.material) this.currentMaterials.push({ object: child, original: child.material.clone() });
+                });
+            }
+            setupMaterialControls() {
+                document.querySelectorAll('.view-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        this.currentView = btn.dataset.view;
+                        this.setMaterialView(this.currentView);
+                    });
+                });
+            }
+            setMaterialView(view) {
+                if (!this.currentModel) return;
+                this.currentModel.traverse(child => {
+                    if (!child.material) return;
+                    if (view === 'wireframe') { child.material.wireframe = true; }
+                    else if (view === 'no-material') {
+                        child.material = new THREE.MeshBasicMaterial({ color: 0x666666, transparent: true, opacity: 0.3 });
+                    } else {
+                        const orig = this.currentMaterials.find(m => m.object === child);
+                        if (orig) child.material = orig.original.clone();
+                        else { child.material.wireframe = false; child.material.transparent = false; child.material.opacity = 1; }
+                    }
+                });
+            }
+            onWindowResize() {
+                const c = document.getElementById('modelViewer');
+                this.camera.aspect = c.clientWidth / c.clientHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(c.clientWidth, c.clientHeight);
+            }
+        }
+
+        // ── Models Library ───────────────────────────────────────────────────
+        class ModelsLibrary {
+            constructor(viewer) { this.models = []; this.viewer = viewer; this.init(); }
+            async init() {
+                await this.loadModels();
+                this.renderModels();
+                this.setupCategoryFilter();
+                this.populateModelSelector();
+            }
+            async loadModels() {
+                try {
+                    const ts = new Date().getTime();
+                    const res = await fetch(`./media-database.json?v=${ts}`);
+                    if (!res.ok) throw new Error('Failed');
+                    const db = await res.json();
+                    this.models = db.entities.filter(e => e.type === '3d-model' && e.status === 'published');
+                } catch (err) {
+                    console.error(err);
+                    this.models = [];
+                }
+            }
+            renderModels() {
+                const grid = document.getElementById('modelsGrid');
+                grid.innerHTML = '';
+                this.models.forEach(model => {
+                    const meta = model.metadata || {};
+                    const card = document.createElement('div');
+                    card.className = 'model-card';
+                    card.dataset.category = meta.category || '';
+                    card.innerHTML = `
+                        <div class="model-line">
+                            <div class="model-info">
+                                <span class="model-title">${model.title}</span>
+                                <span class="model-meta">
+                                    <span class="model-category">${meta.category || ''}</span>
+                                    <span class="model-stats">${meta.polyCount || '?'} polygons • ${meta.fileSize || '?'}</span>
+                                </span>
+                            </div>
+                            <button class="load-to-viewer-btn" data-model-id="${model.id}">Load</button>
+                        </div>`;
+                    card.querySelector('.load-to-viewer-btn').addEventListener('click', () => {
+                        this.viewer.loadExternalModel(model.mediaUrl, model.title);
+                    });
+                    grid.appendChild(card);
+                });
+            }
+            populateModelSelector() {
+                const select = document.getElementById('modelSelect');
+                select.innerHTML = '<option value="">Select a model to load</option>';
+                this.models.forEach(model => {
+                    const opt = document.createElement('option');
+                    opt.value = (model.metadata && model.metadata.filename) || model.title;
+                    opt.textContent = model.title;
+                    select.appendChild(opt);
+                });
+            }
+            setupCategoryFilter() {
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        const cat = btn.dataset.category;
+                        document.querySelectorAll('.model-card').forEach(card => {
+                            card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'block' : 'none';
+                        });
+                    });
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const viewer = new ModelViewer();
+            new ModelsLibrary(viewer);
+        });
+    </script>
+</body>
+</html>
